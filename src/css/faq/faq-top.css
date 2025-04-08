@@ -1,0 +1,18 @@
+.faq-top-main {
+     justify-content: center;
+}
+
+.faq-top-sec {
+    justify-content: center;
+    max-width: 2000px;
+    margin: 10rem 0 !important;
+}
+
+.faq-top-main-h {
+    text-align: center;
+    color: #132151;
+}
+
+.faq-top-ac-main {
+    justify-content: center;
+}

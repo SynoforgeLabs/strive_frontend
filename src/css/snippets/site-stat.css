@@ -1,0 +1,46 @@
+#site-stat {
+    background-color: #85C5FF;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+  }
+  
+  .site-stat-sec {
+    justify-content: center;
+    max-width: 2000px !important;
+  }
+  
+  .stite-stat-main-h {
+    font-size: 2.25rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .site-stat-comp-main {
+    flex-wrap: wrap;
+  }
+  
+  .s-stat-comp {
+    width: fit-content !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .s-stat-no,
+  .s-stat-h {
+    width: fit-content !important;
+    align-items: center;
+  }
+  
+  .s-stat-no {
+    font-size: 3rem;
+    color: white;
+  }
+  
+  .s-stat-h {
+    font-size: 1.25rem;
+  }
+  

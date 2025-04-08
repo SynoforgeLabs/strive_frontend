@@ -1,0 +1,56 @@
+#aboutus-points {
+    justify-content: center;
+}
+.aboutus-points-sec {
+    max-width: 2000px !important;
+}
+
+.about-us-point-con {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-us-point-main {
+    margin-bottom: 3rem;
+}
+
+.aboutus-point-main-h {
+    color: #0C4DA2;
+    font-size: 2rem;
+}
+
+
+.aboutus-point-des {
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+.aboutus-point-img-main {
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutus-point1-img {
+    transform: scale(70%);
+}
+
+#aboutus-point2-img {
+    transform: scale(90%);
+}
+
+#aboutus-point3-img {
+    transform: scale(80%);
+}
+
+#aboutus-point4-img {
+    transform: scale(80%);
+}
+
+#aboutus-point5-img {
+    transform: scale(80%);
+}
+
+#aboutus-point-r {
+    justify-content: end;
+    text-align: end;
+}

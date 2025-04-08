@@ -1,0 +1,1 @@
+export {default as Faqtop} from "./faq-top"

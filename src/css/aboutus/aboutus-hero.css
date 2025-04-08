@@ -1,0 +1,24 @@
+#aboutus_hero {
+    justify-content: center;;
+}
+
+
+.aboutus-hero-top {
+    justify-content: center;
+    margin: 10rem 0 !important;
+    max-width: 2000px !important;
+}
+
+.aboutus-strive-logo {
+    transform: scale(35%);
+}
+
+.aboutus-hero-main-h {
+    margin-top: -3rem !important;
+    justify-content: center;
+    color: #0D2371;
+}
+
+.aboutus-hero-sub-h {
+    justify-content: center;
+}

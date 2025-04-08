@@ -1,0 +1,21 @@
+#aboutus-msg {
+    height: auto;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.aboutus-msg-sec {
+    justify-content: center;
+    max-width: 2000px !important;
+}
+
+.aboutus-msg-h {
+    color: #0D2371;
+    margin-bottom: 3rem;
+}
+
+.aboutus-content {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    text-align: justify;
+}
