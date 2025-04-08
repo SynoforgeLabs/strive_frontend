@@ -1,0 +1,74 @@
+.reviews-header-container {
+  height: auto;
+  background-color: transparent;
+  text-align: center;
+  padding: 12rem 0 2rem 0;
+  /* background-image: url('../../../public/Images/Home/Hero/hero-bg.png'); */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.reviews-header-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: -1;
+}
+
+.reviews-heading {
+  color: #0D2371;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.reviews-slogan {
+  color: #666;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.reviews-content {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.review-platforms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.trustpilot-logo img{
+  height: 90px;
+  object-fit: contain;
+}
+.google-logo img{
+  height: 140px;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .reviews-heading {
+    font-size: 2.5rem;
+  }
+  
+  .reviews-slogan {
+    font-size: 1.25rem;
+  }
+  
+  .review-platforms {
+    flex-direction: column;
+    gap: 2rem;
+  }
+} 

@@ -35,7 +35,7 @@ function Navbar() {
                   </a>
                   <ul className="dropdown-menu nav-item-drop-down" id="nav-au-dd">
                     <li><a className="dropdown-item nav-item-drop-down-item" href="/aboutus">About us</a></li>
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="#">Reviews</a></li>
+                    <li><a className="dropdown-item nav-item-drop-down-item" href="/reviews">Reviews</a></li>
                     <li><a className="dropdown-item nav-item-drop-down-item" href="/faq">FAQ</a></li>
                     <li><a className="dropdown-item nav-item-drop-down-item" href="#">Contact US</a></li>
                     <li><a className="dropdown-item nav-item-drop-down-item" href="#">Become Tutor</a></li>
