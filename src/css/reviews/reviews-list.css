@@ -1,6 +1,7 @@
 .reviews-list-container {
   padding: 0 15% 5rem;
   background-color: white;
+  justify-content: center;
 }
 
 .reviews-grid {
@@ -8,6 +9,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   align-items: start;
+  max-width: 2000px;
 }
 
 .review-card {
