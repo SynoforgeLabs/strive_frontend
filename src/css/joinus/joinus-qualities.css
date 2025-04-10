@@ -1,0 +1,139 @@
+.joinus-qualities-main {
+    justify-content: center;
+}
+
+.joinus-qualities-sec {
+    justify-content: center;
+    max-width: 2000px !important;
+}
+
+.joinus-qualitiy {
+    gap: 5rem;
+    align-items: center;
+}
+
+.joinus-qualities-content {
+    position: relative;
+    flex: 1;
+    padding-right: 2rem;
+    max-width: 800px;
+}
+
+.joinus-qualities-title {
+    color: #0D2371;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.joinus-qualities-subtitle {
+    color: #4B5563;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.joinus-qualities-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.joinus-qualities-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.25rem;
+    color: #4B5563;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.joinus-qualities-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230D2371'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.joinus-qualities-list.characteristics li {
+    margin-bottom: 2rem;
+}
+
+.joinus-qualities-image-right,
+.joinus-qualities-image-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    max-width: 300px;
+    height: 300px;
+}
+
+.joinus-qualities-image-right img,
+.joinus-qualities-image-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .joinus-qualities-content {
+        padding-right: 0 !important;
+    }
+
+    .joinus-qualities-title {
+        font-size: 1.75rem;
+    }
+
+    .joinus-qualities-subtitle,
+    .joinus-qualities-list li {
+        font-size: 1rem;
+    }
+
+    .joinus-qualities-image-right,
+    .joinus-qualities-image-left {
+        min-width: 250px;
+        max-width: 250px;
+        height: 250px;
+    }
+
+    .joinus-qualities-image-left {
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .joinus-qualities-main {
+        padding: 3rem 0;
+    }
+
+    .col-12.d-flex {
+        flex-direction: column;
+    }
+
+    .joinus-qualities-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .joinus-qualities-title {
+        text-align: center;
+        margin-bottom: 4rem !important;
+    }
+
+    .joinus-qualities-image-right,
+    .joinus-qualities-image-left {
+        min-width: 200px;
+        max-width: 200px;
+        height: 200px;
+        margin: 2rem auto;
+    }
+
+    .joinus-qualities-list.characteristics li {
+        margin-bottom: 1.5rem;
+    }
+}

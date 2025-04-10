@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../../css/snippets/navbar.css';
-import { Link } from 'react-router-dom';
 
 function Navbar() {
 
@@ -38,7 +37,7 @@ function Navbar() {
                     <li><a className="dropdown-item nav-item-drop-down-item" href="/reviews">Reviews</a></li>
                     <li><a className="dropdown-item nav-item-drop-down-item" href="/faq">FAQ</a></li>
                     <li><a className="dropdown-item nav-item-drop-down-item" href="#">Contact US</a></li>
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="#">Become Tutor</a></li>
+                    <li><a className="dropdown-item nav-item-drop-down-item" href="/join-us">Become Tutor</a></li>
                   </ul>
                 </li>
                 <li className="nav-item dropdown">
