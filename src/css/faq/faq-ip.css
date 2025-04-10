@@ -1,0 +1,44 @@
+.faq-ip-main {
+    justify-content: center;
+}
+
+.faq-ip-sec {
+   justify-content: center;
+   max-width: 2000px;
+   margin-top: 5rem !important;
+   max-width: 2000px !important;
+}
+
+.faq-ip-main-h {
+    text-align: center;
+    color: #132151;
+    margin-bottom: 3rem;
+    justify-content: center;
+}
+
+#faq-ip-accordians-main {
+    flex-direction: column;
+}
+
+#faq-ip-ac-item {
+    border-radius: 1rem !important;
+}
+
+#faq-ip-accordians-main button {
+    box-shadow: none !important;
+    border: none;
+    border-radius: .5rem !important;
+}
+
+.accordion-item {
+    transition: border 0.3s ease; /* Smooth transition for border */
+}
+
+.faq-ip-q {
+    border-radius: 0.5 !important;
+    border: none;
+    justify-content: start;
+    font-size: 1.5rem !important;
+    padding: 1rem 1.5rem !important;
+    color: #0C4DA2 !important;
+}

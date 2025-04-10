@@ -1,1 +1,5 @@
 export {default as Faqtop} from "./faq-top"
+export {default as Private} from "./faq-private"
+export {default as Bfs} from "./faq-bfs"
+export {default as Ip} from "./faq-ip"
+export {default as Ucat} from "./faq-ucat"

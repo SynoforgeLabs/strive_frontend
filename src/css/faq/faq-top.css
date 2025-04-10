@@ -5,14 +5,47 @@
 .faq-top-sec {
     justify-content: center;
     max-width: 2000px;
-    margin: 10rem 0 !important;
+    margin-top: 10rem !important;
+    max-width: 2000px !important;
 }
 
 .faq-top-main-h {
     text-align: center;
     color: #132151;
+    margin-bottom: 3rem;
 }
 
-.faq-top-ac-main {
+.faq-top-q-main {
     justify-content: center;
+}
+
+#faq-top-ac-item {
+    border-radius: 1rem !important;
+    border: 3px solid !important;
+    border-top: none !important;
+    overflow: hidden !important;
+}
+
+#faq-top-q-1 .accordion-item  {
+    border-color: #0C4DA2 !important;
+}
+
+#faq-top-q-2 .accordion-item  {
+    border-color: #ff3a3a !important;
+}
+
+.faq-top-q {
+    padding: 1rem !important;
+    border-radius: .5rem !important;
+    font-size: 1.5rem !important;
+}
+
+#faq-top-q-1 button {
+    background-color: #0C4DA2;
+    color: white;
+}
+
+#faq-top-q-2 button {
+    background-color: #ff3a3a !important;
+    color: white;
 }

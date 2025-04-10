@@ -195,7 +195,7 @@ function ReviewsList() {
   ];
 
   return (
-    <div className="reviews-list-container">
+    <div className="d-flex reviews-list-container">
       <div className="reviews-grid">
         {reviews.map((review) => (
           <ReviewCard

@@ -9,6 +9,10 @@ const Faqpage = () => {
 
         <Snippets.Navbar />
         <Faqcomponents.Faqtop />
+        <Faqcomponents.Private />
+        <Faqcomponents.Bfs />
+        <Faqcomponents.Ip />
+        <Faqcomponents.Ucat />
 
       </div>
     );
