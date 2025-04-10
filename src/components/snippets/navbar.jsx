@@ -9,7 +9,7 @@ function Navbar() {
       <div className="col-lg-8 col-md-12 col-sm-12 g-0 nav-sec">
         <nav className="navbar navbar-expand-lg mt-lg-4 mt-md-0 mt-md-0">
           <div className="container-fluid p-0">
-            <a className="navbar-brand" href="/">Logo</a>
+            <Link className="navbar-brand" to="/">Logo</Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -34,11 +34,11 @@ function Navbar() {
                     About Us
                   </a>
                   <ul className="dropdown-menu nav-item-drop-down" id="nav-au-dd">
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="/aboutus">About us</a></li>
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="/reviews">Reviews</a></li>
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="/faq">FAQ</a></li>
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="#">Contact US</a></li>
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="#">Become Tutor</a></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/aboutus">About us</Link></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/reviews">Reviews</Link></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/faq">FAQ</Link></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/contact">Contact US</Link></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/become-tutor">Become Tutor</Link></li>
                   </ul>
                 </li>
                 <li className="nav-item dropdown">
@@ -52,19 +52,19 @@ function Navbar() {
                     Tutoring
                   </a>
                   <ul className="dropdown-menu nav-item-drop-down" id="nav-Tu-dd">
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="#">Private Tutoring</a></li>
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="#">Bring a Friend and save</a></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/private-tutoring">Private Tutoring</Link></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/bring-friend">Bring a Friend and save</Link></li>
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">UCAT</a>
+                  <Link className="nav-link active" to="/ucat">UCAT</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">Pricing</a>
+                  <Link className="nav-link active" to="/pricing">Pricing</Link>
                 </li>
-                <a className="btn btn-outline-primary nav-item nav-f-t-btn">
+                <Link className="btn btn-outline-primary nav-item nav-f-t-btn" to="/find-tutor">
                   Find a Tutor
-                </a>
+                </Link>
               </ul>
             </div>
           </div>
