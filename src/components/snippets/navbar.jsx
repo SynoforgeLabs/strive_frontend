@@ -8,7 +8,7 @@ function Navbar() {
       <div className="col-lg-8 col-md-12 col-sm-12 g-0 nav-sec">
         <nav className="navbar navbar-expand-lg mt-lg-4 mt-md-0 mt-md-0">
           <div className="container-fluid p-0">
-            <Link className="navbar-brand" to="/">Logo</Link>
+            <a className="navbar-brand" href="/">Logo</a>
             <button
               className="navbar-toggler"
               type="button"
@@ -38,7 +38,6 @@ function Navbar() {
                     <li><a className="dropdown-item nav-item-drop-down-item" href="/faq">FAQ</a></li>
                     <li><a className="dropdown-item nav-item-drop-down-item" href="#">Contact US</a></li>
                     <li><a className="dropdown-item nav-item-drop-down-item" href="/join-us">Become Tutor</a></li>
-
                   </ul>
                 </li>
                 <li className="nav-item dropdown">
@@ -52,18 +51,17 @@ function Navbar() {
                     Tutoring
                   </a>
                   <ul className="dropdown-menu nav-item-drop-down" id="nav-Tu-dd">
-                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/private-tutoring">Private Tutoring</Link></li>
-                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/bring-friend">Bring a Friend and save</Link></li>
+                    <li><a className="dropdown-item nav-item-drop-down-item" href="#">Private Tutoring</a></li>
+                    <li><a className="dropdown-item nav-item-drop-down-item" href="#">Bring a Friend and save</a></li>
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" to="/ucat">UCAT</Link>
+                  <a className="nav-link active" aria-current="page" href="/ucat">UCAT</a>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" to="/pricing">Pricing</Link>
+                  <a className="nav-link active" aria-current="page" href="#">Pricing</a>
                 </li>
                 <a href='/find-a-tutor' className="btn btn-outline-primary nav-item nav-f-t-btn">
-
                   Find a Tutor
                 </a>
               </ul>

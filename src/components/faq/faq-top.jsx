@@ -9,7 +9,7 @@ function Faqtop() {
                     <div class="accordion col-5" id="faq-top-q-1">
                         <div class="accordion-item" id="faq-top-ac-item">
                             <h2 class="accordion-header">
-                            <button class="btn primary-button fw-bold w-100 faq-top-q" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                            <button class="btn primary-button fw-bold w-100 faq-top-q m-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                             Payment Policy
                             </button>
                             </h2>
@@ -23,7 +23,7 @@ function Faqtop() {
                     <div class="accordion col-5" id="faq-top-q-2">
                         <div class="accordion-item" id="faq-top-ac-item">
                             <h2 class="accordion-header">
-                            <button class="btn primary-button fw-bold w-100 faq-top-q" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo" id="faq-top-q-2">
+                            <button class="btn primary-button fw-bold w-100 faq-top-q m-0" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo" id="faq-top-q-2">
                             Cancellation Policy
                             </button>
                             </h2>
