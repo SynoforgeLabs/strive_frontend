@@ -1,0 +1,129 @@
+.findt-tutors-main {
+    justify-content: center;
+}
+
+.findt-tutors-sec {
+    max-width: 2000px;
+    margin: 3rem 0 !important;
+}
+
+.findt-tutors-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    height: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+
+.findt-tutors-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-color: #004494;
+}
+
+.findt-tutors-stats {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.findt-tutors-gold {
+    background: #FFF9E6;
+    color: #B8860B;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.findt-tutors-atr {
+    background: #FFE6E6;
+    color: #FF4444;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.findt-tutors-avatar {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.findt-tutors-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.findt-tutors-avatar.available {
+    background: #28a745;
+}
+
+.findt-tutors-avatar.booked {
+    background: #dc3545;
+}
+
+.findt-tutors-status {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 0.25rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.findt-tutors-avatar.available .findt-tutors-status {
+    color: #28a745;
+}
+
+.findt-tutors-avatar.booked .findt-tutors-status {
+    color: #dc3545;
+}
+
+.findt-tutors-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #0D2371;
+}
+
+.findt-tutors-description {
+    color: #6B7280;
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.findt-tutors-book-btn {
+    background: #0C4DA2;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.findt-tutors-book-btn:hover {
+    background: #004494;
+}
+

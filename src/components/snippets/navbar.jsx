@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../../css/snippets/navbar.css';
-import { Link } from 'react-router-dom';
 
 function Navbar() {
 
@@ -34,11 +33,12 @@ function Navbar() {
                     About Us
                   </a>
                   <ul className="dropdown-menu nav-item-drop-down" id="nav-au-dd">
-                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/aboutus">About us</Link></li>
-                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/reviews">Reviews</Link></li>
-                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/faq">FAQ</Link></li>
-                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/contact">Contact US</Link></li>
-                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/become-tutor">Become Tutor</Link></li>
+                    <li><a className="dropdown-item nav-item-drop-down-item" href="/aboutus">About us</a></li>
+                    <li><a className="dropdown-item nav-item-drop-down-item" href="/reviews">Reviews</a></li>
+                    <li><a className="dropdown-item nav-item-drop-down-item" href="/faq">FAQ</a></li>
+                    <li><a className="dropdown-item nav-item-drop-down-item" href="#">Contact US</a></li>
+                    <li><a className="dropdown-item nav-item-drop-down-item" href="/join-us">Become Tutor</a></li>
+
                   </ul>
                 </li>
                 <li className="nav-item dropdown">
@@ -62,9 +62,10 @@ function Navbar() {
                 <li className="nav-item">
                   <Link className="nav-link active" to="/pricing">Pricing</Link>
                 </li>
-                <Link className="btn btn-outline-primary nav-item nav-f-t-btn" to="/find-tutor">
+                <a href='/find-a-tutor' className="btn btn-outline-primary nav-item nav-f-t-btn">
+
                   Find a Tutor
-                </Link>
+                </a>
               </ul>
             </div>
           </div>

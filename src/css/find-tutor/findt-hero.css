@@ -1,0 +1,16 @@
+#findt-hero {
+    justify-content: center;
+    background-color: #0D2371;
+}
+
+
+.findt-hero-sec {
+    justify-content: end;
+    margin: 10rem 0 !important;
+    max-width: 2000px !important;
+}
+
+.findt-hero-main-h {
+    color: #FFFFFF;
+    font-size: 2.5rem !important;
+}
