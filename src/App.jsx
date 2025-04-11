@@ -7,6 +7,8 @@ import FaqPage from './pages/js/faq';
 import ReviewsPage from './pages/js/reviews';
 import FindtPage from './pages/js/find-tutor';
 import JoinusPage from './pages/js/joinus';
+import UCATPage from './pages/js/ucat';
+
 const App = () => {
   return (
 
@@ -18,6 +20,8 @@ const App = () => {
         <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="/find-a-tutor" element={<FindtPage />} />
         <Route path="/join-us" element={<JoinusPage />} />
+        <Route path="/ucat" element={<UCATPage />} />
+
         {/* Add more routes here, like <Route path="/about" element={<AboutPage />} /> */}
       </Routes>
     </Router>
