@@ -1,0 +1,199 @@
+#tutor-info {
+    justify-content: center;
+}
+
+
+.tutor-info-sec {
+    max-width: 2000px !important;
+    justify-content: center !important;
+}
+
+.tutor-info-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tutor-info-title {
+    color: #0D2371;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.tutor-info-subtitle {
+    color: #1F2937;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.tutor-info-text {
+    color: #4B5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.tutor-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tutor-info-list li {
+    color: #4B5563;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.tutor-info-list li:last-child {
+    border-bottom: none;
+}
+
+.tutor-info-video-placeholder {
+    width: 100%;
+    max-width: 560px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.tutor-info-stat {
+    padding: 1rem;
+}
+
+.tutor-info-stat-number {
+    color: #FF8A00;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.tutor-info-stat-label {
+    color: #0D2371;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    font-weight: 600 !important;
+}
+
+.tutor-info-consultation-btn {
+    background: #0D2371;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tutor-info-consultation-btn:hover {
+    background: #1a3dad;
+}
+
+.tutor-info-consultation-note {
+    color: #6B7280;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .tutor-info-card {
+        padding: 1.5rem;
+    }
+    
+    .tutor-info-stat-number {
+        font-size: 1.75rem;
+    }
+    
+    .tutor-info-stat-label {
+        font-size: 0.9rem;
+    }
+    
+    .tutor-info-consultation-btn {
+        padding: 0.875rem 1.75rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .tutor-info-title {
+        font-size: 1.15rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .tutor-info-text,
+    .tutor-info-list li {
+        font-size: 0.9rem;
+    }
+    
+    .tutor-info-stat {
+        padding: 0.75rem;
+    }
+    
+    .tutor-info-stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .tutor-info-stat-label {
+        font-size: 0.85rem;
+    }
+    
+    .tutor-info-consultation-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .tutor-info-consultation-note {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tutor-info-card {
+        padding: 1.25rem;
+    }
+
+    .tutor-info-title {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    .tutor-info-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .tutor-info-text,
+    .tutor-info-list li {
+        font-size: 0.85rem;
+    }
+    
+    .tutor-info-stat {
+        padding: 0.5rem;
+    }
+    
+    .tutor-info-stat-number {
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .tutor-info-stat-label {
+        font-size: 0.8rem;
+    }
+    
+    .tutor-info-consultation-btn {
+        width: 100%;
+    }
+    
+    .tutor-info-consultation-note {
+        text-align: center;
+        width: 100%;
+    }
+}

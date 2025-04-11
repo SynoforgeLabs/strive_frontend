@@ -1,0 +1,241 @@
+#tutor-top {
+    justify-content: center;
+}
+
+
+.tutor-top-sec {
+    max-width: 2000px !important;
+    justify-content: center !important;
+}
+
+.tutor-top-main {
+    position: relative;
+    width: 100%;
+}
+
+.tutor-top-content {
+    background-color: white;
+    border-radius: 0 0 1rem 1rem !important;
+}
+
+.tutor-top-banner {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.tutor-top-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+.tutor-top-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 2rem;
+}
+
+.tutor-top-profile-left {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.tutor-top-avatar-container {
+    position: relative;
+}
+
+.tutor-top-avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 2rem;
+    border: 8px solid #22c55e;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tutor-top-status {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #22c55e;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    white-space: nowrap;
+}
+
+.tutor-top-name {
+    color: #0D2371;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.tutor-top-tier {
+    margin-bottom: 1rem;
+}
+
+.tutor-top-badge {
+    background: #FEF3C7;
+    color: #92400E;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    height: fit-content;
+    align-self: center;
+}
+
+.tutor-top-contact {
+    background: #0D2371;
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 1rem ;
+    transition: background-color 0.2s;
+}
+
+.tutor-top-contact:hover {
+    background: #1a3dad;
+}
+
+.tutor-top-profile-right {
+    text-align: center;
+}
+
+.tutor-top-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.tutor-top-score {
+    color: #DC2626;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.tutor-top-label {
+    color: #4B5563;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .tutor-top-profile {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: -40px;
+    }
+
+    .tutor-top-profile-left {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .tutor-top-avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .tutor-top-name {
+        font-size: 2rem;
+    }
+
+    .tutor-top-profile-right {
+        margin-top: 1rem;
+    }
+    
+    .tutor-top-score {
+        font-size: 2.5rem;
+    }
+
+    .tutor-top-info > div {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .tutor-top-banner {
+        height: 200px;
+    }
+
+    .tutor-top-profile {
+        padding: 0 1rem;
+    }
+
+    .tutor-top-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .tutor-top-name {
+        font-size: 1.75rem;
+    }
+
+    .tutor-top-score {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tutor-top-banner {
+        height: 150px;
+    }
+
+    .tutor-top-profile {
+        margin-top: -30px;
+    }
+
+    .tutor-top-avatar {
+        width: 100px;
+        height: 100px;
+        border-width: 3px;
+    }
+
+    .tutor-top-name {
+        font-size: 1.5rem;
+    }
+
+    .tutor-top-status {
+        font-size: 0.75rem;
+        padding: 3px 10px;
+    }
+
+    .tutor-top-badge {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+
+    .tutor-top-score {
+        font-size: 1.75rem;
+    }
+
+    .tutor-top-label {
+        font-size: 0.875rem;
+    }
+
+    .tutor-top-info > div {
+        gap: 0.75rem !important;
+    }
+}
