@@ -189,7 +189,7 @@ function ReviewsList() {
       name: "Wonder Woman",
       date: "2025/4/20",
       rating: 5,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+      reviewText: "Lorem ipsum dolor  mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
       platform: "trustpilot"
     }
   ];
