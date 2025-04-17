@@ -1,18 +1,25 @@
 import '../../css/home/home-price-grid.css'
+import { useLocation } from 'react-router-dom';
 
 function Pricegrid() {
-  return (
+  const location = useLocation();
+  const isBringAFriendPage = location.pathname.includes('bring-a-friend-and-save');
 
+  return (
     <section
       className="container-fluid section d-flex g-0 z-index-0"
       id="home-pricing-plans"
     >
-      <h1 className="col-8 d-flex fw-bold pricing-plans-main-h">
-        Pricing Plans
-      </h1>
-      <span className="row col-6 d-flex pricing-plans-sub-h">
-        Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-      </span>
+      {!isBringAFriendPage && (
+        <>
+          <h1 className="col-8 d-flex fw-bold pricing-plans-main-h">
+            Pricing Plans
+          </h1>
+          <span className="row col-6 d-flex pricing-plans-sub-h">
+            Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          </span>
+        </>
+      )}
 
       <div className="row col-8 d-grid home-price-grid">
         <div className="grid-empty"></div>
@@ -179,7 +186,6 @@ function Pricegrid() {
         </div>
       </div>
     </section>
-
   );
 }
 

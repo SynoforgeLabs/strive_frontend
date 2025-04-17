@@ -1,0 +1,140 @@
+#b-friend-hdiw {
+    justify-content: center;
+}
+
+.b-friend-hdiw-main {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+.b-friend-hdiw-sec {
+    justify-content: center;
+    margin: 10rem 0 0 !important;
+    max-width: 2000px !important;
+}
+
+.b-friend-hdiw-title {
+    color: #0D2371;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.b-friend-hdiw-steps {
+    margin: 0 auto;
+}
+
+.b-friend-hdiw-step {
+    padding: 2rem;
+}
+
+.b-friend-hdiw-number {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 600;
+    flex-shrink: 0;
+    color: #ff3a3a;
+}
+
+.b-friend-hdiw-img-container {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.b-friend-hdiw-img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.b-friend-hdiw-content {
+    flex-grow: 1;
+}
+
+.b-friend-hdiw-step-title {
+    color: #0C4DA2 !important;
+    font-size: 1.75rem;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 700;
+}
+
+.b-friend-hdiw-step-title strong {
+    color: #0D2371;
+    font-weight: 600;
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+}
+
+.b-friend-hdiw-text {
+    color: #4B5563;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .b-friend-hdiw-title {
+        font-size: 1.75rem;
+    }
+
+    .b-friend-hdiw-step {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .b-friend-hdiw-number {
+        margin-bottom: 1rem;
+    }
+
+    .b-friend-hdiw-img-container {
+        width: 320px;
+        height: 240px;
+    }
+
+    .b-friend-hdiw-step-title {
+        font-size: 1rem;
+    }
+
+    .b-friend-hdiw-text {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .b-friend-hdiw-title {
+        font-size: 1.5rem;
+    }
+
+    .b-friend-hdiw-step {
+        padding: 1.25rem;
+    }
+
+    .b-friend-hdiw-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+    }
+
+    .b-friend-hdiw-img-container {
+        width: 260px;
+        height: 200px;
+    }
+
+    .b-friend-hdiw-step-title {
+        font-size: 0.95rem;
+    }
+}
