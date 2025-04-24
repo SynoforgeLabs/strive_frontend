@@ -4,9 +4,8 @@
 
 .faq-top-sec {
     justify-content: center;
-    max-width: 2000px;
+    max-width: 1200px !important;
     margin-top: 10rem !important;
-    max-width: 2000px !important;
 }
 
 .faq-top-main-h {
