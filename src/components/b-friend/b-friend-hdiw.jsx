@@ -14,7 +14,7 @@ const BFriendHdiw = () => {
                             <div className="b-friend-hdiw-number fw-bold me-4">1</div>
                             <div className="b-friend-hdiw-content">
                                 <h3 className="b-friend-hdiw-step-title">
-                                    Find a Tutor Reach out to a suitable tutor to request tutoring. We have limited spots available,- lock it in early!
+                                    Find a Tutor Reach out to a suitable tutor to request tutoring. We have limited spots available - lock it in early!
                                 </h3>
                             </div>
                             <div className="b-friend-hdiw-img-container me-4">
@@ -36,12 +36,12 @@ const BFriendHdiw = () => {
                                     className="b-friend-hdiw-img"
                                 />
                             </div>
+                            <div className="b-friend-hdiw-number fw-bold me-4">2</div>
                             <div className="b-friend-hdiw-content">
                                 <h3 className="b-friend-hdiw-step-title">
                                     Confirm Friends Confirm that your friends would like to receive tutoring with you, and fill out this form.
                                 </h3>
                             </div>
-                            <div className="b-friend-hdiw-number fw-bold me-4">2</div>
                         </div>
 
                         {/* Step 3 */}

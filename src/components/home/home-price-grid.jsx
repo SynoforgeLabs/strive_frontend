@@ -23,38 +23,44 @@ function Pricegrid() {
 
       <div className="row col-8 d-grid home-price-grid">
         <div className="grid-empty"></div>
-        <div className="d-flex p-3 price-grid-heading-main" id="gold-plan">
-          <h1 className="fw-bold plan-type" id="plan-t-gold">
-            Gold
-          </h1>
-          <span className="plan-des">
-            Tailored Sessions
-          </span>
-          <button className="btn btn-primary mt-4 p-3 fw-bold plan-gs-btn" id="plan-gs-gold-btn">
-            Get started
-          </button>
+        <div className="d-flex g-0 price-grid-heading-main" id="gold-plan">
+          <div className="d-flex price-grid-heading-sec" id="plan-h-gold">
+            <h1 className="fw-bold plan-type" id="plan-t-gold">
+              Gold
+            </h1>
+            <span className="plan-des">
+              Tailored Sessions
+            </span>
+            <button className="btn btn-primary mt-5m p-3 fw-bold plan-gs-btn" id="plan-gs-gold-btn">
+              Get started
+            </button>
+          </div>
         </div>
-        <div className="d-flex p-3 price-grid-heading-main" id="platinum-plan">
-          <h1 className="fw-bold plan-type" id="plan-t-platinum">
-            Platinum
-          </h1>
-          <span className="plan-des">
-            Tailored Sessions
-          </span>
-          <button className="btn btn-primary mt-4 p-3 fw-bold plan-gs-btn" id="plan-gs-platinum-btn">
-            Get started
-          </button>
+        <div className="d-flex g-0 price-grid-heading-main" id="platinum-plan">
+          <div className="d-flex price-grid-heading-sec" id="plan-h-platinum">
+            <h1 className="fw-bold plan-type" id="plan-t-platinum">
+              Platinum
+            </h1>
+            <span className="plan-des">
+              Tailored Sessions
+            </span>
+            <button className="btn btn-primary mt-5 p-3 fw-bold plan-gs-btn" id="plan-gs-platinum-btn">
+              Get started
+            </button>
+          </div>
         </div>
-        <div className="d-flex p-3 price-grid-heading-main" id="executive-plan">
-          <h1 className="fw-bold plan-type" id="plan-t-executive">
-            Executive
-          </h1>
-          <span className="plan-des">
-            Tailored Sessions
-          </span>
-          <button className="btn btn-primary mt-4 p-3 fw-bold plan-gs-btn" id="plan-gs-executive-btn">
-            Get started
-          </button>
+        <div className="d-flex g-0 price-grid-heading-main" id="executive-plan">
+          <div className="d-flex price-grid-heading-sec" id="plan-h-executive">
+            <h1 className="fw-bold plan-type" id="plan-t-executive">
+              Executive
+            </h1>
+            <span className="plan-des">
+              Tailored Sessions
+            </span>
+            <button className="btn btn-primary mt-5 p-3 fw-bold plan-gs-btn" id="plan-gs-executive-btn">
+              Get started
+            </button>
+          </div>
         </div>
         <div className="d-flex grid-row-start-main">
           <h1 className="fw-bold grid-row-main-h">

@@ -1,0 +1,17 @@
+#interview-hdiw {
+    justify-content: center;
+}
+
+.interview-hdiw-sec {
+    justify-content: center;
+    margin: 8rem 0 !important;
+    max-width: 2000px !important;
+}
+
+.interview-hdiw-title {
+    color: #16205b;
+}
+
+.interview-hdiw-number {
+    color: #f44336;
+}
