@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../css/ucat.css';
+import '../../css/ucat/ucat.css';
 
 const WhyChooseUs = () => {
   return (

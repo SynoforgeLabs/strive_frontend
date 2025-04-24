@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/ucat.css';
+import '../../css/ucat/ucat.css';
 
 const TutorSelection = () => {
   return (
