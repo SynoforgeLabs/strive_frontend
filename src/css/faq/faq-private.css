@@ -4,9 +4,9 @@
 
 .faq-private-sec {
    justify-content: center;
-   max-width: 2000px;
+   max-width: 1500px !important;
    margin-top: 5rem !important;
-   max-width: 2000px !important;
+   max-width: 1200px !important;
 }
 
 .faq-private-main-h {

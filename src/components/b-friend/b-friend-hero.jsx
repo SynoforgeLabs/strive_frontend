@@ -8,7 +8,7 @@ const BFriendHero = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-12 d-flex justify-content-end">
-              <h1>Bring a friend and save heading</h1>
+              <h1>Strive for Success with your friends!</h1>
             </div>
           </div>
         </div>
