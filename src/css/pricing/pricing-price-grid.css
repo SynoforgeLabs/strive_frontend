@@ -1,0 +1,186 @@
+#pricing-price-grid {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-price-grid-main {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.pricing-price-grid-sec {
+    justify-content: center;
+    margin: 4rem 0 0 !important;
+    max-width: 2000px !important;
+}
+
+.pricing-price-grid-main-container {
+    grid-template-columns: 35% 20% 20% 20%;
+    grid-template-rows:  auto auto auto auto auto auto auto auto auto auto auto auto !important;
+    grid-column-gap: 1rem;
+    grid-row-gap: 0;
+    max-width: 1080px !important;
+}
+
+.pricing-price-grid-header {
+    border: 3px solid transparent;
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: none;
+    overflow: hidden;
+}
+
+.pricing-price-grid-header .pricing-price-grid-gold h3, 
+.pricing-price-grid-header .pricing-price-grid-gold .pricing-price-grid-price-tag .pricing-price-grid-amount, 
+.pricing-price-grid-header .pricing-price-grid-gold .pricing-price-grid-price-tag .pricing-price-grid-period {
+    color: #CCAC00;
+}
+.pricing-price-grid-header .pricing-price-grid-platinum h3, 
+.pricing-price-grid-header .pricing-price-grid-platinum .pricing-price-grid-price-tag .pricing-price-grid-amount, 
+.pricing-price-grid-header .pricing-price-grid-platinum .pricing-price-grid-price-tag .pricing-price-grid-period {
+    color: #3A4750;
+}
+.pricing-price-grid-header .pricing-price-grid-elite h3, 
+.pricing-price-grid-header .pricing-price-grid-elite .pricing-price-grid-price-tag .pricing-price-grid-amount, 
+.pricing-price-grid-header .pricing-price-grid-elite .pricing-price-grid-price-tag .pricing-price-grid-period {
+    color: #0D2371;
+}
+
+.pricing-price-grid-header .pricing-price-grid-gold .btn-primary {
+    background-color: #CCAC00 !important;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+}
+
+.pricing-price-grid-header .pricing-price-grid-platinum .btn-primary {
+    background-color: #3A4750 !important;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+}
+
+.pricing-price-grid-header .pricing-price-grid-elite .btn-primary {
+    background-color: #0D2371 !important;
+    border: none;
+    border-radius: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+}
+
+.pricing-price-grid-card {
+    padding: 2rem;
+    border-radius: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+.pricing-price-grid-card:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-price-grid-card.pricing-price-grid-gold {
+    background-color: #f7e2ab;
+    box-shadow: 0 10px 20px rgba(255, 224, 102, 0.1);
+}
+
+.pricing-price-grid-card.pricing-price-grid-platinum {
+    background-color: #B0C0CA;
+    box-shadow: 0 10px 20px rgba(156, 163, 175, 0.1);
+}
+
+.pricing-price-grid-card.pricing-price-grid-elite {
+    background-color: #C7D3FF;
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.1);
+}
+
+.pricing-price-grid-card p {
+    font-size: .7rem;
+}
+
+.pricing-price-grid-price-tag {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.pricing-price-grid-price-tag .pricing-price-grid-period {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.pricing-price-grid-feature-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pricing-price-grid-feature-content {
+    padding: 1rem;
+    text-align: center;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    height: auto;
+}
+
+.pricing-price-grid-feature-content-b {
+    border-bottom: 3px solid transparent;
+    border-radius: 0 0 1rem 1rem;
+}
+
+#pricing-price-grid-gold {
+    border-color: #CCAC00;
+}
+
+#pricing-price-grid-platinum {
+    border-color: #3A4750;
+}
+
+#pricing-price-grid-elite {
+    border-color: #0D2371;
+}
+
+.pricing-price-grid-feature-content p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.pricing-price-grid-feature-row {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pricing-price-grid-feature-row:last-child {
+    border-bottom: none;
+}
+
+.pricing-price-grid-check {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pricing-price-grid-gold-check {
+    color: #F59E0B;
+}
+
+.pricing-price-grid-platinum-check {
+    color: #4B5563;
+}
+
+.pricing-price-grid-elite-check {
+    color: #3730A3;
+}
+

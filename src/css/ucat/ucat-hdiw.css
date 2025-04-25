@@ -1,0 +1,54 @@
+#ucat-hdiw {
+    justify-content: center;
+}
+
+.ucat-hdiw-main {
+    display: flex;
+    align-items: center;
+    padding: 6rem 0;
+    overflow: hidden;
+}
+
+.ucat-hdiw-sec {
+    justify-content: center;
+    margin: 0 !important;
+    max-width: 2000px !important;
+}
+
+.ucat-hdiw-title {
+    color: #16205b;
+}
+
+.ucat-hdiw-number {
+    color: #f44336;
+}
+
+.ucat-hdiw-btn-row {
+    display: flex !important;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 4rem !important;
+}
+
+.ucat-hdiw-btn-row .btn {
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    background-color: transparent;
+    border: 3px solid transparent;
+    font-weight: 600;
+}
+
+#ucat-hdiw-btn-1 {
+    border-color: #0D2371;
+    color: #0D2371;
+}
+
+#ucat-hdiw-btn-2 {
+    border-color: #FF3A3A;
+    color: #FF3A3A;
+}
+
+#ucat-hdiw-btn-3 {
+    border-color: #0C4DA2;
+    color: #0C4DA2;
+}

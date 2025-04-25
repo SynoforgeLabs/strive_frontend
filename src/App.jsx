@@ -11,6 +11,7 @@ import TutorPage from './pages/js/tutor';
 import BFriendPage from './pages/js/b-friend';  
 import InterviewPage from './pages/js/interview';  
 import PricingPage from './pages/js/pricing';  
+import UcatPage from './pages/js/ucat';  
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/bring-a-friend-and-save" element={<BFriendPage />} />
         <Route path="/interview-preperation" element={<InterviewPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/ucat" element={<UcatPage />} />
 
         {/* Add more routes here, like <Route path="/about" element={<AboutPage />} /> */}
       </Routes>

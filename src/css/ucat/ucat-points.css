@@ -1,0 +1,54 @@
+#ucat-points {
+    justify-content: center;
+}
+
+.ucat-points-main {
+    display: flex;
+    align-items: center;
+    padding: 6rem 0;
+    overflow: hidden;
+}
+
+.ucat-points-sec {
+    justify-content: center;
+    margin: 0 !important;
+    max-width: 2000px !important;
+}
+
+.ucat-points-title {
+    color: #0D2371;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.ucat-points-text {
+    color: #4B5563;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.ucat-points-image {
+    max-width: 90%;
+    height: auto;
+}
+
+@media (max-width: 992px) {
+    .ucat-points-main {
+        padding: 4rem 0;
+    }
+
+    .ucat-points-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .ucat-points-text {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .ucat-points-image {
+        max-width: 80%;
+        margin: 2rem 0;
+    }
+}

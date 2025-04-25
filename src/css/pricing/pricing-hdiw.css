@@ -1,0 +1,99 @@
+#pricing-hdiw {
+    justify-content: center;
+}
+
+.pricing-hdiw-main {
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+.pricing-hdiw-sec {
+    justify-content: center;
+    margin: 4rem 0 !important;
+    max-width: 2000px !important;
+}
+
+.pricing-hdiw-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0D2371;
+}
+
+.pricing-hdiw-step {
+    background: white;
+    border-radius: 1rem !important;
+    height: 100%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pricing-hdiw-step:hover {
+    transform: translateY(-5px);
+}
+
+.pricing-hdiw-step-number {
+    width: 40px;
+    height: 40px;
+    background-color: #FF3A3A;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+.pricing-hdiw-step-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0D2371;
+    margin-bottom: 1rem;
+}
+
+.pricing-hdiw-step-title a {
+    color: #0D2371;
+}
+
+.pricing-hdiw-step-title a:hover {
+    color: #091853;
+}
+
+.pricing-hdiw-step-text {
+    color: #4B5563;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .pricing-hdiw-title {
+        font-size: 2rem;
+    }
+
+    .pricing-hdiw-step {
+        margin-bottom: 1rem;
+    }
+
+    .pricing-hdiw-step-title {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .pricing-hdiw-main {
+        padding: 2rem 0;
+    }
+
+    .pricing-hdiw-title {
+        font-size: 1.75rem;
+    }
+
+    .pricing-hdiw-sec {
+        margin: 2rem 0 !important;
+    }
+}
