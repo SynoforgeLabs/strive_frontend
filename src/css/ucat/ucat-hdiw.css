@@ -39,3 +39,9 @@
     color: #0D2371;
     white-space: pre;
 }
+
+.ucat-hdiw-btn-row .btn:hover {
+    background-color: #0D2371;
+    color: white;
+    border-color: #0D2371;
+}
