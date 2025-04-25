@@ -1,9 +1,0 @@
-export { default as Hero } from './Hero';
-export { default as ProvenResults } from './ProvenResults';
-export { default as ExamStrategies } from './ExamStrategies';
-export { default as InterviewSuccess } from './InterviewSuccess';
-export { default as EliteTutors } from './EliteTutors';
-export { default as TutorSelection } from './TutorSelection';
-export { default as SmallGroupSessions } from './SmallGroupSessions';
-export { default as WhyChooseUs } from './WhyChooseUs';
-export { default as SignUpProcess } from './SignUpProcess'; 

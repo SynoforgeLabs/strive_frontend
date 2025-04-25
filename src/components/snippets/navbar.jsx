@@ -59,7 +59,7 @@ function Navbar() {
                   <a className="nav-link active" aria-current="page" href="/ucat">UCAT</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">Pricing</a>
+                  <a className="nav-link active" aria-current="page" href="/pricing">Pricing</a>
                 </li>
                 <a href='/find-a-tutor' className="btn btn-outline-primary nav-item nav-f-t-btn">
                   Find a Tutor
