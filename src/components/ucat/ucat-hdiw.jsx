@@ -33,9 +33,7 @@ function UcatHdiw() {
                     </div>
 
                     <div className="ucat-hdiw-btn-row fluid-container d-flex">
-                        <button className='btn btn-primary' id='ucat-hdiw-btn-1'>Private Tutoring</button>
-                        <button className='btn btn-primary' id='ucat-hdiw-btn-2'>Bring a Friend and Save</button>
-                        <button className='btn btn-primary' id='ucat-hdiw-btn-3'>Interview Preparation</button>
+                        <button className='btn btn-primary'>📃  Sign up for UCAT</button>
                     </div>
 
             </div>

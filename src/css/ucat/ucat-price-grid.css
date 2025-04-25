@@ -15,6 +15,15 @@
     max-width: 2000px !important;
 }
 
+.ucat-prce-grid-heading {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0D2371;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 6rem;
+}
+
 .ucat-price-grid {
     grid-template-columns: 35% 20%;
     grid-template-rows:  auto auto auto auto auto auto auto auto auto auto auto auto !important;
