@@ -55,8 +55,20 @@ function Navbar() {
                     <li><a className="dropdown-item nav-item-drop-down-item" href="/bring-a-friend-and-save">Bring a Friend and save</a></li>
                   </ul>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/ucat">UCAT</a>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Medical Entrance
+                  </a>
+                  <ul className="dropdown-menu nav-item-drop-down" id="nav-me-dd">
+                    <li><a className="dropdown-item nav-item-drop-down-item" href="/ucat">UCAT</a></li>
+                    <li><a className="dropdown-item nav-item-drop-down-item" href="/interview-preperation">Interview Preperation</a></li>
+                  </ul>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/pricing">Pricing</a>

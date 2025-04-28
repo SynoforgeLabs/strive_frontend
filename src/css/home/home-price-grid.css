@@ -3,13 +3,15 @@
   align-items: center;
   gap: 2rem;
   flex-direction: column;
+  background-color: #f8f9fa;
 }
 
-.pricing-plans-main-h {
+.homeprice-grid-title {
   height: fit-content;
   font-size: 3rem;
   justify-content: center;
   color: #0D2371 !important;
+  font-weight: 700;
 }
 
 .pricing-plans-sub-h {
@@ -25,147 +27,70 @@
   max-width: 1080px !important;
 }
 
-.price-grid-heading-main {
-  flex-direction: column;
-  gap: .5rem;
-  border: 3px solid;
-  border-radius: 1rem 1rem 0 0;
-  border-bottom: none;
-  padding: none !important;
-  overflow: hidden;
-}
-
-.price-grid-heading-sec {
-  padding: 1.5rem 1rem !important;
-  border-radius: 0 0 1rem 1rem;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-#plan-h-gold {
-  background-color: #E6DDAA !important
-}
-
-#plan-h-platinum {
-  background-color: #B0C0CA !important
-}
-
-#plan-h-executive {
-  background-color: #C7D3FF !important
-}
-
-#gold-plan {
-  border-color: #CCAC00 !important;
-}
-
-#platinum-plan {
-  border-color: #3A4750;
-}
-
-#executive-plan {
-  border-color: #062A78;
-}
-
-.plan-type {
-  font-size: 2rem !important;
-}
-
-#plan-t-gold {
-  color: gold;
-}
-
-#plan-t-platinum {
-  color: #3A4750;
-}
-
-#plan-t-executive {
-  color: #0D2371;
-}
-
-.plan-des {
-  font-size: 1rem !important;
-}
-
-.plan-gs-btn {
+.homeprice-grid-card {
   border-radius: 1rem !important;
+}
+
+.homeprice-grid-gold {
+  background-color: #f7e2ab !important;
+}
+
+.homeprice-grid-gold .homeprice-grid-price {
+  color: #CCAC00 !important;
+  font-weight: 600;
+}
+
+.homeprice-grid-platinum {
+  background-color: #B0C0CA !important;
+}
+
+.homeprice-grid-platinum .homeprice-grid-price {
+  color: #3A4750 !important;
+  font-weight: 600;
+}
+
+.homeprice-grid-elite {
+  background-color: #C7D3FF !important;
+}
+
+.homeprice-grid-elite .homeprice-grid-price {
+  color: #0D2371 !important;
+  font-weight: 600;
+}
+
+.home-pricing-plans .card-text {
+  font-weight: 800 !important;
+}
+
+.homeprice-grid-card .card-title {
+  font-weight: 600;
+}
+
+.homeprice-grid-card .card-title {
+  font-weight: 600;
+}
+
+.homeprice-grid-card .card-text {
+  text-align: center;
+}
+
+.homeprice-grid-card .btn-primary {
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 1rem;
+}
+
+.homeprice-grid-gold .btn-primary {
+  background-color: #CCAC00;
   border: none !important;
 }
 
-#plan-gs-gold-btn {
-  background-color: gold !important;
+.homeprice-grid-platinum .btn-primary {
+  background-color: #3A4750;
+  border: none !important;
 }
 
-#plan-gs-platinum-btn {
-  background-color: #3A4750 !important;
-}
-
-#plan-gs-executive-btn {
-  background-color: #0D2371 !important;
-}
-
-.plan-gs-btn {
-  width: fit-content;
-}
-
-.grid-row-start-main {
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
-}
-
-.grid-row-main-h {
-  font-size: 2rem;
-  color: #333333;
-}
-
-.grid-row-sub-h {
-  font-size: 1rem;
-  color: #6B7280;
-}
-
-.grid-row-prices {
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
-  border: 3px solid gold;
-  border-top: none;
-  border-bottom: none;
-}
-
-.private-tut-price {
-  text-decoration: line-through;
-}
-
-.grid-row-price {
-  font-weight: 800;
-}
-
-#grid-gold-price {
-  color: gold;
-}
-
-#grid-gold-price-des {
-  color: rgb(124, 106, 0);
-}
-
-#grid-platinum-price {
-  color: #3A4750;
-}
-
-#grid-paltinum-price-des {
-  color: #A0ABA5;
-}
-
-#grid-executive-price {
-  color: #062A78;
-}
-
-#grid-executive-price-des {
-  color: #7493D8;
-}
-
-.grid-bottom {
-  border-bottom: 3px solid !important;
-  border-radius: 0 0 1rem 1rem;
+.homeprice-grid-elite .btn-primary {
+  background-color: #0D2371;
+  border: none !important;
 }

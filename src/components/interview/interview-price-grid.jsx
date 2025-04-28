@@ -15,104 +15,94 @@ function InterviewPriceGrid() {
                         Why choose us?
                     </h1>
 
-                    <div className="row col-8 d-grid interview-price-grid">
-                        <div className="grid-empty"></div>
-                        <div className="d-flex p-3 price-grid-heading-main" id="gold-plan">
-                            <span className="interview-price-grid-plan-des">
-                            5 x Interview Workshops
-                            </span>
-                            <h1 className="fw-bold interview-price-grid-plan-price" id="plan-t-gold">
-                                $30 <span>/hr</span> 
-                            </h1>
-                            <button className="btn btn-primary mt-4 p-3 fw-bold plan-gs-btn" id="plan-gs-gold-btn">
-                                Get started
-                            </button>
+                    <div className="interview-price-grid d-grid">
+                        <div className="col"></div>
+                        <div className="col interview-price-grid-header" id='interview-price-grid-gold'>
+                            <div className="interview-price-grid-card interview-price-grid-gold text-center p-4 rounded-4">
+                                <p className="text-muted mb-3">5 x Interview Workshops</p>
+                                <div className="interview-price-grid-price-tag mb-3">
+                                    <span className="interview-price-grid-amount">$30</span>
+                                    <span className="interview-price-grid-period">/hr</span>
+                                </div>
+                                <button className="btn btn-primary w-100">Get Started</button>
+                            </div>
                         </div>
-                        <div className="d-flex p-3 price-grid-heading-main" id="executive-plan">
-                            <span className="interview-price-grid-plan-des">
-                            Mock Interviews
-                            </span>
-                            <h1 className="fw-bold interview-price-grid-plan-price" id="plan-t-executive">
-                            $100 <span>Per mock</span>
-                            </h1>
-                            <button className="btn btn-primary mt-4 p-3 fw-bold plan-gs-btn" id="plan-gs-executive-btn">
-                                Get started
-                            </button>
+                        <div className="col interview-price-grid-header" id='interview-price-grid-elite'>
+                            <div className="interview-price-grid-card interview-price-grid-elite text-center p-4 rounded-4">
+                                <p className="text-muted mb-3">Mock Interviews</p>
+                                <div className="interview-price-grid-price-tag mb-3">
+                                    <span className="interview-price-grid-amount">$120</span>
+                                    <span className="interview-price-grid-period">Per mock</span>
+                                </div>
+                                <button className="btn btn-primary w-100">Get Started</button>
+                            </div>
                         </div>
-                        <div className="d-flex grid-row-start-main">
-                            <h1 className="fw-bold interview-price-grid-row-main-h">
-                                Our Tutors
-                            </h1>
+                        
+                        
+                        {/* out tutors */}
+                        <div className="col p-3 d-flex">
+                            <h4 className="interview-price-grid-feature-title">Our Tutors</h4>
                         </div>
-                        <div className="d-flex grid-row-prices" id="gold-plan">
-                            <span className="interview-price-grid-row-p-des" id="grid-gold-price-des">
-                            Top scoring medical students with experience in numerous interviews across Australia
-                            </span>
+                        
+                        <div className="col interview-price-grid-feature-content" id='interview-price-grid-gold'>
+                                <p className="text-muted small">Top scoring medical students with experience in numerous interviews across Australia</p>
                         </div>
-                        <div className="d-flex grid-row-prices" id="executive-plan">
-                            <span className="interview-price-grid-row-p-des" id="grid-executive-price-des">
-                            Top scoring medical students with experience in numerous interviews across Australia
-                            </span>
+                        <div className="col interview-price-grid-feature-content" id='interview-price-grid-elite'>
+                                <p className="text-muted small">Top scoring medical students with experience in numerous interviews across Australia</p>
                         </div>
-                        <div className="d-flex grid-row-start-main">
-                            <h1 className="fw-bold interview-price-grid-row-main-h">
-                            Lesson Style
-                            </h1>
+                        
+                        {/* Lesson Style */}
+                        <div className="col p-3 d-flex">
+                            <h4 className="interview-price-grid-feature-title">Lesson Style</h4>
                         </div>
-                        <div className="d-flex grid-row-prices" id="gold-plan">
-                            <span className="interview-price-grid-row-p-des" id="grid-gold-price-des">
-                            Interactive small group sessions, both MMI and panel interviews covered
-                            </span>
+                        
+                        <div className="col interview-price-grid-feature-content" id='interview-price-grid-gold'>
+                                <p className="text-muted small">Interactive small group sessions, both MMI and panel interviews covered</p>
                         </div>
-                        <div className="d-flex grid-row-prices" id="executive-plan">
-                            <span className="interview-price-grid-row-p-des" id="grid-executive-price-des">
-                            1-on-1 interview mocks that emulate the real interview, feedback included
-                            </span>
+                        <div className="col interview-price-grid-feature-content" id='interview-price-grid-elite'>
+                                <p className="text-muted small">1-on-1 interview mocks that emulate the real interview, feedback included</p>
                         </div>
-                        <div className="d-flex grid-row-start-main">
-                            <h1 className="fw-bold interview-price-grid-row-main-h">
-                            Duration
-                            </h1>
+
+                        {/* Duration */}
+                        <div className="col p-3 d-flex">
+                            <h4 className="interview-price-grid-feature-title">Duration</h4>
                         </div>
-                        <div className="d-flex grid-row-prices" id="gold-plan">
-                            <span className="interview-price-grid-row-p-des" id="grid-gold-price-des">
-                            3 hours per workshop
-                            </span>
+                        
+                        <div className="col interview-price-grid-feature-content" id='interview-price-grid-gold'>
+                                <p className="text-muted small">3 hours per workshop</p>
                         </div>
-                        <div className="d-flex grid-row-prices" id="executive-plan">
-                            <span className="interview-price-grid-row-p-des" id="grid-executive-price-des">
-                            20 minute mock, 10 minutes of comprehensive feedback
-                            </span>
+                        <div className="col interview-price-grid-feature-content" id='interview-price-grid-elite'>
+                                <p className="text-muted small">30 minute mock, 10 minutes of comprehensive feedback</p>
                         </div>
-                        <div className="d-flex grid-row-start-main">
-                            <h1 className="fw-bold interview-price-grid-row-main-h">
-                            Session Times
-                            </h1>
+
+                        {/* Session Times */}
+                        <div className="col p-3 d-flex">
+                            <h4 className="interview-price-grid-feature-title">Session Times</h4>
                         </div>
-                        <div className="d-flex grid-row-prices" id="gold-plan">
-                            <span className="interview-price-grid-row-p-des" id="grid-gold-price-des">
-                            10am – 1pm AEST, dates stated below
-                            </span>
+                        
+                        <div className="col interview-price-grid-feature-content" id='interview-price-grid-gold'>
+                                <p className="text-muted small">10am – 1pm AEST, dates stated below</p>
                         </div>
-                        <div className="d-flex grid-row-prices" id="executive-plan">
-                            <span className="interview-price-grid-row-p-des" id="grid-executive-price-des">
-                            Flexible scheduling, at a convenient time to you
-                            </span>
+                        <div className="col interview-price-grid-feature-content" id='interview-price-grid-elite'>
+                                <p className="text-muted small">Flexible scheduling, at a convenient time to you</p>
                         </div>
-                        <div className="d-flex grid-row-start-main">
-                            <h1 className="fw-bold interview-price-grid-row-main-h">
-                            Parent consultations
-                            </h1>
+
+                        {/* Parent consultations */}
+                        <div className="col p-3 d-flex">
+                            <h4 className="interview-price-grid-feature-title">Session Times</h4>
                         </div>
-                        <div className="d-flex grid-row-prices grid-bottom" id="gold-plan">
-                            <span className="interview-price-grid-row-p-des" id="grid-gold-price-des">
-                            Online, payment following each lesson
-                            </span>
+                        
+                        <div className="col interview-price-grid-feature-content interview-price-grid-feature-content-b" id='interview-price-grid-gold'>
+                                <p className="text-muted small">Online, payment following each lesson</p>
                         </div>
-                        <div className="d-flex grid-row-prices grid-bottom" id="executive-plan">
-                            <span className="interview-price-grid-row-p-des" id="grid-executive-price-des">
-                            Online, payment following each lesson
-                            </span>
+                        <div className="col interview-price-grid-feature-content interview-price-grid-feature-content-b" id='interview-price-grid-elite'>
+                                <p className="text-muted small">Online, payment following each lesson</p>
+                        </div>
+                        
+                    </div>
+                    <div className="row mt-4">
+                        <div className="col-12 text-center">
+                            <p className="text-muted small">*please view our payment policy for more information: insert hyperlink to terms and conditions</p>
                         </div>
                     </div>
                 </div>
