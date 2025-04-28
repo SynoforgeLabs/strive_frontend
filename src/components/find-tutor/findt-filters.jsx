@@ -15,11 +15,16 @@ function FindtFilters() {
         isOpen: false,
         selectedOption: ""
     });
+    const [locationDropdown, setLocationDropdown] = useState({
+        isOpen: false,
+        selectedOption: ""
+    });
 
     // Create separate refs for each dropdown
     const yearDropdownRef = useRef(null);
     const curriculumDropdownRef = useRef(null);
     const subjectDropdownRef = useRef(null);
+    const locationDropdownRef = useRef(null);
   
     // Toggle functions for each dropdown
     const toggleYearDropdown = () => {
@@ -42,6 +47,13 @@ function FindtFilters() {
             isOpen: !subjectDropdown.isOpen
         });
     };
+
+    const toggleLocationDropdown = () => {
+        setLocationDropdown({
+            ...locationDropdown,
+            isOpen: !locationDropdown.isOpen
+        });
+    };
   
     // Handle selecting options for each dropdown
     const handleYearSelect = (option) => {
@@ -60,6 +72,13 @@ function FindtFilters() {
 
     const handleSubjectSelect = (option) => {
         setSubjectDropdown({
+            isOpen: false,
+            selectedOption: option
+        });
+    };
+
+    const handleLocationSelect = (option) => {
+        setLocationDropdown({
             isOpen: false,
             selectedOption: option
         });
@@ -86,6 +105,14 @@ function FindtFilters() {
         e.stopPropagation();
         setSubjectDropdown({
             ...subjectDropdown,
+            selectedOption: ""
+        });
+    };
+    
+    const clearLocationOption = (e) => {
+        e.stopPropagation();
+        setLocationDropdown({
+            ...locationDropdown,
             selectedOption: ""
         });
     };
@@ -116,6 +143,14 @@ function FindtFilters() {
                     isOpen: false
                 }));
             }
+            
+            // Check location dropdown
+            if (locationDropdownRef.current && !locationDropdownRef.current.contains(event.target)) {
+                setLocationDropdown(prev => ({
+                    ...prev,
+                    isOpen: false
+                }));
+            }
         }
       
         document.addEventListener("mousedown", handleClickOutside);
@@ -128,7 +163,7 @@ function FindtFilters() {
         <section className='row container-fluid d-flex g-0 findt-filters-main' id='findt-filters'>
             <div className="col-8 d-flex findt-filters-sec">
                 {/* Year Level Dropdown */}
-                <div className="col-4 d-flex findt-filter-main justify-content-center align-items-center gap-3" ref={yearDropdownRef}>
+                <div className="col-3 d-flex findt-filter-main justify-content-center align-items-center gap-3" ref={yearDropdownRef}>
                     <span className="fw-bold findt-filter-h">Year Level</span>
                     <div className="dropdown">
                         <button 
@@ -155,7 +190,7 @@ function FindtFilters() {
                 </div>
 
                 {/* Curriculum Dropdown */}
-                <div className="col-4 d-flex findt-filter-main justify-content-center align-items-center gap-3" ref={curriculumDropdownRef}>
+                <div className="col-3 d-flex findt-filter-main justify-content-center align-items-center gap-3" ref={curriculumDropdownRef}>
                     <span className="fw-bold findt-filter-h">Curriculum</span>
                     <div className="dropdown">
                         <button 
@@ -182,7 +217,7 @@ function FindtFilters() {
                 </div>
 
                 {/* Subject Dropdown */}
-                <div className="col-4 d-flex findt-filter-main justify-content-center align-items-center gap-3" ref={subjectDropdownRef}>
+                <div className="col-3 d-flex findt-filter-main justify-content-center align-items-center gap-3" ref={subjectDropdownRef}>
                     <span className="fw-bold findt-filter-h">Subject</span>
                     <div className="dropdown">
                         <button 
@@ -205,6 +240,33 @@ function FindtFilters() {
                     </div>
                     {subjectDropdown.selectedOption && (
                         <button type="button" className="btn-close" onClick={clearSubjectOption} aria-label="Close"></button>
+                    )}
+                </div>
+
+                {/* location Dropdown */}
+                <div className="col-3 d-flex findt-filter-main justify-content-center align-items-center gap-3" ref={subjectDropdownRef}>
+                    <span className="fw-bold findt-filter-h">Location</span>
+                    <div className="dropdown">
+                        <button 
+                            className={`btn btn-secondary d-flex px-3 auto-width ${locationDropdown.isOpen ? 'dropdown-open' : ''}`}
+                            type="button"
+                            onClick={toggleLocationDropdown}
+                            aria-expanded={locationDropdown.isOpen}
+                        >
+                            {locationDropdown.selectedOption || "Select Location"}
+                        </button>
+                        
+                        {locationDropdown.isOpen && (
+                            <ul className="dropdown-menu show">
+                                <li><button className="dropdown-item" onClick={() => handleSubjectSelect("location1")}>location 1</button></li>
+                                <li><button className="dropdown-item" onClick={() => handleSubjectSelect("location2")}>location 2</button></li>
+                                <li><button className="dropdown-item" onClick={() => handleSubjectSelect("location3")}>location 3</button></li>
+                                <li><button className="dropdown-item" onClick={() => handleSubjectSelect("location4")}>location 4</button></li>
+                            </ul>
+                        )}
+                    </div>
+                    {locationDropdown.selectedOption && (
+                        <button type="button" className="btn-close" onClick={clearLocationOption} aria-label="Close"></button>
                     )}
                 </div>
             </div>

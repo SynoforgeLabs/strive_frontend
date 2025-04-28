@@ -19,9 +19,9 @@ function Aboutend() {
                 </p>
 
                 <div class="col-12 d-flex gap-5 aboutus-end-btn-grp">
-                    <button type="button" class="col-4 btn btn-outline-primary border-3 fw-semibold aboutus-end-btn" id="aboutus-end-btn-1">Private Tutoring</button>
-                    <button type="button" class="col-4 btn btn-outline-primary border-3 fw-semibold aboutus-end-btn" id="aboutus-end-btn-2">Bring a Friend and Save</button>
-                    <button type="button" class="col-4 btn btn-outline-primary border-3 fw-semibold aboutus-end-btn" id="aboutus-end-btn-3">Interview Preparation</button>
+                    <button type="button" class="col-4 btn btn-outline-primary border-3 fw-semibold aboutus-end-btn" id="aboutus-end-btn-1">👩🏻‍🏫 Private Tutoring</button>
+                    <button type="button" class="col-4 btn btn-outline-primary border-3 fw-semibold aboutus-end-btn" id="aboutus-end-btn-2">🧑🏻‍🎓 Bring a Friend and Save</button>
+                    <button type="button" class="col-4 btn btn-outline-primary border-3 fw-semibold aboutus-end-btn" id="aboutus-end-btn-3">💻 Interview Preparation</button>
                 </div>
 
             </div>

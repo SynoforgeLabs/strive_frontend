@@ -18,6 +18,8 @@
     text-align: center;
     color: #062A78;
     font-size: 1.25rem;
+    display: flex;
+    justify-content: center;
   }
   
   .reviews-main {

@@ -11,7 +11,7 @@ const BFriendPage = () => {
       {/* hero */}
       <BFriendComponents.BFriendHero />
       {/* price grid */}
-      <Pricegrid />
+      <BFriendComponents.BfriendPricegrid />
       {/* how it works */}  
       <BFriendComponents.BFriendHDIW />
     </div>

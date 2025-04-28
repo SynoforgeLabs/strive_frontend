@@ -37,13 +37,10 @@ function Reviews() {
       className="row container-fluid section d-flex g-0 z-index-0"
       id="home_reviews"
     >
-      <h1 className="row col-8 d-flex fw-bold reviews-main-h">Reviews Heading</h1>
+      <h1 className="row col-8 d-flex fw-bold reviews-main-h">🌟 Trusted by Families Across Australia</h1>
 
       <p className="row col-6 d-flex fw-light reviews-sub-h">
-        Horem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-        libero et velit interdum, ac aliquet odiot mattis. Horem ipsum dolor sit
-        amet, consectetur adipiscing elit. Nunc vulputate libero et velit
-        interdum, ac aliquet odiot mattis.
+      See why students love learning with us.
       </p>
 
       <div class="row container d-flex g-0 gap-3 reviews-main" ref={reviewsMainRef} >
