@@ -9,7 +9,7 @@ function JoinusQualities() {
                     {/* Requirements Column */}
                     <div className="col-12 d-flex justify-content-center joinus-qualitiy">
                         <div className="joinus-qualities-image-right">
-                            <img src="https://cdn.jsdelivr.net/gh/Tarikul-Islam-Anik/Animated-Fluent-Emojis/Emojis/Objects/Clipboard.png" alt="Requirements checklist" />
+                            <img className='joinus-qualities-image' src="/Images/site-images/join-us/join-us1.jpg" alt="Requirements checklist" />
                         </div>
                         <div className="joinus-qualities-content ps-lg-5">
                             <h2 className="joinus-qualities-title mb-lg-4">What we look for ..</h2>
@@ -53,7 +53,7 @@ function JoinusQualities() {
                             </ul>
                         </div>
                         <div className="joinus-qualities-image-left order-sm-1 order-md-1 order-lg-2">
-                            <img src="https://cdn.jsdelivr.net/gh/Tarikul-Islam-Anik/Animated-Fluent-Emojis/Emojis/People/Person%20Raising%20Hand.png" alt="Happy tutor" />
+                            <img className='joinus-qualities-image' src="/Images/site-images/join-us/join-us2.jpg" alt="Happy tutor" />
                         </div>
                     </div>
                 </div>

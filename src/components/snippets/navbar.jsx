@@ -51,7 +51,7 @@ function Navbar() {
                     Tutoring
                   </a>
                   <ul className="dropdown-menu nav-item-drop-down" id="nav-Tu-dd">
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="#">Private Tutoring</a></li>
+                    <li><a className="dropdown-item nav-item-drop-down-item" href="/pricing">Private Tutoring</a></li>
                     <li><a className="dropdown-item nav-item-drop-down-item" href="/bring-a-friend-and-save">Bring a Friend and save</a></li>
                   </ul>
                 </li>

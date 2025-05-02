@@ -15,6 +15,11 @@
     max-width: 2000px !important;
 }
 
+.ucat-points-sec img {
+    width: 600px;
+    height: auto;
+}
+
 .ucat-points-title {
     color: #0D2371;
     font-size: 2rem;
