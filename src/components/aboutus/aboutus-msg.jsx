@@ -1,7 +1,7 @@
 import '../../css/aboutus/aboutus-msg.css'
 
 
-function Msg() {
+function  Msg() {
     return (
 
         <section className="row container-fluid section d-flex g-0 z-index-0 abouts-msg-main" id='aboutus-msg'>
