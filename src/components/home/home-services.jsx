@@ -125,7 +125,7 @@ function Services() {
           </div>
           <div className="col-6 d-flex service-sub-r-col">
             <img
-              src="/Images/Home/services/private-tutoring.png"
+              src="/Images/site-images/home/home1.jpeg"
               className="private-tutoring-img"
               alt=""
             />
@@ -153,7 +153,7 @@ function Services() {
         <div className="row col-8 d-flex g-0 service-sub-main">
           <div className="col-6 d-flex service-sub-r-col">
             <img
-              src="/Images/Home/services/bring-a-friend-and-save.png"
+              src="/Images/site-images/home/home2.jpg"
               className="bfs-img"
               alt=""
             />

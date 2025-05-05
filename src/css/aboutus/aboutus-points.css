@@ -31,23 +31,28 @@
 }
 
 #aboutus-point1-img {
-    transform: scale(70%);
+    width: 600px;
+    height: auto;
 }
 
 #aboutus-point2-img {
-    transform: scale(90%);
+    width: 600px;
+    height: auto;
 }
 
 #aboutus-point3-img {
-    transform: scale(80%);
+    width: 600px;
+    height: auto;
 }
 
 #aboutus-point4-img {
-    transform: scale(80%);
+    width: 600px;
+    height: auto;
 }
 
 #aboutus-point5-img {
-    transform: scale(80%);
+    width: 600px;
+    height: auto;
 }
 
 #aboutus-point-r {

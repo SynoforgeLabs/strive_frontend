@@ -69,13 +69,16 @@
   }
   
   .private-tutoring-img {
-    transform: scale(100%);
+    height: auto;
+    width: 600px;
     margin-right: -40%;
     margin-top: -55%;
   }
   
   .bfs-img {
     transform: scale(100%);
+    height: auto;
+    width: 600px;
     margin-left: -40%;
     margin-top: -55%;
   }

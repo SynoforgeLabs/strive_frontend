@@ -74,7 +74,7 @@
 
 .joinus-qualities-image-right img,
 .joinus-qualities-image-left img {
-    width: 100%;
+    width: 600px;
     height: 100%;
     object-fit: contain;
 }

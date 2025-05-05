@@ -25,4 +25,4 @@ const BFriendHero = () => {
   );
 };
 
-export default BFriendHero; 
+export default BFriendHero;
