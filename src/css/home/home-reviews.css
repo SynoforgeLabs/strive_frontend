@@ -1,11 +1,14 @@
 
 #home_reviews {
     height: auto;
-    background-color: #85C5FF;
     justify-content: center;
     align-items: center !important;
     gap: 2rem !important;
-    padding: 4rem 0;
+    padding: 8rem 0;
+    background-image: url('/public/Images/site-images/home/home-reviews-bg.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 20 100%;
   }
   
   .reviews-main-h {

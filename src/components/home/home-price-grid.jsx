@@ -48,8 +48,8 @@ function Pricegrid() {
                 </div>
                 <p className="card-text mb-4">Tutors with a wealth of experience and consistently outstanding student feedback.</p>
                 <ul className="list-unstyled mb-4">
-                  <li className="mb-2">✓ Progress Reports</li>
                   <li className="mb-2">✓ 24/7 Support via Platform</li>
+                  <li className="mb-2">✓ Progress Reports</li>
                   <li className="mb-2">✓ Medicine/Dentistry Interview Prep</li>
                 </ul>
                 <div className="mt-auto">
@@ -71,8 +71,8 @@ function Pricegrid() {
                 </div>
                 <p className="card-text mb-4">Top-tier tutors with 3+ years experience, glowing reviews, and academic excellence.</p>
                 <ul className="list-unstyled mb-4">
-                  <li className="mb-2">✓ Progress Reports</li>
                   <li className="mb-2">✓ 24/7 Support via Platform</li>
+                  <li className="mb-2">✓ Progress Reports</li>
                   <li className="mb-2">✓ Parent Consultations</li>
                   <li className="mb-2">✓ Medicine/Dentistry Interview Prep</li>
                   <li className="mb-2">✓ University/Scholarship Application Support</li>

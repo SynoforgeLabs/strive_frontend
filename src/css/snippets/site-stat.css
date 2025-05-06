@@ -1,9 +1,13 @@
 #site-stat {
-    background-color: #85C5FF;
     height: auto;
     justify-content: center;
     align-items: center;
-    padding: 4rem 0;
+    padding: 6rem 0;
+    background-image: url('/public/Images/site-images/home/site-stats.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 80%;
+
   }
   
   .site-stat-sec {
@@ -15,6 +19,7 @@
     font-size: 2.25rem;
     justify-content: center;
     text-align: center;
+    color: #062A78;
   }
 
   .site-stat-comp-main {
@@ -37,7 +42,7 @@
   
   .s-stat-no {
     font-size: 3rem;
-    color: white;
+    color: black;
   }
   
   .s-stat-h {

@@ -6,15 +6,8 @@
   width: 100dvw;
 }
 
-nav {
-  border-radius: 1.5rem;
-  /* mobile
-  border-radius: 0; */
-}
-
 .navbar {
   background-color: white;
-  backdrop-filter: blur(10px);
 }
 
 .nav-sec {
@@ -23,6 +16,7 @@ nav {
 
 .navbar-expand-lg {
   padding: 1rem !important;
+  
 }
 
 .navbar-collapse {

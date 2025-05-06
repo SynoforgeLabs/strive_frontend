@@ -73,6 +73,17 @@
     width: 600px;
     margin-right: -40%;
     margin-top: -55%;
+    transform: translate3d(20%,15%,0);
+    border-radius: 1rem;
+
+  }
+
+  .private-tutoring-2 {
+    transform: translate3d(-30%,25%,0);
+    z-index: -1;
+    opacity: 30%;
+    filter: blur(5px);
+    border-radius: 1rem;
   }
   
   .bfs-img {
@@ -81,5 +92,18 @@
     width: 600px;
     margin-left: -40%;
     margin-top: -55%;
+    transform: translate3d(-30%,20%,0);
+    border-radius: 1rem;
+  }
+
+  .bfs-img-2 {
+    transform: translate3d(20%,25%,0);
+    z-index: -1;
+    opacity: 30%;
+    filter: blur(5px);
+    border-radius: 1rem;
   }
   
+
+  /* test */
+

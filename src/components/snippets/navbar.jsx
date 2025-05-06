@@ -5,9 +5,9 @@ function Navbar() {
 
   return (
     <div className="row w-100 d-flex nav-main g-0">
-      <div className="col-lg-8 col-md-12 col-sm-12 g-0 nav-sec">
-        <nav className="navbar navbar-expand-lg mt-lg-4 mt-md-0 mt-md-0">
-          <div className="container-fluid p-0">
+      <div className="col-12 g-0 nav-sec">
+        <nav className="navbar navbar-expand-lg">
+          <div className="container-fluid p-0 col-9">
             <a className="navbar-brand" href="/">Logo</a>
             <button
               className="navbar-toggler"
