@@ -126,7 +126,12 @@ function Services() {
           <div className="col-6 d-flex service-sub-r-col">
             <img
               src="/Images/site-images/home/home1.jpeg"
-              className="private-tutoring-img"
+              className="private-tutoring-img "
+              alt=""
+            />
+            <img
+              src="/Images/site-images/home/home1.jpeg"
+              className="private-tutoring-img private-tutoring-2 "
               alt=""
             />
           </div>
@@ -135,7 +140,7 @@ function Services() {
 
       <div className="row d-fex g-0 service-main">
         <div className="col-8 g-0 d-flex service-main-t">
-          <h1 className="col-7 offset-5 service-main-h">
+          <h1 className="col-7 fw-bold offset-5 service-main-h">
             Bring a Friend and Save!
           </h1>
           <span className="col-7 offset-5 text-right fw-light service-des">
@@ -152,6 +157,11 @@ function Services() {
 
         <div className="row col-8 d-flex g-0 service-sub-main">
           <div className="col-6 d-flex service-sub-r-col">
+            <img
+              src="/Images/site-images/home/home2.jpg"
+              className="bfs-img bfs-img-2"
+              alt=""
+            />
             <img
               src="/Images/site-images/home/home2.jpg"
               className="bfs-img"
