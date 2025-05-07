@@ -31,11 +31,6 @@ function UcatHdiw() {
                             </div>
                         </div>
                     </div>
-
-                    <div className="ucat-hdiw-btn-row fluid-container d-flex">
-                        <button className='btn btn-primary'>📃  Sign up for UCAT</button>
-                    </div>
-
             </div>
         </section>
     );
