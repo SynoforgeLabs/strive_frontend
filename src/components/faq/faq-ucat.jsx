@@ -31,12 +31,11 @@ function Ucat() {
                             class="accordion-collapse collapse"
                         >
                             <div class="accordion-body">
-                            You can get started by filling this form. 
-Once we establish a group of at least 4, and no more than 8 students, we will get the free academic skills consultation organised!
+                            You can get started by filling this form. <br /><br />
+                            Once we establish a group of at least 4, and no more than 8 students, we will get the free academic skills consultation organised!<br /><br />
+                            Once the free academic skills consultation is complete, you will start having weekly sessions with your group and expert tutor! <br /><br />
 
-Once the free academic skills consultation is complete, you will start having weekly sessions with your group and expert tutor! 
-
-Please note: the free academic skills consultation will not be offered if you are joining an existing group. 
+                            Please note: the free academic skills consultation will not be offered if you are joining an existing group. 
                             </div>
                         </div>
                     </div>
@@ -58,8 +57,8 @@ Please note: the free academic skills consultation will not be offered if you ar
                             class="accordion-collapse collapse"
                         >
                             <div class="accordion-body">
-                            You will need access to the Medify questionbank - the gold standard for UCAT questions. While we have no affiliation with Medify, we know that their questionbank closely represents the standard of questions on the UCAT exam. 
-You can purchase Medify using the following link: https://www.medify.com.au/ucat
+                            You will need access to the Medify questionbank - the gold standard for UCAT questions. While we have no affiliation with Medify, we know that their questionbank closely represents the standard of questions on the UCAT exam.<br /><br />
+                            You can purchase Medify using the following link: <strong><a href="https://www.medify.com.au/ucat">https://www.medify.com.au/ucat</a></strong>
                             </div>
                         </div>
                     </div>
@@ -81,9 +80,9 @@ You can purchase Medify using the following link: https://www.medify.com.au/ucat
                             class="accordion-collapse collapse"
                         >
                             <div class="accordion-body">
-                            You will never be charged before a session is completed. For the first lesson with your tutor, you will receive an invoice. Please ensure that this invoice is paid within 48 hours.
-You can make payment via credit/debit card, Google/Apple Pay or direct debit. We do not accept other payment methods.
-For sessions thereafter, your card will be charged automatically after each lesson. Stripe’s secure payment system handles all payments. Once your fees have been received, the tutor is paid immediately.
+                            You will never be charged before a session is completed. For the first lesson with your tutor, you will receive an invoice. Please ensure that this invoice is paid within 48 hours.<br /><br />
+                            You can make payment via credit/debit card, Google/Apple Pay or direct debit. We do not accept other payment methods.<br /><br />
+                            For sessions thereafter, your card will be charged automatically after each lesson. Stripe’s secure payment system handles all payments. Once your fees have been received, the tutor is paid immediately.
                             </div>
                         </div>
                     </div>
@@ -105,31 +104,9 @@ For sessions thereafter, your card will be charged automatically after each less
                             class="accordion-collapse collapse"
                         >
                             <div class="accordion-body">
-                            We understand that some students work best when they have 1-on-1 tutor support. 
-You can get started with private sessions for UCAT preparation by finding a tutor - please filter by subject - UCAT and select a suitable tutor. 
-Once you contact the tutor you select, they will then schedule a free academic skills consultation and once you complete this, you’re all set to start sessions!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item" id="faq-ucat-ac-item">
-                        <h2 class="accordion-header">
-                            <button
-                                class="btn primary-button d-flex fw-bold w-100 faq-ucat-q"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseucat5"
-                                aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapseucat5"
-                            >
-                                Do you have any policies, terms and conditions I need to be aware of?
-                            </button>
-                        </h2>
-                        <div
-                            id="panelsStayOpen-collapseucat5"
-                            class="accordion-collapse collapse"
-                        >
-                            <div class="accordion-body">
-                            There are several important policies outlined in our Terms and Conditions . As a Student or Tutor at Strive Academics, you agree to all terms set out in our Terms and Conditions.
+                            We understand that some students work best when they have 1-on-1 tutor support. <br /><br />
+                            You can get started with private sessions for UCAT preparation by finding a tutor - please filter by subject - UCAT and select a suitable tutor. <br /><br />
+                            Once you contact the tutor you select, they will then schedule a free academic skills consultation and once you complete this, you’re all set to start sessions!
                             </div>
                         </div>
                     </div>

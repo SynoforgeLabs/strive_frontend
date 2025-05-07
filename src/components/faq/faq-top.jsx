@@ -15,7 +15,23 @@ function Faqtop() {
                             </h2>
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
                             <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <p>There are several important policies outlines in our Terms and Conditions. As a Student or Tutor at Strive Academics, you agree to all terms set out in our Terms and Conditions.</p>
+
+                                <p>Here are a summary of 3 important policies:</p>
+
+                                <h5 class="fw-bold">Payment Policy</h5>
+                                <ul class="ps-4">
+                                    <li>You only pay for lessons after they happen.</li>
+                                    <li>The first lesson is invoiced via email and needs to be paid within 3 days (credit card or direct debit).</li>
+                                    <li>After that, payments are automatic (immediately after lesson completion and tutor confirmation).</li>
+                                    <li>You'll get a receipt for each payment.</li>
+                                    <li>Late payments are subject to fees and potential debt collection.
+                                        <ul class="ps-4">
+                                            <li>$30 late fee after 14 days.</li>
+                                            <li>Debt collection agency after 28 days.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                             </div>
                         </div>
@@ -29,7 +45,38 @@ function Faqtop() {
                             </h2>
                             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                             <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <h5 class="fw-bold">Cancellation Policy</h5>
+                                <ul class="ps-4">
+                                    <li>Lessons are considered final once arranged: This applies to both in-person and online sessions.</li>
+                                    <li>Notify immediately if you need to cancel: Regardless of the reason, you must inform the tutor as soon as possible.</li>
+                                    <li>Cancellation fees apply:
+                                        <ul class="ps-4">
+                                            <li>50% fee if notice is less than 24 hours and reason is not acceptable (see below).</li>
+                                            <li>No fee if notice is more than 1 hour and reason is acceptable (see below).</li>
+                                        </ul>
+                                    </li>
+                                    <li>Acceptable reasons for cancellation and reschedule (without fee):
+                                        <ul class="ps-4">
+                                            <li>Tutor cancels or is absent.</li>
+                                            <li>You are sick with a doctor's note.</li>
+                                            <li>You have an important and urgent un-reschedulable appointment.</li>
+                                            <li>You need to be in court.</li>
+                                            <li>You and the tutor agree to cancel without charge.</li>
+                                            <li>Unforeseen event that takes priority over the lesson.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Unacceptable reasons for cancellation (full fee applies):
+                                        <ul class="ps-4">
+                                            <li>You are late (including due to transport issues).</li>
+                                            <li>You have a foreseeable event that could be rescheduled (except court appearances).</li>
+                                            <li>You miss the lesson due to poor planning.</li>
+                                            <li>You have other work or study commitments.</li>
+                                            <li>You don't show up without explanation.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Insufficient notice (even with acceptable reason) incurs a fee: You must give at least 1 hour notice, or the cancellation fee applies.</li>
+                                    <li>Immediate notice is important: Even with an acceptable reason, if the late notice significantly inconveniences the tutor, you may still be charged.</li>
+                                </ul>
                             </div>
                             </div>
                         </div>
