@@ -2,6 +2,7 @@
     justify-content: center;
     background-image: url('/public/Images/site-images/com/site-top-new.png');
     background-repeat: no-repeat;
+    background-size: 100%;
     background-position-y: 10%;
 }
 
@@ -10,10 +11,12 @@
     margin: 20rem 0 !important;
     max-width: 2000px !important;
     height: fit-content !important;
+    margin-bottom: 10rem !important;
 }
 
 .aboutus-strive-logo {
-    transform: scale(35%);
+    transform: scale(45%);
+    margin-top: 2rem !important;
 }
 
 .aboutus-hero-main-h {
@@ -21,6 +24,7 @@
     justify-content: center;
     color: #0D2371;
     height: fit-content !important;
+    margin-top: 1rem !important;
 }
 
 .aboutus-hero-sub-h {
