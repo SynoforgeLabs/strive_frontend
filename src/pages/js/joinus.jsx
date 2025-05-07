@@ -10,6 +10,7 @@ const JoinusPage = () => {
       <Joinuscomponents.JoinusHero />
       <Joinuscomponents.JoinusQualities />
       <Joinuscomponents.JoinusPoints /> 
+      <Joinuscomponents.JoinusEnd />
     </div>
   );
 };

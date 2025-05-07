@@ -1,0 +1,33 @@
+.joinus-end-main {
+    justify-content: center;
+}
+
+.joinus-end-sec {
+    justify-content: center;
+    max-width: 2000px !important;
+    padding: 2rem 0;
+    display: flex;
+    padding-bottom: 4rem !important;
+}
+
+.joinus-end-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0D2371;
+    text-align: center;
+}
+
+.joinus-end-btn {
+    width: fit-content !important;
+    color: #FF3A3A !important;
+    background-color: transparent !important;
+    border-radius: 1rem !important;
+    border: 3px solid #FF3A3A !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+}
+
+.joinus-end-btn:hover {
+    background-color: #FF3A3A !important;
+    color: white !important;
+}

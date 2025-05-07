@@ -1,0 +1,15 @@
+import React from 'react';
+import "../../css/joinus/joinus-end.css";
+
+function JoinusEnd() {
+    return (
+        <section className="row container-fluid section d-flex g-0 joinus-end-main" id="joinus-end">
+            <div className="row col-lg-10 col-sm-12 d-flex joinus-end-sec">
+                <h1 className="joinus-end-heading">Ready to join our Team?</h1>
+                <button className="btn btn-primary mt-4 joinus-end-btn">Apply Now !</button>
+            </div>
+        </section>
+    );
+}
+
+export default JoinusEnd;

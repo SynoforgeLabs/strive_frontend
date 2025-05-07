@@ -8,10 +8,7 @@ function JoinusQualities() {
                 <div className="row d-flex flex-column">
                     {/* Requirements Column */}
                     <div className="col-12 d-flex justify-content-center joinus-qualitiy">
-                        <div className="joinus-qualities-image-right">
-                            <img className='joinus-qualities-image' src="/Images/site-images/join-us/join-us1.jpg" alt="Requirements checklist" />
-                        </div>
-                        <div className="joinus-qualities-content ps-lg-5">
+                        <div className="joinus-qualities-content ps-lg-5 order-sm-2 order-md-2 order-lg-1">
                             <h2 className="joinus-qualities-title mb-lg-4">What we look for ..</h2>
                             <p className="joinus-qualities-subtitle mb-4">
                                 We believe that for our students to be the best, they have to learn from
@@ -25,11 +22,18 @@ function JoinusQualities() {
                                 <li>Be able to run both private and small group sessions.</li>
                             </ul>
                         </div>
+                        <div className="joinus-qualities-image-left order-sm-1 order-md-1 order-lg-2">
+                            <img className='joinus-qualities-image' src="/Images/site-images/join-us/join-us1.svg" alt="Requirements checklist" />
+                        </div>
                     </div>
 
                     {/* Desirable Characteristics Column */}
                     <div className="col-12 d-flex mt-5 justify-content-center joinus-qualitiy">
-                        <div className="joinus-qualities-content order-sm-2 order-md-2 order-lg-1">
+                        
+                        <div className="joinus-qualities-image-left">
+                            <img className='joinus-qualities-image' src="/Images/site-images/join-us/join-us2.svg" alt="Happy tutor" />
+                        </div>
+                        <div className="joinus-qualities-content">
                             <h2 className="joinus-qualities-title mb-lg-4">Desirable characteristics ..</h2>
                             <ul className="joinus-qualities-list characteristics">
                                 <li>
@@ -51,9 +55,6 @@ function JoinusQualities() {
                                     university applications.
                                 </li>
                             </ul>
-                        </div>
-                        <div className="joinus-qualities-image-left order-sm-1 order-md-1 order-lg-2">
-                            <img className='joinus-qualities-image' src="/Images/site-images/join-us/join-us2.jpg" alt="Happy tutor" />
                         </div>
                     </div>
                 </div>
