@@ -75,7 +75,7 @@ function FindtTutors() {
                 <div className="row g-4 w-100">
                     {tutors.map((tutor) => (
                         <div key={tutor.id} className="col-xl-3 col-lg-4 col-md-6 col-12">
-                            <div className="findt-tutors-card">
+                            <a href="/tutor" className="findt-tutors-card">
                                 <div className="findt-tutors-stats">
                                     <span className="findt-tutors-gold">Gold ({tutor.goldPoints})</span>
                                     <span className="findt-tutors-atr">ATR ({tutor.atrPoints})</span>
@@ -88,8 +88,7 @@ function FindtTutors() {
                                 <p className="findt-tutors-description">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc viverra lectus et velit interdum.
                                 </p>
-                                <button className="findt-tutors-book-btn w-100 fw-bold">Book</button>
-                            </div>
+                            </a>
                         </div>
                     ))}
                 </div>
