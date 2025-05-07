@@ -44,7 +44,7 @@
   }
   
   #plan-h-gold {
-    background-color: #E6DDAA !important
+    background-color: #f7e2ab !important
   }
   
   #plan-h-platinum {
@@ -72,7 +72,7 @@
   }
   
   #plan-t-gold {
-    color: gold;
+    color: #CCAC00;
   }
   
   #plan-t-platinum {
@@ -93,7 +93,7 @@
   }
   
   #plan-gs-gold-btn {
-    background-color: gold !important;
+    background-color: #CCAC00 !important;
   }
   
   #plan-gs-platinum-btn {
@@ -128,7 +128,7 @@
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
-    border: 3px solid gold;
+    border: 3px solid #CCAC00;
     border-top: none;
     border-bottom: none;
   }
@@ -142,7 +142,7 @@
   }
   
   #grid-gold-price {
-    color: gold;
+    color: #CCAC00;
   }
   
   #grid-gold-price-des {
