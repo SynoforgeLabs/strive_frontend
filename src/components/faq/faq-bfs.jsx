@@ -31,10 +31,13 @@ function Bfs() {
                             class="accordion-collapse collapse"
                         >
                             <div class="accordion-body">
-                                All you need to do is follow these steps:
-                                1. Find a Tutor - reach out to a suitable tutor to request tutoring. We have limited spots available - lock it in early!
-                                2. Confirm that your friends would like to receive tutoring with you and fill out this form.
-                                3. Have your free academic consultation together and then start sessions! You’ll receive lessons as a group at a discounted rate (12.5% off per friend you bring along!)
+                                <strong>All you need to do is follow these steps:</strong>
+                                <br /><br />
+                                <ol>
+                                    <li>Find a Tutor - reach out to a suitable tutor to request tutoring. We have limited spots available - lock it in early!</li>
+                                    <li>Confirm that your friends would like to receive tutoring with you and fill out this <a href="#">form</a>.</li>
+                                    <li>Have your free academic consultation together and then start sessions! <strong>You'll receive lessons as a group at a discounted rate (12.5% off per friend you bring along!)</strong></li>
+                                </ol>
                             </div>
                         </div>
                     </div>
@@ -57,8 +60,11 @@ function Bfs() {
                         >
                             <div class="accordion-body">
                                 You will engage in your 30-minute free academic consultation as a group.
+                                <br /><br />
                                 The 30-minute free academic consultation is an opportunity for you to meet your tutor, agree upon how you would like sessions to run, and plan for success.
+                                <br /><br />
                                 Content is not covered during this session, as its purpose is to facilitate future sessions.
+                                <br /><br />
                                 The 30-minute free academic consultation is compulsory as it is essential to ensure that you and your friend(s) have been matched to a suitable tutor.
                             </div>
                         </div>
@@ -82,7 +88,8 @@ function Bfs() {
                         >
                             <div class="accordion-body">
                                 Absolutely! We believe that to be the best, you must learn from the best. For this reason, only hire tutors with ATAR results in the top 3% across Australia (our average tutor ATAR is well above 99). To ensure that tutors are qualified, experienced, and reliable, they must get through a rigorous interview process. We are confident that our tutors are amazing tutors and even better people.
-                                All tutors are also required to have current Working with Children’s Checks in line with our Terms and Conditions.
+                                <br /><br />
+                                All tutors are also required to have current Working with Children's Checks in line with our Terms and Conditions.
                             </div>
                         </div>
                     </div>
@@ -105,8 +112,10 @@ function Bfs() {
                         >
                             <div class="accordion-body">
                                 You will never be charged before a session is completed. For the first lesson with your tutor, you will receive an invoice. Please ensure that this invoice is paid within 48 hours.
+                                <br /><br />
                                 You can make payment via credit/debit card, Google/Apple Pay or direct debit. We do not accept other payment methods.
-                                For sessions thereafter, your card will be charged automatically after each lesson. Stripe’s secure payment system handles all payments. Once your fees have been received, the tutor is paid immediately.
+                                <br /><br />
+                                For sessions thereafter, your card will be charged automatically after each lesson. Stripe's secure payment system handles all payments. Once your fees have been received, the tutor is paid immediately.
                             </div>
                         </div>
                     </div>
@@ -172,19 +181,32 @@ function Bfs() {
                             class="accordion-collapse collapse"
                         >
                             <div class="accordion-body">
-                                You can save up to 37.5% depending on how many friends join you in sessions. If you bring 1 friend, you save 12.5% each. If you bring 2 friends, you save 25% each. If you bring 3 friends, you will save 37.5% each.
+                                <strong>You can save up to 37.5% depending on how many friends join you in sessions. If you bring 1 friend, you save 12.5% each. If you bring 2 friends, you save 25% each. If you bring 3 friends, you will save 37.5% each.</strong>
+                                <br /><br />
                                 What this looks like:
-                                Gold ($60/hr bfs sessions)
+                                <br /><br />
+                                <strong>Gold ($60/hr private sessions)</strong>
+                                <br />
                                 Bring 1 Friend: $52.5 each per hour
+                                <br />
                                 Bring 2 Friends: $45 each per hour
+                                <br />
                                 Bring 3 Friends: $37.5 each per hour
-                                Premium ($80/hr bfs sessions)
+                                <br /><br />
+                                <strong>Premium ($80/hr private sessions)</strong>
+                                <br />
                                 Bring 1 Friend: $70 each per hour
+                                <br />
                                 Bring 2 Friends: $60 each per hour
+                                <br />
                                 Bring 3 Friends: $50 each per hour
-                                Elite ($120/hr bfs sessions)
+                                <br /><br />
+                                <strong>Elite ($120/hr private sessions)</strong>
+                                <br />
                                 Bring 1 Friend: $105 each per hour
+                                <br />
                                 Bring 2 Friends: $90 each per hour
+                                <br />
                                 Bring 3 Friends: $75 each per hour
                             </div>
                         </div>
@@ -208,7 +230,9 @@ function Bfs() {
                         >
                             <div class="accordion-body">
                                 Communication between you, your group, and your tutor will be using whatever works best for you!
+                                <br /><br />
                                 This can be via text message, email or any suitable messaging application.
+                                <br /><br />
                                 Tutors will primarily maintain contact with students, however if you are the parents of young children that are receiving tutoring at Strive Academics, tutors can also reach out to you directly.
                             </div>
                         </div>
@@ -232,30 +256,8 @@ function Bfs() {
                         >
                             <div class="accordion-body">
                                 We completely understand that life can get in the way sometimes, and some sessions may need to be cancelled or rescheduled. We recommend rescheduling if possible as this enables continuity of learning which is extremely important.
+                                <br /><br />
                                 If you do need to cancel a session, please let your tutor know directly. Please do keep in mind that we have a Cancellation Policy,  and we have a 50% fee if notice is less than 24 hours and reason is not acceptable (see Cancellation Policy in our Terms and Conditions ).
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item" id="faq-bfs-ac-item">
-                        <h2 class="accordion-header">
-                            <button
-                                class="btn primary-button d-flex fw-bold w-100 faq-bfs-q"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapsebfs10"
-                                aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapsebfs10"
-                            >
-                                Do you have any policies, terms and conditions I need to be aware of?
-                            </button>
-                        </h2>
-                        <div
-                            id="panelsStayOpen-collapsebfs10"
-                            class="accordion-collapse collapse"
-                        >
-                            <div class="accordion-body">
-                                There are several important policies outlined in our Terms and Conditions . As a Student or Tutor at Strive Academics, you agree to all terms set out in our Terms and Conditions.
-                                Here are a summary of 3 important policies:
                             </div>
                         </div>
                     </div>

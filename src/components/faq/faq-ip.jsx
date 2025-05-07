@@ -54,6 +54,7 @@ function Ip() {
                         >
                             <div class="accordion-body">
                             We offer a series of 5 workshops that equip you will the skills you need to excel in both Multiple Mini Interview (MMI) and Panel medical/dental interviews. These sessions run on a fortnightly basis according to the schedule above at 10AM - 1PM AEST. All sessions run via Zoom.
+                            <br /><br />
                             We then offer mock interviews on a one-on-one basis.
                             </div>
                         </div>
@@ -99,8 +100,10 @@ function Ip() {
                         >
                             <div class="accordion-body">
                             You will never be charged before a session is completed. For the first lesson with your tutor, you will receive an invoice. Please ensure that this invoice is paid within 48 hours.
-You can make payment via credit/debit card, Google/Apple Pay or direct debit. We do not accept other payment methods.
-For sessions thereafter, your card will be charged automatically after each lesson. Stripe’s secure payment system handles all payments. Once your fees have been received, the tutor is paid immediately.
+                            <br /><br />
+                            You can make payment via credit/debit card, Google/Apple Pay or direct debit. We do not accept other payment methods.
+                            <br /><br />
+                            For sessions thereafter, your card will be charged automatically after each lesson. Stripe’s secure payment system handles all payments. Once your fees have been received, the tutor is paid immediately.
                             </div>
                         </div>
                     </div>
@@ -123,6 +126,7 @@ For sessions thereafter, your card will be charged automatically after each less
                         >
                             <div class="accordion-body">
                             The Bring a Friend and Save offer only applies to sessions organised by following the steps outlined on the Bring a Friend and Save page. 
+                            <br /><br />
                             If you would like to complete the workshops in smaller groups with friends, please note that we only offer interview preparation in the Premium and Elite Tiers, which means you will have to select a tutor from these two tiers and then follow the steps for Bring a Friend and Save. 
                             </div>
                         </div>
@@ -146,29 +150,6 @@ For sessions thereafter, your card will be charged automatically after each less
                         >
                             <div class="accordion-body">
                             Mock interviews run on a one-on-one basis following interview preparation workshops. Each mock interview includes a 20 minute period to assess your responses to general questions and scenarios, and then a 10 minute period to provide targeted and actionable feedback.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item" id="faq-ip-ac-item">
-                        <h2 class="accordion-header">
-                            <button
-                                class="btn primary-button d-flex fw-bold w-100 faq-ip-q"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseip7"
-                                aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapseip7"
-                            >
-                                Do you have any policies, terms and conditions I need to be aware of?
-                            </button>
-                        </h2>
-                        <div
-                            id="panelsStayOpen-collapseip7"
-                            class="accordion-collapse collapse"
-                        >
-                            <div class="accordion-body">
-                            There are several important policies outlined in our Terms and Conditions . As a Student or Tutor at Strive Academics, you agree to all terms set out in our Terms and Conditions.
-                            Here are a summary of 3 important policies:
                             </div>
                         </div>
                     </div>
