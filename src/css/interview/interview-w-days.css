@@ -8,89 +8,94 @@
     max-width: 2000px !important;
 }
 
-.interview-w-days-title {
+.interview-w-days-heading {
     color: #16205b;
     font-size: 2.7rem;
-    margin-bottom: 9rem !important;
+    text-align: center;
+    margin-bottom: 4rem !important;
+    font-weight: 700;
 }
 
-.interview-w-days-grid {
-    margin-top: 2rem;
+.interview-w-days-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+    border-radius: 1rem !important;
+    overflow: hidden;
+    border: none;
 }
 
-.interview-w-days-card {
-    background: transparent;
-    min-width: 180px;
-    min-height: 180px;
-    margin-bottom: 2rem;
+.interview-w-days-table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 1rem !important;
 }
 
-.interview-w-days-date-block {
-    margin-bottom: 0.5rem;
+.interview-w-days-table tbody tr:last-child td:last-child {
+    border-radius: 0 0 1rem 0 !important;
 }
 
-.interview-w-days-month {
-    color: #16205b;
+.interview-w-days-th,
+.interview-w-days-td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.interview-w-days-th {
+    background-color: #FF3A3A;
+    color: white;
+    border: none;
     font-size: 1.5rem;
-    letter-spacing: 0.05em;
 }
 
-.interview-w-days-day {
-    color: #f44336;
-    font-size: 2.8rem;
-    line-height: 1;
-    display: inline-block;
+.interview-w-days-td {
+    font-size: 1.2rem;
 }
 
-.interview-w-days-suffix {
-    font-size: 1.1rem;
-    color: #444;
-    vertical-align: super;
-    margin-left: 2px;
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    .interview-w-days-table,
+    .interview-w-days-table thead,
+    .interview-w-days-table tbody,
+    .interview-w-days-th,
+    .interview-w-days-td,
+    .interview-w-days-table tr {
+        display: block;
+    }
+
+    .interview-w-days-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .interview-w-days-table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 0.5rem;
+    }
+
+    .interview-w-days-td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+
+    .interview-w-days-td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    /* Labeling table cells for responsiveness */
+    .interview-w-days-td:nth-of-type(1):before { content: "Workshop Name"; }
+    .interview-w-days-td:nth-of-type(2):before { content: "Date"; }
+    .interview-w-days-td:nth-of-type(3):before { content: "Time"; }
 }
 
-.interview-w-days-weekday {
-    color: #16205b;
-    font-size: 1.1rem;
-    margin-top: 0.2rem;
-}
-
-.interview-w-days-label {
-    color: #111827;
-    font-size: 2rem;
-    margin-top: 0.5rem;
-}
-
-@media (max-width: 991.98px) {
-    .interview-w-days-title {
-        font-size: 2.1rem;
-    }
-    .interview-w-days-label {
-        font-size: 1.5rem;
-    }
-    .interview-w-days-day {
-        font-size: 2.1rem;
-    }
-    .interview-w-days-month {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .interview-w-days-title {
-        font-size: 1.5rem;
-    }
-    .interview-w-days-label {
-        font-size: 1.1rem;
-    }
-    .interview-w-days-day {
-        font-size: 1.5rem;
-    }
-    .interview-w-days-month {
-        font-size: 1rem;
-    }
-    .interview-w-days-card {
-        min-width: 120px;
-        min-height: 120px;
-    }
-}
