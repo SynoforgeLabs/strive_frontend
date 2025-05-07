@@ -4,8 +4,9 @@
 
 .interview-price-grid-sec {
     justify-content: center;
-    margin: 8rem 0 !important;
+    margin: 4rem 0 !important;
     max-width: 2000px !important;
+    margin-bottom: 2rem;
 }
 
 .interview-price-grid-sub-h {
@@ -13,7 +14,7 @@
     text-align: center;
     font-size: 1.75rem;
     color: #6B7280;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
     max-width: 1050px !important;
 }
 
