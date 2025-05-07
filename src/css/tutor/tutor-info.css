@@ -91,6 +91,7 @@
     transition: background-color 0.2s;
     cursor: pointer;
     white-space: nowrap;
+    border-radius: 1rem;
 }
 
 .tutor-info-consultation-btn:hover {
