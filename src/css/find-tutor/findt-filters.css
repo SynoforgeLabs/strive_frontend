@@ -1,6 +1,7 @@
 #findt-filters {
     justify-content: center;
     overflow: visible;
+    background-color: #ff3a3a;
 }
 
 
@@ -11,7 +12,7 @@
 }
 
 .findt-filter-h {
-     color: #0D2371;
+     color: white;
 }
 
 .indt-filter-main {

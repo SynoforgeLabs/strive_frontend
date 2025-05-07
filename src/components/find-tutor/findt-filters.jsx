@@ -244,7 +244,7 @@ function FindtFilters() {
                 </div>
 
                 {/* location Dropdown */}
-                <div className="col-3 d-flex findt-filter-main justify-content-center align-items-center gap-3" ref={subjectDropdownRef}>
+                <div className="col-3 d-flex findt-filter-main justify-content-center align-items-center gap-3" ref={locationDropdownRef}>
                     <span className="fw-bold findt-filter-h">Location</span>
                     <div className="dropdown">
                         <button 
@@ -258,10 +258,10 @@ function FindtFilters() {
                         
                         {locationDropdown.isOpen && (
                             <ul className="dropdown-menu show">
-                                <li><button className="dropdown-item" onClick={() => handleSubjectSelect("location1")}>location 1</button></li>
-                                <li><button className="dropdown-item" onClick={() => handleSubjectSelect("location2")}>location 2</button></li>
-                                <li><button className="dropdown-item" onClick={() => handleSubjectSelect("location3")}>location 3</button></li>
-                                <li><button className="dropdown-item" onClick={() => handleSubjectSelect("location4")}>location 4</button></li>
+                                <li><button className="dropdown-item" onClick={() => handleLocationSelect("location1")}>location 1</button></li>
+                                <li><button className="dropdown-item" onClick={() => handleLocationSelect("location2")}>location 2</button></li>
+                                <li><button className="dropdown-item" onClick={() => handleLocationSelect("location3")}>location 3</button></li>
+                                <li><button className="dropdown-item" onClick={() => handleLocationSelect("location4")}>location 4</button></li>
                             </ul>
                         )}
                     </div>
