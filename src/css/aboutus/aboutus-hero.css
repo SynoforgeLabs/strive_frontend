@@ -1,12 +1,15 @@
 #aboutus_hero {
-    justify-content: center;;
+    justify-content: center;
+    background-image: url('/public/Images/site-images/com/site-top-new.png');
+    background-repeat: no-repeat;
+    background-position-y: 10%;
 }
-
 
 .aboutus-hero-top {
     justify-content: center;
-    margin: 10rem 0 !important;
+    margin: 20rem 0 !important;
     max-width: 2000px !important;
+    height: fit-content !important;
 }
 
 .aboutus-strive-logo {
@@ -17,6 +20,7 @@
     margin-top: -3rem !important;
     justify-content: center;
     color: #0D2371;
+    height: fit-content !important;
 }
 
 .aboutus-hero-sub-h {

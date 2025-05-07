@@ -16,13 +16,13 @@ function Points() {
                         </span>
                     </div>
                     <div className="col-6 d-flex aboutus-point-img-main">
-                        <img src="/Images/site-images/about-us/aboutus-1.jpg" alt="" className="aboutus-point-img" id="aboutus-point1-img"/>
+                        <img src="/Images/site-images/about-us/aboutus-1.svg" alt="" className="aboutus-point-img" id="aboutus-point1-img"/>
                     </div>
                 </div>
 
                 <div className="row d-flex about-us-point-main" >
                     <div className="col-6 d-flex aboutus-point-img-main">
-                        <img src="/Images/site-images/about-us/aboutus-2.jpg" alt="" className="aboutus-point-img" id="aboutus-point2-img"/>
+                        <img src="/Images/site-images/about-us/aboutus-2.svg" alt="" className="aboutus-point-img" id="aboutus-point2-img"/>
                     </div>
                     <div className="col-6 d-flex about-us-point-con">
                         <h1 className="fw-bold d-flex mb-3 aboutus-point-main-h" id="aboutus-point-r">
@@ -44,13 +44,13 @@ function Points() {
                         </span>
                     </div>
                     <div className="col-6 d-flex aboutus-point-img-main">
-                        <img src="/Images/site-images/about-us/aboutus-3.jpg" alt="" className="aboutus-point-img" id="aboutus-point3-img"/>
+                        <img src="/Images/site-images/about-us/aboutus-3.svg" alt="" className="aboutus-point-img" id="aboutus-point3-img"/>
                     </div>
                 </div>
 
                 <div className="row d-flex about-us-point-main" >
                     <div className="col-6 d-flex aboutus-point-img-main">
-                        <img src="/Images/site-images/about-us/aboutus-4.jpg" alt="" className="aboutus-point-img" id="aboutus-point4-img"/>
+                        <img src="/Images/site-images/about-us/aboutus-4.svg" alt="" className="aboutus-point-img" id="aboutus-point4-img"/>
                     </div>
                     <div className="col-6 d-flex about-us-point-con">
                         <h1 className="fw-bold d-flex mb-3 aboutus-point-main-h" id="aboutus-point-r">
@@ -72,7 +72,7 @@ function Points() {
                         </span>
                     </div>
                     <div className="col-6 d-flex aboutus-point-img-main">
-                        <img src="/Images/site-images/about-us/aboutus-5.jpg" alt="" className="aboutus-point-img" id="aboutus-point5-img"/>
+                        <img src="/Images/site-images/about-us/aboutus-5.svg" alt="" className="aboutus-point-img" id="aboutus-point5-img"/>
                     </div>
                 </div>
 

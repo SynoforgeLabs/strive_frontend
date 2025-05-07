@@ -28,7 +28,7 @@ function Private() {
                         </h2>
                         <div
                             id="panelsStayOpen-collapseP1"
-                            class="accordion-collapse collapse show"
+                            class="accordion-collapse collapse"
                         >
                             <div class="accordion-body">
                                 Private tutoring is where you can receive personalised, structured, results-oriented support for your school subjects following a schedule that is convenient to you.

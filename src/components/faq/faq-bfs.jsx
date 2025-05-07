@@ -28,7 +28,7 @@ function Bfs() {
                         </h2>
                         <div
                             id="panelsStayOpen-collapsebfs1"
-                            class="accordion-collapse collapse show"
+                            class="accordion-collapse collapse"
                         >
                             <div class="accordion-body">
                                 All you need to do is follow these steps:

@@ -28,7 +28,7 @@ function Ip() {
                         </h2>
                         <div
                             id="panelsStayOpen-collapseip1"
-                            class="accordion-collapse collapse show"
+                            class="accordion-collapse collapse"
                         >
                             <div class="accordion-body">
                             You can get started by filling out this form to confirm attendance in our interview preparation workshops.

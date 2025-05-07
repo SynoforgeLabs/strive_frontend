@@ -6,7 +6,7 @@ function UcatPricegrid() {
         <>
             <section className="row container-fluid section d-flex g-0 z-index-0 ucat-price-grid-main" id="ucat-price-grid">
                 <div className="row col-11 col-lg-9 d-flex ucat-price-grid-sec">
-                    <h3 className="ucat-prce-grid-heading">Why Choose Us ?</h3>
+                    <h3 className="ucat-price-grid-heading">Why Choose Us ?</h3>
                     <div className="ucat-price-grid d-grid">
                         <div className="col"></div>
                         <div className="col ucat-price-grid-header" id='ucat-price-grid-gold'>

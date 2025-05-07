@@ -1,6 +1,6 @@
 #aboutus_end {
     justify-content: center;
-    margin-bottom: 5rem;
+    margin: 5rem 0;
 }
 
 .aboutus-end-sec {
@@ -9,9 +9,15 @@
     max-width: 2000px !important;
 }
 
+.aboutus-end-img {
+    transform: translateY(30rem);
+    z-index: -1;
+}
+
 .aboutus-end-main-h {
     margin-bottom: 3rem;
     color: #0D2371;
+    margin-top: -10rem;
 }
 
 .aboutus-end-des {

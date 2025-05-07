@@ -1,32 +1,107 @@
-/* Main container styles */
-.b-friend-container {
-    width: 100%;
-    overflow: hidden;
+#b-friend-hero {
+  justify-content: center;
+  background-image: url('/public/Images/site-images/com/site-top-sec.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position-y: 5rem;
+}
+
+.b-friend-hero-sec {
+  justify-content: center;
+  margin: 10rem 0 0 !important;
+  max-width: 2000px !important;
+}
+
+.b-friend-hero-main {
+  background-color: #0D2371;
+  display: flex;
+  align-items: center;
+  padding: 7rem 0;
+  overflow: hidden;
+}
+
+.b-friend-hero-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 50l-10-10 10-10 10 10-10 10zm0 0l10 10-10 10-10-10 10-10z' stroke='%23ffffff20' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.b-friend-hero-content {
+  position: relative;
+  z-index: 1;
+  /* max-width: 800px; */
+  padding: 0 1rem;
+}
+
+.b-friend-hero-title {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.b-friend-hero-subtitle-wrapper {
+  padding: 5rem 0;
+  justify-content: center;
+}
+
+.b-friend-hero-subtitle {
+  color: #1a1a1a;
+  font-size: 2.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+  margin: 0;
+  max-width: 1000px !important;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .b-friend-hero-subtitle {
+      font-size: 2.25rem;
   }
-  
-  /* Hero section styles */
-  .b-friend-hero {
-    background-color: #0D2371;
-    color: white;
-    padding: 150px 0;
-    text-align: center;
-    /* background-image: url('/assets/images/academic-pattern.png'); */
-    background-size: contain;
-    background-position: left;
-    background-repeat: no-repeat;
-  }
-  
-  .b-friend-hero h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    margin-right: 10%;
-    padding-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .b-friend-hero-main {
+      padding: 3rem 0;
+      min-height: 250px;
   }
 
-  .b-friend-hero-sub-h {
-    justify-content: center;
-    margin-top: 3rem;
-    color: #0D2371;
+  .b-friend-hero-pattern {
+      width: 100%;
   }
-  
+
+  .b-friend-hero-title {
+      font-size: 2.5rem;
+  }
+
+  .b-friend-hero-subtitle-wrapper {
+      padding: 4rem 1.5rem;
+  }
+
+  .b-friend-hero-subtitle {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .b-friend-hero-main {
+      padding: 2.5rem 0;
+      min-height: 200px;
+  }
+
+  .b-friend-hero-title {
+      font-size: 2rem;
+  }
+
+  .b-friend-hero-subtitle-wrapper {
+      padding: 3rem 1rem;
+  }
+
+  .b-friend-hero-subtitle {
+      font-size: 1.75rem;
+  }
+}

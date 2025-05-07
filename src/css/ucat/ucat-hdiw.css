@@ -5,7 +5,7 @@
 .ucat-hdiw-main {
     display: flex;
     align-items: center;
-    padding: 6rem 0;
+    padding: 4rem 0;
     overflow: hidden;
 }
 
@@ -16,11 +16,20 @@
 }
 
 .ucat-hdiw-title {
-    color: #16205b;
+    font-size: 2.7rem !important;
+    font-weight: 800;
+    color: #0D2371;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .ucat-hdiw-number {
     color: #f44336;
+}
+
+.ucat-hdiw-step-text {
+    font-size: 1.125rem;
+    line-height: 1.7;
 }
 
 .ucat-hdiw-btn-row {

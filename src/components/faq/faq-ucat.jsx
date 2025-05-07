@@ -28,7 +28,7 @@ function Ucat() {
                         </h2>
                         <div
                             id="panelsStayOpen-collapseucat1"
-                            class="accordion-collapse collapse show"
+                            class="accordion-collapse collapse"
                         >
                             <div class="accordion-body">
                             You can get started by filling this form. 

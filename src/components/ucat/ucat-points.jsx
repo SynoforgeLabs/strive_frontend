@@ -7,7 +7,7 @@ function UcatPoints() {
             <section className="row container-fluid section d-flex g-0 z-index-0 ucat-points-main" id="ucat-points">
                 <div className="row col-11 col-lg-9 d-flex flex-column ucat-points-sec">
                     {/* First Point */}
-                    <div className="row align-items-center mb-5">
+                    <div className="row align-items-center svg">
                         <div className="col-12 col-lg-6 mb-4 mb-lg-0">
                             <div className="ucat-points-content">
                                 <h2 className="ucat-points-title mb-4">Proven Results</h2>
@@ -19,7 +19,7 @@ function UcatPoints() {
                         </div>
                         <div className="col-12 col-lg-6 text-center">
                             <img 
-                                src="/Images/site-images/ucat/ucat1.jpg"
+                                src="/Images/site-images/ucat/ucat1.svg"
                                 alt="Students achieving high scores" 
                                 className="ucat-points-image img-fluid"
                             />
@@ -30,7 +30,7 @@ function UcatPoints() {
                     <div className="row align-items-center flex-column-reverse flex-lg-row">
                         <div className="col-12 col-lg-6 text-center">
                             <img 
-                                src="/Images/site-images/ucat/ucat2.jpg" 
+                                src="/Images/site-images/ucat/ucat2.svg" 
                                 alt="Exam tested strategies" 
                                 className="ucat-points-image img-fluid"
                             />
@@ -46,7 +46,7 @@ function UcatPoints() {
                         </div>
                     </div>
                     {/* Third Point */}
-                    <div className="row align-items-center mb-5">
+                    <div className="row align-items-center svg">
                         <div className="col-12 col-lg-6 mb-4 mb-lg-0">
                             <div className="ucat-points-content">
                                 <h2 className="ucat-points-title mb-4">Interview Success</h2>
@@ -57,7 +57,7 @@ function UcatPoints() {
                         </div>
                         <div className="col-12 col-lg-6 text-center">
                             <img 
-                                src="/Images/site-images/ucat/ucat3.jpg" 
+                                src="/Images/site-images/ucat/ucat3.svg" 
                                 alt="Students achieving high scores" 
                                 className="ucat-points-image img-fluid"
                             />
@@ -68,7 +68,7 @@ function UcatPoints() {
                     <div className="row align-items-center flex-column-reverse flex-lg-row">
                         <div className="col-12 col-lg-6 text-center">
                             <img 
-                                src="/Images/site-images/ucat/ucat4.jpg" 
+                                src="/Images/site-images/ucat/ucat4.svg" 
                                 alt="Exam tested strategies" 
                                 className="ucat-points-image img-fluid"
                             />
@@ -83,7 +83,7 @@ function UcatPoints() {
                         </div>
                     </div>
                     {/* Fifth Point */}
-                    <div className="row align-items-center mb-5">
+                    <div className="row align-items-center svg">
                         <div className="col-12 col-lg-6 mb-4 mb-lg-0">
                             <div className="ucat-points-content">
                                 <h2 className="ucat-points-title mb-4">Rigorous Tutor Selection</h2>
@@ -94,7 +94,7 @@ function UcatPoints() {
                         </div>
                         <div className="col-12 col-lg-6 text-center">
                             <img 
-                                src="/Images/site-images/ucat/ucat5.jpg" 
+                                src="/Images/site-images/ucat/ucat5.svg" 
                                 alt="Students achieving high scores" 
                                 className="ucat-points-image img-fluid"
                             />
@@ -105,7 +105,7 @@ function UcatPoints() {
                     <div className="row align-items-center flex-column-reverse flex-lg-row">
                         <div className="col-12 col-lg-6 text-center">
                             <img 
-                                src="/Images/site-images/ucat/ucat6.jpg" 
+                                src="/Images/site-images/ucat/ucat6.svg" 
                                 alt="Exam tested strategies" 
                                 className="ucat-points-image img-fluid"
                             />
