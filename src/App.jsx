@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ContactFormOverlay } from './components/snippets/snippets-index';
 
 import HomePage from './pages/js/home';
 import AboutusPage from './pages/js/aboutus';
@@ -15,25 +16,26 @@ import UcatPage from './pages/js/ucat';
 
 const App = () => {
   return (
+    <>
+      <ContactFormOverlay />
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/aboutus" element={<AboutusPage />} />
+          <Route path="/faq" element={<FaqPage />} />
+          <Route path="/reviews" element={<ReviewsPage />} />
+          <Route path="/find-a-tutor" element={<FindtPage />} />
+          <Route path="/join-us" element={<JoinusPage />} />
+          <Route path="/tutor" element={<TutorPage />} />
+          <Route path="/bring-a-friend-and-save" element={<BFriendPage />} />
+          <Route path="/interview-preperation" element={<InterviewPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/ucat" element={<UcatPage />} />
 
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/aboutus" element={<AboutusPage />} />
-        <Route path="/faq" element={<FaqPage />} />
-        <Route path="/reviews" element={<ReviewsPage />} />
-        <Route path="/find-a-tutor" element={<FindtPage />} />
-        <Route path="/join-us" element={<JoinusPage />} />
-        <Route path="/tutor" element={<TutorPage />} />
-        <Route path="/bring-a-friend-and-save" element={<BFriendPage />} />
-        <Route path="/interview-preperation" element={<InterviewPage />} />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/ucat" element={<UcatPage />} />
-
-        {/* Add more routes here, like <Route path="/about" element={<AboutPage />} /> */}
-      </Routes>
-    </Router>
-
+          {/* Add more routes here, like <Route path="/about" element={<AboutPage />} /> */}
+        </Routes>
+      </Router>
+    </>
   );
 };
 

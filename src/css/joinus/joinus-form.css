@@ -1,0 +1,233 @@
+/* Form Overlay */
+.joinus-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.joinus-form-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Form Container */
+.joinus-form-container {
+  background-color: white;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  position: relative;
+}
+
+/* Form Header */
+.joinus-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+
+.joinus-form-header h2 {
+  margin: 0;
+  color: #0D2371;
+  font-weight: 700;
+}
+
+/* Form Termination Message */
+.joinus-form-termination {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.joinus-form-termination p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #dc3545;
+}
+
+/* Form Steps Indicator */
+.joinus-form-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Line connecting steps */
+.joinus-form-steps::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #e9ecef;
+  z-index: 1;
+}
+
+.joinus-form-step-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  text-align: center;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.step-label {
+  font-size: 0.75rem;
+  color: #6c757d;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Active Step Styles */
+.joinus-form-step-indicator.active .step-number {
+  background-color: #FF3A3A;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 58, 58, 0.3);
+}
+
+.joinus-form-step-indicator.active .step-label {
+  color: #212529;
+  font-weight: 600;
+}
+
+/* Completed Step Styles */
+.joinus-form-step-indicator.completed .step-number {
+  background-color: #28a745;
+  color: white;
+}
+
+.joinus-form-step-indicator.completed .step-label {
+  color: #28a745;
+}
+
+/* Form Content */
+.joinus-form-content {
+  margin-bottom: 1rem;
+}
+
+.joinus-form-step h3 {
+  color: #0D2371;
+  font-weight: 600;
+}
+
+/* Form Checkbox Groups */
+.joinus-form-checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.joinus-form-checkbox-group.is-invalid {
+  padding: 0.5rem;
+  border: 1px solid #dc3545;
+  border-radius: 0.25rem;
+}
+
+/* Form Buttons */
+.joinus-form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.joinus-form-buttons button {
+  min-width: 120px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border-radius: .75rem;
+}
+
+.joinus-form-buttons .btn-primary {
+  background-color: #0D2371;
+  border-color: #0D2371;
+}
+
+.joinus-form-buttons .btn-success {
+  background-color: #FF3A3A;
+  border-color: #FF3A3A;
+}
+
+.joinus-form-buttons .btn-primary:hover,
+.joinus-form-buttons .btn-success:hover {
+  opacity: 0.9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .joinus-form-container {
+    padding: 1.5rem;
+    width: 95%;
+  }
+  
+  .joinus-form-checkbox-group {
+    grid-template-columns: 1fr;
+  }
+  
+  .joinus-form-buttons button {
+    min-width: 100px;
+  }
+  
+  .step-label {
+    font-size: 0.65rem;
+  }
+  
+  .step-number {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .joinus-form-steps::before {
+    top: 20px;
+  }
+  
+  .step-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
+  
+  .step-label {
+    font-size: 0.6rem;
+  }
+} 
