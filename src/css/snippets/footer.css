@@ -1,0 +1,88 @@
+/* Basic styles for the bootom-footer */
+.bootom-footer-wrapper {
+  background-color: #0C1759 !important;
+  color: white;
+}
+
+/* Logo */
+.bootom-footer-logo {
+    width: 160px;
+    height: auto;
+}
+
+/* Links */
+.bootom-footer-link {
+  color: white;
+  text-decoration: none;
+}
+
+.bootom-footer-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.bootom-footer-social {
+    display: flex;
+    align-items: center;
+}
+
+/* Social icons */
+.bootom-footer-social-link {
+  background-color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bootom-footer-social-link svg {
+  color: #0C1759;
+}
+
+/* Buttons */
+.bootom-footer-btn-become,
+.bootom-footer-btn-find {
+  min-width: 160px !important;
+  padding: .5rem 1rem !important;
+  font-size: 1rem !important;
+  text-align: center;
+  border-radius: 1rem !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+.bootom-footer-btn-become {
+  color: #85C5FF !important;
+  border: 3px solid #85C5FF !important;
+}
+
+.bootom-footer-btn-become:hover {
+  background-color: #85C5FF !important;
+  color: white !important;
+}
+
+.bootom-footer-btn-find {
+  background-color: transparent;
+  color: #FF5757 !important;
+  border: 3px solid #FF5757 !important;
+}
+
+.bootom-footer-btn-find:hover {
+  background-color: #FF5757 !important;
+  color: white !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bootom-footer-brand-section {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .bootom-footer-social {
+    justify-content: center;
+  }
+}

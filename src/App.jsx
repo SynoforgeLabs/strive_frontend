@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ContactFormOverlay } from './components/snippets/snippets-index';
+import { ContactFormOverlay, Footer } from './components/snippets/snippets-index';
 
 import HomePage from './pages/js/home';
 import AboutusPage from './pages/js/aboutus';
@@ -13,6 +13,7 @@ import BFriendPage from './pages/js/b-friend';
 import InterviewPage from './pages/js/interview';  
 import PricingPage from './pages/js/pricing';  
 import UcatPage from './pages/js/ucat';  
+import TermsPage from './pages/js/terms';
 
 const App = () => {
   return (
@@ -31,8 +32,9 @@ const App = () => {
           <Route path="/interview-preperation" element={<InterviewPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/ucat" element={<UcatPage />} />
-
+          <Route path="/terms" element={<TermsPage />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );

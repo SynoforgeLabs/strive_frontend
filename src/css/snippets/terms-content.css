@@ -1,0 +1,123 @@
+/* Terms and Conditions Content Styles */
+.terms-content {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  line-height: 1.6;
+}
+
+.terms-section-title {
+  color: #0C1759;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 2rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.terms-section-title:first-child {
+  margin-top: 0;
+}
+
+.terms-section-subtitle {
+  color: #0C1759;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1.5rem 0 1rem;
+}
+
+.terms-content p {
+  margin-bottom: 1rem;
+  color: #343a40;
+}
+
+.terms-content ul, 
+.terms-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.terms-content li {
+  margin-bottom: 0.5rem;
+  color: #343a40;
+}
+
+.terms-pricing-table {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-left: 4px solid #0C1759;
+}
+
+.terms-pricing-table h4 {
+  color: #0C1759;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem;
+}
+
+.terms-pricing-table h4:first-child {
+  margin-top: 0;
+}
+
+.terms-appendix-list {
+  padding-left: 1.5rem;
+  counter-reset: item;
+  list-style-type: decimal;
+}
+
+.terms-appendix-list li {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Responsive styles */
+@media (max-width: 991.98px) {
+  .terms-section-title {
+    font-size: 1.6rem;
+  }
+  
+  .terms-section-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .terms-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .terms-content {
+    padding: 1.5rem;
+  }
+  
+  .terms-section-title {
+    font-size: 1.4rem;
+    margin: 1.5rem 0 1rem;
+  }
+  
+  .terms-section-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .terms-content {
+    padding: 1.25rem;
+    border-radius: 6px;
+  }
+  
+  .terms-section-title {
+    font-size: 1.3rem;
+  }
+  
+  .terms-section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .terms-pricing-table {
+    padding: 1rem;
+  }
+} 
