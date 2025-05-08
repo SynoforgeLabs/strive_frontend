@@ -32,7 +32,6 @@ const App = () => {
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/ucat" element={<UcatPage />} />
 
-          {/* Add more routes here, like <Route path="/about" element={<AboutPage />} /> */}
         </Routes>
       </Router>
     </>
