@@ -8,7 +8,9 @@ function Navbar() {
       <div className="col-12 g-0 nav-sec">
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid p-0 col-9">
-            <a className="navbar-brand" href="/">Logo</a>
+            <a className="navbar-brand" href="/">
+              <img src="/Images/logo/logo1.png" alt="" className="nav-logo" />
+            </a>
             <button
               className="navbar-toggler"
               type="button"
@@ -51,7 +53,7 @@ function Navbar() {
                     Tutoring
                   </a>
                   <ul className="dropdown-menu nav-item-drop-down" id="nav-Tu-dd">
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="/pricing">Private Tutoring</a></li>
+                    <li><a className="dropdown-item nav-item-drop-=own-item" href="/find-a-tutor">Private Tutoring</a></li>
                     <li><a className="dropdown-item nav-item-drop-down-item" href="/bring-a-friend-and-save">Bring a Friend and save</a></li>
                   </ul>
                 </li>

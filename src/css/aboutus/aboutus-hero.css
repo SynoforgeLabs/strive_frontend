@@ -10,8 +10,8 @@
     justify-content: center;
     margin: 20rem 0 !important;
     max-width: 2000px !important;
-    height: fit-content !important;
     margin-bottom: 10rem !important;
+    transform: scale(140%);
 }
 
 .aboutus-strive-logo {

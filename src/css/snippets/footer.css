@@ -4,6 +4,47 @@
   color: white;
 }
 
+/* Top Searches Section */
+.bootom-footer-top-searches {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+}
+
+.bootom-footer-top-searches h2 {
+  color: #0C1759;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.bootom-footer-top-searches h3 {
+  color: #FF3A3A;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.bootom-footer-search-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bootom-footer-search-item {
+  margin-bottom: 0.5rem;
+}
+
+.bootom-footer-search-link {
+  color: #2c3e50;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.bootom-footer-search-link:hover {
+  color: #3498db;
+}
+
 /* Logo */
 .bootom-footer-logo {
     width: 160px;
@@ -84,5 +125,21 @@
   
   .bootom-footer-social {
     justify-content: center;
+  }
+  
+  .bootom-footer-top-searches h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .bootom-footer-top-searches h3 {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .bootom-footer-search-list {
+    text-align: center;
+    margin-bottom: 1.5rem;
   }
 }
