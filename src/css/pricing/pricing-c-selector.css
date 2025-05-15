@@ -15,19 +15,20 @@
 }
 
 .pricing-c-selector-wrapper {
-    background: #ededed;
-    border-radius: 1.5rem;
+    border: 2px solid white;
+    border-bottom: none !important;
+    border-radius: 1.5rem 1.5rem 0 0 ;
     display: flex;
     width: fit-content;
     min-width: 320px;
     justify-content: space-between;
-    padding: 0.5rem 0.5rem !important;
+    padding: 0.5rem 0.5rem 0 0.5rem!important;
 }
 
 .pricing-c-selector-btn {
     background: transparent;
     border: none;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0 0 !important;
     padding: 1rem 2rem 0.5rem 2rem;
     margin: 0 0.25rem;
     transition: background 0.2s, color 0.2s;
@@ -44,22 +45,12 @@
 .pricing-c-selector-btn-active {
     background: #ff3a3a !important;
     color: #fff;
-    border-radius: 0 !important;
 }
 
 .pricing-c-selector-btn:active {
     border-color: #ff3a3a !important;
-    border-radius: 0;
 }
 
-.pricing-c-selector-btn-active:first-of-type {
-    border-radius: 1rem 0 0 1rem !important;
-}
-
-
-.pricing-c-selector-btn-active:last-of-type {
-    border-radius: 0 1rem 1rem 0 !important;
-}
 
 
 .pricing-c-selector-btn-active .pricing-c-selector-label {
@@ -68,7 +59,7 @@
 
 .pricing-c-selector-label {
     font-size: 1.2rem;
-    color: #111;
+    color: white;
 }
 
 .pricing-c-selector-btn-active .pricing-c-selector-sub {

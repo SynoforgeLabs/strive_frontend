@@ -154,9 +154,9 @@ const Footer = () => {
             <div className="col-lg-4 col-md-6">
               <div className="d-flex align-items-center gap-3 bootom-footer-brand-section">
                 <img 
-                  src="/Images/logo/logo1.png" 
+                  src="Images/logo/logo-v/logo-v-w.svg" 
                   alt="Strive Academics" 
-                  className="bootom-footer-logo mb-3"
+                  className="bootom-footer-logo mb-3 me-3"
                 />
                 
                 <div className="bootom-footer-contact-info">

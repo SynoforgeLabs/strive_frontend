@@ -71,19 +71,17 @@
   .private-tutoring-img {
     height: auto;
     width: 600px;
-    margin-right: -40%;
-    margin-top: -55%;
-    transform: translate3d(20%,15%,0);
     border-radius: 1rem;
+    transform: translate3d(15%,0,0);
 
   }
 
   .private-tutoring-2 {
-    transform: translate3d(-30%,25%,0);
+    position: absolute;
     z-index: -1;
     opacity: 30%;
     filter: blur(5px);
-    border-radius: 1rem;
+    transform: translate3d(20%,10%,0);
   }
   
   .bfs-img {

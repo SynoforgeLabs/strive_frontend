@@ -9,8 +9,6 @@ const PricingPage = () => {
       <Snippets.Navbar />
       {/* pricing page hero */}
       <Pricingcomponents.PricingHero />
-      {/* pricing page c selector */}
-      <Pricingcomponents.PricingCSelector />
       {/* pricing page price gridd */}
       <Pricingcomponents.PricingPricegrid />
       {/* pricing page how do it work */}

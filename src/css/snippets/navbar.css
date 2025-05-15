@@ -20,9 +20,11 @@
   
 }
 
+
 .nav-logo {
-  height: 50px;
+  height: 10px;
   width: auto;
+  transform: scale(3000%);
 }
 
 .navbar-collapse {
@@ -78,8 +80,9 @@
 .nav-item-drop-down-item {
   display: flex !important;
   justify-content: center;
-  color: rgb(255, 58, 58) !important;
+  color: #333333 !important;
   padding: 0.75rem 1rem !important;
+  transition: 0.3s ease-in-out;
 }
 
 .nav-item-drop-down-item:hover {

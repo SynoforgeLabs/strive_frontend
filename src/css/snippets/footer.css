@@ -49,6 +49,7 @@
 .bootom-footer-logo {
     width: 160px;
     height: auto;
+    transform: scale(1.6);
 }
 
 /* Links */
