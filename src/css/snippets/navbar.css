@@ -46,6 +46,15 @@
   padding: 1rem; */
 }
 
+.login-signup-links {
+  white-space: nowrap;
+}
+
+.login-signup-links .nav-link {
+  display: inline-block;
+  margin: 0 2px;
+}
+
 .nav-link {
   color: #333333 !important;
   font-size: 20px !important;

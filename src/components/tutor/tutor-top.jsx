@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "../../css/tutor/tutor-top.css";
+import TutorContact from './tutor-contact';
 
 function TutorTop() {
+    const [showContactModal, setShowContactModal] = useState(false);
+    
+    const handleOpenContact = () => {
+        setShowContactModal(true);
+    };
+    
+    const handleCloseContact = () => {
+        setShowContactModal(false);
+    };
+    
     return (
         <section className="row container-fluid section d-flex justify-content-center g-0 tutor-top-main" id="tutor-top">
             <div className="row col-lg-10 col-md-11 col-sm-12 d-flex tutor-top-sec">
@@ -30,7 +41,7 @@ function TutorTop() {
                                     <h1 className="tutor-top-name m-0">Enola Holmes</h1>
                                     <span className="tutor-top-badge">Gold (30$/h)</span>
                                 </div>
-                                <button className="tutor-top-contact">Contact Me</button>
+                                <button className="tutor-top-contact" onClick={handleOpenContact}>Contact Me</button>
                             </div>
                         </div>
                         
@@ -43,6 +54,21 @@ function TutorTop() {
                     </div>
                 </div>
             </div>
+            
+            <TutorContact 
+                isOpen={showContactModal}
+                onClose={handleCloseContact}
+                tutorName="Enola Holmes"
+                tutorSubjects={[
+                    "IB Chemistry HL Year 11-12",
+                    "IB Biology HL Year 11-12",
+                    "IB Biology SL Year 11-12",
+                    "Maths Year 5-10",
+                    "Science Year 5-10",
+                    "Maths Year 1-4",
+                    "Mathematics Applications Year 11-12"
+                ]}
+            />
         </section>
     );
 }

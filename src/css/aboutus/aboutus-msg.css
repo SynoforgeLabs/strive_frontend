@@ -19,3 +19,27 @@
     line-height: 2rem;
     text-align: justify;
 }
+
+.aboutus-founder-img-container {
+    max-width: 100%;
+    padding: 15px;
+}
+
+.aboutus-founder-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .aboutus-founder-img-container {
+        margin: 20px auto;
+        text-align: center;
+    }
+    
+    .aboutus-founder-img {
+        max-width: 250px;
+    }
+}

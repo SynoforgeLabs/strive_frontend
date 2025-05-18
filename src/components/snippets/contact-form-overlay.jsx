@@ -1,11 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, createContext, useContext } from 'react';
 import '../../css/snippets/contact-form-overlay.css';
 
-const ContactFormOverlay = () => {
+// Create a context to expose the overlay functionality globally
+const ContactFormContext = createContext({
+  openContactForm: () => {},
+  closeContactForm: () => {},
+});
+
+// Custom hook to access the contact form from anywhere in the app
+export const useContactForm = () => useContext(ContactFormContext);
+
+export const ContactFormProvider = ({ children }) => {
   const [showOverlay, setShowOverlay] = useState(false);
   
   useEffect(() => {
-    // Show overlay after 5 seconds
+    // Show overlay after 5 seconds - keep existing functionality
     const timer = setTimeout(() => {
       setShowOverlay(true);
     }, 5000);
@@ -13,21 +22,32 @@ const ContactFormOverlay = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleClose = () => {
+  const openContactForm = () => {
+    setShowOverlay(true);
+  };
+  
+  const closeContactForm = () => {
     setShowOverlay(false);
   };
 
+  return (
+    <ContactFormContext.Provider value={{ openContactForm, closeContactForm }}>
+      {children}
+      {showOverlay && <ContactFormOverlay onClose={closeContactForm} />}
+    </ContactFormContext.Provider>
+  );
+};
+
+const ContactFormOverlay = ({ onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
-    setShowOverlay(false);
+    onClose();
   };
-
-  if (!showOverlay) return null;
 
   return (
     <div className="snippet-contact-us-overlay">
-      <div className="snippet-contact-us-backdrop" onClick={handleClose}></div>
+      <div className="snippet-contact-us-backdrop" onClick={onClose}></div>
       <div className="snippet-contact-us-modal">
         <div className="container">
           <div className="row">
@@ -39,7 +59,7 @@ const ContactFormOverlay = () => {
             <div className="col-md-6 col-sm-12 snippet-contact-us-form-container">
               <button 
                 className="snippet-contact-us-close-btn" 
-                onClick={handleClose}
+                onClick={onClose}
                 aria-label="Close"
               >
                 &times;
@@ -113,4 +133,26 @@ const ContactFormOverlay = () => {
   );
 };
 
-export default ContactFormOverlay; 
+// For backwards compatibility with existing code
+const ContactFormOverlayStandalone = () => {
+  const [showOverlay, setShowOverlay] = useState(false);
+  
+  useEffect(() => {
+    // Show overlay after 5 seconds
+    const timer = setTimeout(() => {
+      setShowOverlay(true);
+    }, 5000);
+    
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleClose = () => {
+    setShowOverlay(false);
+  };
+
+  if (!showOverlay) return null;
+  
+  return <ContactFormOverlay onClose={handleClose} />;
+};
+
+export default ContactFormOverlayStandalone; 

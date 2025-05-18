@@ -1,0 +1,236 @@
+/* Tutor Contact Overlay Styles */
+.tutor-top-contact-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tutor-top-contact-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.tutor-top-contact-modal {
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 90%;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.tutor-top-contact-form-container {
+    padding: 2rem !important;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.tutor-top-contact-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: transparent;
+    font-size: 1.8rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 10;
+    color: #333;
+}
+
+.tutor-top-contact-close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tutor-top-contact-form-title {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #0D2371;
+    text-align: center;
+}
+
+.tutor-top-contact-form-subtitle {
+    font-size: 1.35rem;
+    margin-bottom: 1.5rem;
+    color: #0D2371;
+    font-weight: 600;
+}
+
+.tutor-top-contact-input,
+.tutor-top-contact-select,
+.tutor-top-contact-textarea {
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    transition: border-color 0.3s;
+}
+
+.tutor-top-contact-input:focus,
+.tutor-top-contact-select:focus,
+.tutor-top-contact-textarea:focus {
+    border-color: #0D2371;
+    box-shadow: 0 0 0 0.2rem rgba(13, 35, 113, 0.25);
+}
+
+.tutor-top-contact-submit-btn {
+    background-color: #0D2371;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.tutor-top-contact-submit-btn:hover,
+.tutor-top-contact-submit-btn:focus {
+    background-color: #091a54;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tutor-top-contact-note {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.tutor-top-contact-link {
+    color: #0D2371;
+    text-decoration: none;
+}
+
+.tutor-top-contact-link:hover {
+    text-decoration: underline;
+}
+
+/* Success message styles */
+.tutor-top-contact-success {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.tutor-top-contact-success-icon {
+    margin-bottom: 1.5rem;
+}
+
+.tutor-top-contact-success-title {
+    color: #0D2371;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.tutor-top-contact-success-text {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tutor-top-contact-close-btn-success {
+    background-color: #0D2371;
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.tutor-top-contact-close-btn-success:hover {
+    background-color: #091a54;
+    color: white;
+}
+
+/* Responsive styles */
+@media (max-width: 991.98px) {
+    .tutor-top-contact-form-subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .tutor-top-contact-modal {
+        width: 95%;
+        max-height: 90vh;
+    }
+    
+    .tutor-top-contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    .tutor-top-contact-form-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .tutor-top-contact-form-subtitle {
+        font-size: 1.15rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .tutor-top-contact-success-title {
+        font-size: 1.5rem;
+    }
+    
+    .tutor-top-contact-success-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .tutor-top-contact-modal {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        border-radius: 0;
+    }
+    
+    .tutor-top-contact-form-container {
+        padding: 1.25rem;
+    }
+    
+    .tutor-top-contact-form-title {
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tutor-top-contact-form-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .tutor-top-contact-submit-btn,
+    .tutor-top-contact-close-btn-success {
+        padding: 0.65rem 1.25rem;
+        font-size: 1rem;
+    }
+    
+    .tutor-top-contact-success-title {
+        font-size: 1.35rem;
+    }
+}

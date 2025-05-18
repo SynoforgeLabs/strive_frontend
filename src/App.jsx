@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ContactFormOverlay, Footer } from './components/snippets/snippets-index';
+import { Footer } from './components/snippets/snippets-index';
+import { ContactFormProvider } from './components/snippets/contact-form-overlay';
 
 import HomePage from './pages/js/home';
 import AboutusPage from './pages/js/aboutus';
@@ -14,11 +15,11 @@ import InterviewPage from './pages/js/interview';
 import PricingPage from './pages/js/pricing';  
 import UcatPage from './pages/js/ucat';  
 import TermsPage from './pages/js/terms';
+import LoginPage from './pages/js/login';
 
 const App = () => {
   return (
-    <>
-      <ContactFormOverlay />
+    <ContactFormProvider>
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -33,10 +34,11 @@ const App = () => {
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/ucat" element={<UcatPage />} />
           <Route path="/terms" element={<TermsPage />} />
+          <Route path="/login" element={<LoginPage />} />
         </Routes>
         <Footer />
       </Router>
-    </>
+    </ContactFormProvider>
   );
 };
 

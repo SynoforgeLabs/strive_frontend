@@ -18,7 +18,7 @@ function Pricegrid() {
             <div className="card homeprice-grid-card homeprice-grid-gold h-100">
               <div className="card-body d-flex flex-column p-4">
                 <div className="d-flex align-items-center justify-content-between mb-3">
-                  <h3 className="card-title mb-0">⭐ Gold Tier</h3>
+                  <h3 className="card-title mb-0">🧑‍🎓 Gold Tier</h3>
                   <div className="homeprice-grid-price">
                     <span className="h3">$60</span>/hr
                   </div>
@@ -41,7 +41,7 @@ function Pricegrid() {
             <div className="card homeprice-grid-card homeprice-grid-platinum h-100">
               <div className="card-body d-flex flex-column p-4">
                 <div className="d-flex align-items-center justify-content-between mb-3">
-                  <h3 className="card-title mb-0">🌟 Platinum Tier</h3>
+                  <h3 className="card-title mb-0">🧑‍🏫 Platinum Tier</h3>
                   <div className="homeprice-grid-price">
                     <span className="h3">$80</span>/hr
                   </div>
@@ -64,7 +64,7 @@ function Pricegrid() {
             <div className="card homeprice-grid-card homeprice-grid-elite h-100">
               <div className="card-body d-flex flex-column p-4">
                 <div className="d-flex align-items-center justify-content-between mb-3">
-                  <h3 className="card-title mb-0">⚡ Elite Tier</h3>
+                  <h3 className="card-title mb-0">🌟 Elite Tier</h3>
                   <div className="homeprice-grid-price">
                     <span className="h3">$120</span>/hr
                   </div>

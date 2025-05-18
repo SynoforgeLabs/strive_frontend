@@ -19,6 +19,9 @@ const Footer = () => {
                   <Link to="/tutors/high-school" className="bootom-footer-search-link">High School Tutors</Link>
                 </li>
                 <li className="bootom-footer-search-item">
+                  <Link to="/tutors/high-school" className="bootom-footer-search-link">Medical Entrance Tutors</Link>
+                </li>
+                <li className="bootom-footer-search-item">
                   <Link to="/tutors/year-7" className="bootom-footer-search-link">Year 7 Tutors</Link>
                 </li>
                 <li className="bootom-footer-search-item">
@@ -58,7 +61,19 @@ const Footer = () => {
                   <Link to="/tutors/physics" className="bootom-footer-search-link">Physics Tutors</Link>
                 </li>
                 <li className="bootom-footer-search-item">
-                  <Link to="/tutors/science" className="bootom-footer-search-link">Science Tutors</Link>
+                  <Link to="/tutors/science" className="bootom-footer-search-link">General Science Tutors</Link>
+                </li>
+                <li className="bootom-footer-search-item">
+                  <Link to="/tutors/science" className="bootom-footer-search-link">Economics Tutors</Link>
+                </li>
+                <li className="bootom-footer-search-item">
+                  <Link to="/tutors/science" className="bootom-footer-search-link">History Tutors</Link>
+                </li>
+                <li className="bootom-footer-search-item">
+                  <Link to="/tutors/science" className="bootom-footer-search-link">HPE Tutors</Link>
+                </li>
+                <li className="bootom-footer-search-item">
+                  <Link to="/tutors/science" className="bootom-footer-search-link">Business Tutors</Link>
                 </li>
               </ul>
             </div>
@@ -212,6 +227,11 @@ const Footer = () => {
                   <li className="bootom-footer-nav-item">
                     <Link to="/faq" className="bootom-footer-link">
                       FAQ
+                    </Link>
+                  </li>
+                  <li className="bootom-footer-nav-item">
+                    <Link to="/faq" className="bootom-footer-link">
+                      Contact Us
                     </Link>
                   </li>
                 </ul>

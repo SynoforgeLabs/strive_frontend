@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/snippets/navbar.css';
 
 function Navbar() {
-
   return (
     <div className="row w-100 d-flex nav-main g-0">
       <div className="col-12 g-0 nav-sec">
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid p-0 col-9">
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" to="/">
               <img src="/Images/logo/logo h/logo-h-gr.svg" alt="" className="nav-logo" />
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -35,11 +35,11 @@ function Navbar() {
                     About Us
                   </a>
                   <ul className="dropdown-menu nav-item-drop-down" id="nav-au-dd">
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="/aboutus">About us</a></li>
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="/reviews">Reviews</a></li>
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="/faq">FAQ</a></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/aboutus">About us</Link></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/reviews">Reviews</Link></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/faq">FAQ</Link></li>
                     <li><a className="dropdown-item nav-item-drop-down-item" href="#">Contact US</a></li>
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="/join-us">Become Tutor</a></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/join-us">Become Tutor</Link></li>
                   </ul>
                 </li>
                 <li className="nav-item dropdown">
@@ -53,8 +53,8 @@ function Navbar() {
                     Tutoring
                   </a>
                   <ul className="dropdown-menu nav-item-drop-down" id="nav-Tu-dd">
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="/find-a-tutor">Private Tutoring</a></li>
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="/bring-a-friend-and-save">Bring a Friend and save</a></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/find-a-tutor">Private Tutoring</Link></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/bring-a-friend-and-save">Bring a Friend and save</Link></li>
                   </ul>
                 </li>
                 <li className="nav-item dropdown">
@@ -68,16 +68,20 @@ function Navbar() {
                     Medical Entrance
                   </a>
                   <ul className="dropdown-menu nav-item-drop-down" id="nav-me-dd">
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="/ucat">UCAT</a></li>
-                    <li><a className="dropdown-item nav-item-drop-down-item" href="/interview-preperation">Interview Preperation</a></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/ucat">UCAT</Link></li>
+                    <li><Link className="dropdown-item nav-item-drop-down-item" to="/interview-preperation">Interview Preperation</Link></li>
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/pricing">Pricing</a>
+                  <Link className="nav-link active" aria-current="page" to="/pricing">Pricing</Link>
                 </li>
-                <a href='/find-a-tutor' className="btn btn-outline-primary nav-item nav-f-t-btn">
+                <Link to='/find-a-tutor' className="btn btn-outline-primary nav-item nav-f-t-btn">
                   Find a Tutor
-                </a>
+                </Link>
+                <li className="nav-item login-signup-links">
+                  <Link className="nav-link active" aria-current="page" to="/login">Login</Link>/
+                  <Link className="nav-link active" aria-current="page" to="/signup">Sign Up</Link>
+                </li>
               </ul>
             </div>
           </div>

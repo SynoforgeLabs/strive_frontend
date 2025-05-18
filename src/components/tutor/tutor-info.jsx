@@ -1,7 +1,14 @@
 import React from 'react';
 import "../../css/tutor/tutor-info.css";
+import { useContactForm } from '../../components/snippets/snippets-index';
 
 function TutorInfo() {
+    const { openContactForm } = useContactForm();
+
+    const handleConsultationClick = () => {
+        openContactForm();
+    };
+
     return (
         <section className="row container-fluid section d-flex justify-content-center g-0 tutor-info-main" id="tutor-info">
             <div className="row col-lg-10 col-md-11 col-sm-12 d-flex tutor-info-sec">
@@ -122,7 +129,10 @@ function TutorInfo() {
                                 <div className="row mt-4">
                                     <div className="col-12">
                                         <div className="d-flex align-items-center flex-wrap gap-3">
-                                            <button className="tutor-info-consultation-btn">
+                                            <button 
+                                                className="tutor-info-consultation-btn"
+                                                onClick={handleConsultationClick}
+                                            >
                                                 Book free academic consultation
                                             </button>
                                             <small className="tutor-info-consultation-note">

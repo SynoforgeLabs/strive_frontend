@@ -31,3 +31,165 @@
     font-size: 1.125rem;
     line-height: 1.7;
 }
+
+.ucat-hdiw-link {
+    color: #0D2371;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.ucat-hdiw-link:hover {
+    color: #f44336;
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.ucat-hdiw-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+}
+
+.ucat-hdiw-modal {
+    width: 100%;
+    max-width: 800px;
+    margin: 1.75rem auto;
+    z-index: 1060;
+}
+
+.ucat-hdiw-modal-dialog {
+    position: relative;
+    pointer-events: auto;
+}
+
+.ucat-hdiw-modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.ucat-hdiw-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom:  1.5rem;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.ucat-hdiw-modal-title {
+    font-weight: 700;
+    color: #0D2371;
+    margin: 0;
+}
+
+.ucat-hdiw-close-button {
+    background-color: transparent;
+    filter: invert(1) brightness(200%);
+    opacity: 0.8;
+}
+
+.ucat-hdiw-close-button:hover {
+    opacity: 1;
+}
+
+
+.ucat-hdiw-form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.ucat-hdiw-form-input,
+.ucat-hdiw-form-select {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.ucat-hdiw-form-input:focus,
+.ucat-hdiw-form-select:focus {
+    border-color: #0D2371;
+    box-shadow: 0 0 0 0.25rem rgba(13, 35, 113, 0.25);
+}
+
+.ucat-hdiw-form-checkbox {
+    margin-top: 0.5rem;
+}
+
+.ucat-hdiw-submit-btn {
+    background-color: #16205b !important;
+    color: white !important;
+    border: none;
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 1rem !important;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.ucat-hdiw-submit-btn:hover,
+.ucat-hdiw-submit-btn:focus {
+    background-color: #091a54;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ucat-hdiw-confirmation {
+    padding: 2rem 1rem;
+}
+
+.ucat-hdiw-confirmation-icon {
+    font-size: 4rem;
+    color: #28a745;
+    display: inline-block;
+}
+
+.ucat-hdiw-confirmation-title {
+    color: #0D2371;
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+.ucat-hdiw-confirmation-text {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .ucat-hdiw-modal {
+        width: 90%;
+    }
+    
+    .ucat-hdiw-modal-body {
+        padding: 1.5rem;
+    }
+    
+    .ucat-hdiw-confirmation-icon {
+        font-size: 3rem;
+    }
+    
+    .ucat-hdiw-confirmation-title {
+        font-size: 1.5rem;
+    }
+    
+    .ucat-hdiw-confirmation-text {
+        font-size: 1.125rem;
+    }
+}
