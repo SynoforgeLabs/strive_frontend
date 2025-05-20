@@ -175,18 +175,10 @@ const Footer = () => {
                 />
                 
                 <div className="bootom-footer-contact-info">
-                  <p className="bootom-footer-contact-item mb-1">
+                  <p className="bootom-footer-contact-item mb-3">
                     <a href="mailto:email@gmail.com" className="bootom-footer-link">
                       email@gmail.com
                     </a>
-                  </p>
-                  <p className="bootom-footer-contact-item mb-1">
-                    <a href="tel:+94123456789" className="bootom-footer-link">
-                      +94 123456789
-                    </a>
-                  </p>
-                  <p className="bootom-footer-contact-item mb-3">
-                    221B Baker Street,<br />London
                   </p>
                   
                   <div className="bootom-footer-social">
@@ -231,7 +223,7 @@ const Footer = () => {
                   </li>
                   <li className="bootom-footer-nav-item">
                     <Link to="/faq" className="bootom-footer-link">
-                      Contact Us2
+                      Contact Us
                     </Link>
                   </li>
                 </ul>

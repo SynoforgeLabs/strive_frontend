@@ -12,7 +12,9 @@ const PricingPage = () => {
       {/* pricing page price gridd */}
       <Pricingcomponents.PricingPricegrid />
       {/* pricing page how do it work */}
-      <Pricingcomponents.PricingHdiw />
+      <Pricingcomponents.PricingHdiw />q
+      {/* footer */}
+      <Snippets.Footer />
     </div>
   );
 };

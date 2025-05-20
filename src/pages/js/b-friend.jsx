@@ -14,6 +14,8 @@ const BFriendPage = () => {
       <BFriendComponents.BfriendPricegrid />
       {/* how it works */}  
       <BFriendComponents.BFriendHDIW />
+      {/* footer */}
+      <Snippets.Footer />
     </div>
   );
 };

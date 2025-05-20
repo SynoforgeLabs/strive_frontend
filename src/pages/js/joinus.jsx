@@ -11,6 +11,7 @@ const JoinusPage = () => {
       <Joinuscomponents.JoinusQualities />
       <Joinuscomponents.JoinusPoints /> 
       <Joinuscomponents.JoinusEnd />
+      <Snippets.Footer />
     </div>
   );
 };

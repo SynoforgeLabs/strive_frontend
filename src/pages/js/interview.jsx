@@ -16,6 +16,8 @@ const InterviewPage = () => {
         <Interviewcomponents.InterviewWdays />
         {/*hdiw*/}
         <Interviewcomponents.InterviewHdiw />
+        {/*footer*/}
+        <Snippets.Footer />
       </div>
     );
   };

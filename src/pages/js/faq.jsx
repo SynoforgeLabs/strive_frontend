@@ -13,7 +13,7 @@ const Faqpage = () => {
         <Faqcomponents.Bfs />
         <Faqcomponents.Ip />
         <Faqcomponents.Ucat />
-
+        <Snippets.Footer />
       </div>
     );
   };

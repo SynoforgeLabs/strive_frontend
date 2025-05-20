@@ -14,6 +14,8 @@ const FindTutorPage = () => {
         <FindTutorcomponents.FindtFilters />
         {/* tutors */}
         <FindTutorcomponents.FindtTutors />
+        {/* footer */}
+        <Snippets.Footer />
       </div>
     );
   };

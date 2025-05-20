@@ -36,7 +36,6 @@ const App = () => {
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/login" element={<LoginPage />} />
         </Routes>
-        <Footer />
       </Router>
     </ContactFormProvider>
   );

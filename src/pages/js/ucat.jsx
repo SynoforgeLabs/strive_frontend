@@ -15,6 +15,8 @@ const UcatPage = () => {
       <Ucatcomponents.UcatPricegrid />
       {/* ucat page hdiw*/}
       <Ucatcomponents.UcatHdiw />
+      {/* footer */}
+      <Snippets.Footer />
     </div>
   );
 };

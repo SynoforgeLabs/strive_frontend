@@ -15,6 +15,8 @@ const AboutusPage = () => {
         <Aboutuscomponents.Points />
 
         <Aboutuscomponents.Aboutend />
+
+        <Snippets.Footer />
         
       </div>
     );

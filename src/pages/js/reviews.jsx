@@ -10,6 +10,7 @@ const ReviewsPage = () => {
       <Reviewscomponents.ReviewsHeader />
       
       <Reviewscomponents.ReviewsList />
+      <Snippets.Footer />
     </div>
   );
 };

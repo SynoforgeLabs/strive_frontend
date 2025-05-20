@@ -18,6 +18,8 @@ const HomePage = () => {
         <Homecomponents.Reviews />
         {/* home price grid */}
         <Homecomponents.PriceGrid />
+        {/* footer */}
+        <Snippets.Footer />
       </div>
     );
   };

@@ -18,6 +18,7 @@ const BecomeTutorPage = () => {
       {/* call to action */}
       <TutorComponents.CallToAction />
       {/* footer */}
+      <Snippets.Footer />
     </div>
   );
 };
