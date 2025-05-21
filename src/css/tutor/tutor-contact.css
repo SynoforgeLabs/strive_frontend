@@ -1,236 +1,346 @@
-/* Tutor Contact Overlay Styles */
-.tutor-top-contact-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.tutor-contact-wrapper {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    padding: 2rem 0;
+    background-image: url('/public/Images/Aboutus/herobg.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
 }
 
-.tutor-top-contact-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.tutor-top-contact-modal {
-    background-color: #fff;
-    border-radius: 1rem;
-    overflow: hidden;
-    width: 90%;
-    max-width: 800px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 2;
-}
-
-.tutor-top-contact-form-container {
-    padding: 2rem !important;
-    position: relative;
-    max-height: 90vh;
-    overflow-y: auto;
-}
-
-.tutor-top-contact-close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
+.tutor-contact-card {
     border: none;
-    background: transparent;
-    font-size: 1.8rem;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
+    border-radius: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.tutor-contact-card-body {
+    padding: 2rem;
+}
+
+.tutor-contact-title {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+/* Tutor Profile Styles */
+.tutor-contact-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.tutor-contact-profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 3px solid #4a90e2;
+    padding: 3px;
+}
+
+.tutor-contact-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.tutor-contact-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0.5rem 0;
+}
+
+.tutor-contact-stats {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    z-index: 10;
-    color: #333;
+    gap: 2rem;
+    margin-top: 0.5rem;
 }
 
-.tutor-top-contact-close-btn:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+.tutor-contact-atar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
 }
 
-.tutor-top-contact-form-title {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-    color: #0D2371;
-    text-align: center;
+.tutor-contact-score {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #DC2626;
+    line-height: 1;
 }
 
-.tutor-top-contact-form-subtitle {
-    font-size: 1.35rem;
-    margin-bottom: 1.5rem;
-    color: #0D2371;
+.tutor-contact-label {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+}
+
+.tutor-contact-tier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.tutor-contact-badge {
+    background-color: #FFF9E6;
+    color: #B8860B;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
     font-weight: 600;
+    font-size: 0.875rem;
 }
 
-.tutor-top-contact-input,
-.tutor-top-contact-select,
-.tutor-top-contact-textarea {
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    padding: 0.75rem;
-    transition: border-color 0.3s;
-}
-
-.tutor-top-contact-input:focus,
-.tutor-top-contact-select:focus,
-.tutor-top-contact-textarea:focus {
-    border-color: #0D2371;
-    box-shadow: 0 0 0 0.2rem rgba(13, 35, 113, 0.25);
-}
-
-.tutor-top-contact-submit-btn {
-    background-color: #0D2371;
-    color: white;
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    margin-top: 1rem;
-}
-
-.tutor-top-contact-submit-btn:hover,
-.tutor-top-contact-submit-btn:focus {
-    background-color: #091a54;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.tutor-top-contact-note {
-    font-size: 0.85rem;
+.tutor-contact-price {
+    font-size: 0.875rem;
     color: #6c757d;
 }
 
-.tutor-top-contact-link {
-    color: #0D2371;
-    text-decoration: none;
+.tutor-contact-subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
 }
 
-.tutor-top-contact-link:hover {
-    text-decoration: underline;
-}
-
-/* Success message styles */
-.tutor-top-contact-success {
-    text-align: center;
-    padding: 2rem 1rem;
-}
-
-.tutor-top-contact-success-icon {
+.tutor-contact-form-group {
     margin-bottom: 1.5rem;
 }
 
-.tutor-top-contact-success-title {
-    color: #0D2371;
-    font-size: 1.75rem;
-    font-weight: 700;
+.tutor-contact-input,
+.tutor-contact-select,
+.tutor-contact-textarea {
+    width: 100%;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.tutor-contact-input:focus,
+.tutor-contact-select:focus,
+.tutor-contact-textarea:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+    outline: none;
+}
+
+.tutor-contact-input[type="password"] {
+    letter-spacing: 0.1em;
+    font-family: monospace;
+}
+
+/* Availability Table Styles */
+.tutor-contact-availability-section {
+    background-color: #ffffff;
+    border-radius: 8px;
     margin-bottom: 1rem;
 }
 
-.tutor-top-contact-success-text {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 1.5rem;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+.tutor-contact-availability-table {
+    margin-bottom: 0.5rem;
+    overflow-x: auto;
 }
 
-.tutor-top-contact-close-btn-success {
-    background-color: #0D2371;
-    color: white;
+.tutor-contact-availability-table table {
+    margin-bottom: 0;
+}
+
+.tutor-contact-availability-table th,
+.tutor-contact-availability-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.75rem;
+    border-color: #e9ecef;
+}
+
+.tutor-contact-availability-table th:first-child,
+.tutor-contact-availability-table td:first-child {
+    text-align: left;
     font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
+    min-width: 100px;
+}
+
+.tutor-contact-time-label {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.tutor-contact-checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0;
+    cursor: pointer;
+    border: 2px solid #4a90e2;
+    border-radius: 4px;
+}
+
+.tutor-contact-checkbox:checked {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+.tutor-contact-help-text {
+    display: block;
+    color: #6c757d;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+
+.tutor-contact-radio-group {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.tutor-contact-radio {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tutor-contact-radio-input {
+    margin: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.tutor-contact-radio-input:checked {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+.tutor-contact-radio-label {
+    margin: 0;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+.tutor-contact-button-wrapper {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.tutor-contact-submit-btn {
+    background-color: #1a3dad;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    max-width: 200px;
-    margin: 0 auto;
+    width: 100%;
 }
 
-.tutor-top-contact-close-btn-success:hover {
-    background-color: #091a54;
+.tutor-contact-submit-btn:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+}
+
+.tutor-contact-submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tutor-contact-title {
+        font-size: 2rem;
+    }
+
+    .tutor-contact-card-body {
+        padding: 1.5rem !important;
+    }
+
+    .tutor-contact-availability-table {
+        margin: 0 -1rem;
+    }
+
+    .tutor-contact-availability-table table {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tutor-contact-title {
+        font-size: 1.75rem;
+    }
+
+    .tutor-contact-radio-group {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .tutor-contact-availability-table {
+        margin: 0 -1.5rem;
+    }
+}
+
+/* Terms and Conditions Styles */
+.tutor-contact-terms {
+    margin: 1.5rem 0;
+}
+
+.tutor-contact-checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.tutor-contact-terms-checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-top: 0.25rem;
+    cursor: pointer;
+    border: 2px solid #4a90e2;
+    border-radius: 4px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.tutor-contact-terms-checkbox:checked {
+    background-color: #1a3dad;
+    border-color: #1a3dad;
+}
+
+.tutor-contact-terms-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
     color: white;
+    font-size: 0.875rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* Responsive styles */
-@media (max-width: 991.98px) {
-    .tutor-top-contact-form-subtitle {
-        font-size: 1.25rem;
-    }
+.tutor-contact-terms-label {
+    font-size: 0.95rem;
+    color: #2c3e50;
+    cursor: pointer;
+    user-select: none;
 }
 
-@media (max-width: 767.98px) {
-    .tutor-top-contact-modal {
-        width: 95%;
-        max-height: 90vh;
-    }
-    
-    .tutor-top-contact-form-container {
-        padding: 1.5rem;
-    }
-    
-    .tutor-top-contact-form-title {
-        font-size: 1.5rem;
-        margin-bottom: 1.25rem;
-    }
-    
-    .tutor-top-contact-form-subtitle {
-        font-size: 1.15rem;
-        margin-bottom: 1.25rem;
-    }
-    
-    .tutor-top-contact-success-title {
-        font-size: 1.5rem;
-    }
-    
-    .tutor-top-contact-success-text {
-        font-size: 1rem;
-    }
+.tutor-contact-terms-link {
+    color: #1a3dad;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
 }
 
-@media (max-width: 575.98px) {
-    .tutor-top-contact-modal {
-        width: 100%;
-        height: 100%;
-        max-height: 100%;
-        border-radius: 0;
-    }
-    
-    .tutor-top-contact-form-container {
-        padding: 1.25rem;
-    }
-    
-    .tutor-top-contact-form-title {
-        font-size: 1.35rem;
-        margin-bottom: 1rem;
-    }
-    
-    .tutor-top-contact-form-subtitle {
-        font-size: 1.1rem;
-        margin-bottom: 1.25rem;
-    }
-    
-    .tutor-top-contact-submit-btn,
-    .tutor-top-contact-close-btn-success {
-        padding: 0.65rem 1.25rem;
-        font-size: 1rem;
-    }
-    
-    .tutor-top-contact-success-title {
-        font-size: 1.35rem;
-    }
+.tutor-contact-terms-link:hover {
+    color: #4a90e2;
+    text-decoration: underline;
 }

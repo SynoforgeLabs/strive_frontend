@@ -16,6 +16,7 @@ import UcatPage from './pages/js/ucat';
 import TermsPage from './pages/js/terms';
 import LoginPage from './pages/js/login';
 import SignupPage from './pages/js/signup';
+import TutorContactPage from './pages/js/tutor-contact';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/find-a-tutor" element={<FindtPage />} />
           <Route path="/join-us" element={<JoinusPage />} />
           <Route path="/tutor" element={<TutorPage />} />
+          <Route path="/tutor/contact" element={<TutorContactPage />} />
           <Route path="/bring-a-friend-and-save" element={<BFriendPage />} />
           <Route path="/interview-preperation" element={<InterviewPage />} /> 
           <Route path="/pricing" element={<PricingPage />} />

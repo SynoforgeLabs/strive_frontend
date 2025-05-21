@@ -1,198 +1,346 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../../css/tutor/tutor-contact.css';
 
-function TutorContact({ isOpen, onClose, tutorName, tutorSubjects }) {
-    const [formSubmitted, setFormSubmitted] = useState(false);
+
+function TutorContact() {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         phone: '',
         subject: '',
-        grade: '',
+        password: '',
+        confirmPassword: '',
         message: '',
+        preferredContact: 'email',
+        availabilityGrid: {
+            morning: { mon: false, tue: false, wed: false, thu: false, fri: false, sat: false, sun: false },
+            afternoon: { mon: false, tue: false, wed: false, thu: false, fri: false, sat: false, sun: false },
+            night: { mon: false, tue: false, wed: false, thu: false, fri: false, sat: false, sun: false }
+        },
+        availabilityNotes: '',
+        agreeToTerms: false
     });
-    
+
     const handleChange = (e) => {
-        const { id, value } = e.target;
+        const { name, value, type, checked } = e.target;
         setFormData(prevState => ({
             ...prevState,
-            [id]: value
+            [name]: type === 'checkbox' ? checked : value
         }));
     };
-    
+
+    const handleAvailabilityChange = (timeOfDay, day) => {
+        setFormData(prevState => ({
+            ...prevState,
+            availabilityGrid: {
+                ...prevState.availabilityGrid,
+                [timeOfDay]: {
+                    ...prevState.availabilityGrid[timeOfDay],
+                    [day]: !prevState.availabilityGrid[timeOfDay][day]
+                }
+            }
+        }));
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you would handle form submission to backend
-        setFormSubmitted(true);
-    };
-    
-    // Close modal when clicking escape key
-    useEffect(() => {
-        const handleEsc = (event) => {
-            if (event.key === 'Escape') {
-                onClose();
-            }
-        };
-        
-        if (isOpen) {
-            window.addEventListener('keydown', handleEsc);
+        if (!formData.agreeToTerms) {
+            alert("Please agree to the terms and conditions to proceed.");
+            return;
         }
-        
-        return () => {
-            window.removeEventListener('keydown', handleEsc);
-        };
-    }, [isOpen, onClose]);
+        if (formData.password !== formData.confirmPassword) {
+            alert("Passwords don't match!");
+            return;
+        }
+        // Rest of the form submission logic
+        console.log('Form submitted:', formData);
+    };
 
-    if (!isOpen) return null;
-    
-    const subjects = tutorSubjects || [
-        "IB Chemistry HL Year 11-12",
-        "IB Biology HL Year 11-12",
-        "IB Biology SL Year 11-12",
-        "Maths Year 5-10",
-        "Science Year 5-10",
-        "Maths Year 1-4",
-        "Mathematics Applications Year 11-12"
-    ];
-    
-    const displayName = tutorName || "Enola Holmes";
-    
+    // Helper function to render checkbox with proper state binding
+    const renderCheckbox = (timeOfDay, day) => (
+        <input
+            type="checkbox"
+            className="tutor-contact-checkbox"
+            checked={formData.availabilityGrid[timeOfDay][day]}
+            onChange={() => handleAvailabilityChange(timeOfDay, day)}
+        />
+    );
+
     return (
-        <div className="tutor-top-contact-overlay">
-            <div className="tutor-top-contact-backdrop" onClick={onClose}></div>
-            <div className="tutor-top-contact-modal">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12 tutor-top-contact-form-container">
-                            <button 
-                                className="tutor-top-contact-close-btn" 
-                                onClick={onClose}
-                                aria-label="Close"
-                            >
-                                &times;
-                            </button>
-                            
-                            {!formSubmitted ? (
-                                <>
-                                    <h2 className="tutor-top-contact-form-title">Contact Your Tutor</h2>
-                                    <h3 className="tutor-top-contact-form-subtitle">Request a Session with {displayName}</h3>
-                                    
-                                    <form onSubmit={handleSubmit} className="tutor-top-contact-form">
-                                        <div className="mb-3">
-                                            <label htmlFor="name" className="form-label">Your Name *</label>
-                                            <input 
-                                                type="text" 
-                                                className="form-control tutor-top-contact-input" 
-                                                id="name" 
-                                                value={formData.name}
-                                                onChange={handleChange}
-                                                placeholder="Enter your full name" 
-                                                required 
+        <div className="tutor-contact-wrapper">
+            <div className="container py-5">
+                <div className="row justify-content-center">
+                    <div className="col-lg-8 col-md-10">
+                        <div className="tutor-contact-card">
+                            <div className="tutor-contact-card-body p-4 p-md-5">
+                                <div className="text-center mb-4">
+                                    <h1 className="tutor-contact-title">Contact Tutor</h1>
+                                    <div className="tutor-contact-profile">
+                                        <div className="tutor-contact-profile-image">
+                                            <img 
+                                                src="https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_960_720.png" 
+                                                alt="Enola Holmes" 
+                                                className="tutor-contact-avatar"
                                             />
                                         </div>
-                                        
-                                        <div className="mb-3">
-                                            <label htmlFor="email" className="form-label">Your Email *</label>
-                                            <input 
-                                                type="email" 
-                                                className="form-control tutor-top-contact-input" 
-                                                id="email" 
-                                                value={formData.email}
-                                                onChange={handleChange}
-                                                placeholder="Enter your email address" 
-                                                required 
-                                            />
-                                            <small className="text-muted">We'll send you a confirmation email</small>
+                                        <h2 className="tutor-contact-name">Enola Holmes</h2>
+                                        <div className="tutor-contact-stats">
+                                            <div className="tutor-contact-atar">
+                                                <span className="tutor-contact-score">94.27</span>
+                                                <span className="tutor-contact-label">ATAR</span>
+                                            </div>
+                                            <div className="tutor-contact-tier">
+                                                <span className="tutor-contact-badge">Gold Tutor</span>
+                                                <span className="tutor-contact-price">30$/h</span>
+                                            </div>
                                         </div>
-                                        
-                                        <div className="mb-3">
-                                            <label htmlFor="phone" className="form-label">Your Phone Number *</label>
-                                            <input 
-                                                type="tel" 
-                                                className="form-control tutor-top-contact-input" 
-                                                id="phone" 
-                                                value={formData.phone}
-                                                onChange={handleChange}
-                                                placeholder="Enter your phone number" 
-                                                required 
-                                            />
-                                        </div>
-                                        
-                                        <div className="mb-3">
-                                            <label htmlFor="subject" className="form-label">Subject *</label>
-                                            <select 
-                                                className="form-select tutor-top-contact-select" 
-                                                id="subject"
-                                                value={formData.subject}
-                                                onChange={handleChange}
-                                                required
-                                            >
-                                                <option value="">Select a subject</option>
-                                                {subjects.map((subject, index) => (
-                                                    <option key={index} value={subject}>{subject}</option>
-                                                ))}
-                                            </select>
-                                        </div>
-                                        
-                                        <div className="mb-3">
-                                            <label htmlFor="grade" className="form-label">Current Grade/Year Level *</label>
-                                            <input 
-                                                type="text" 
-                                                className="form-control tutor-top-contact-input" 
-                                                id="grade" 
-                                                value={formData.grade}
-                                                onChange={handleChange}
-                                                placeholder="e.g. Year 11" 
-                                                required 
-                                            />
-                                        </div>
-                                        
-                                        <div className="mb-4">
-                                            <label htmlFor="message" className="form-label">Additional Information</label>
-                                            <textarea 
-                                                className="form-control tutor-top-contact-textarea" 
-                                                id="message" 
-                                                rows="3"
-                                                value={formData.message}
-                                                onChange={handleChange}
-                                                placeholder="Let us know about your goals, specific topics you need help with, or any questions you have"
-                                            ></textarea>
-                                        </div>
-                                        
-                                        <div className="d-grid">
-                                            <button type="submit" className="btn tutor-top-contact-submit-btn">
-                                                Send Request
-                                            </button>
-                                        </div>
-                                        
-                                        <div className="mt-3 text-center tutor-top-contact-note">
-                                            <small>By submitting this form, you agree to our <a href="/terms" className="tutor-top-contact-link">Terms of Service</a></small>
-                                        </div>
-                                    </form>
-                                </>
-                            ) : (
-                                <div className="tutor-top-contact-success">
-                                    <div className="tutor-top-contact-success-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#28a745" className="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                        </svg>
-                                    </div>
-                                    <h3 className="tutor-top-contact-success-title">Request Sent Successfully!</h3>
-                                    <p className="tutor-top-contact-success-text">
-                                        Thank you for contacting {displayName}. We've received your request 
-                                        and will get back to you within 24 hours to schedule your session.
-                                    </p>
-                                    <div className="d-grid mt-4">
-                                        <button 
-                                            type="button" 
-                                            className="btn tutor-top-contact-close-btn-success"
-                                            onClick={onClose}
-                                        >
-                                            Close
-                                        </button>
                                     </div>
                                 </div>
-                            )}
+
+                                <form onSubmit={handleSubmit} className="tutor-contact-form">
+                                    <div className="row g-4">
+                                        <div className="col-md-6">
+                                            <div className="tutor-contact-form-group">
+                                                <label htmlFor="name" className="tutor-contact-label">Full Name *</label>
+                                                <input
+                                                    type="text"
+                                                    className="tutor-contact-input"
+                                                    id="name"
+                                                    name="name"
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="tutor-contact-form-group">
+                                                <label htmlFor="email" className="tutor-contact-label">Email Address *</label>
+                                                <input
+                                                    type="email"
+                                                    className="tutor-contact-input"
+                                                    id="email"
+                                                    name="email"
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    required
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="tutor-contact-form-group">
+                                                <label htmlFor="phone" className="tutor-contact-label">Phone Number</label>
+                                                <input
+                                                    type="tel"
+                                                    className="tutor-contact-input"
+                                                    id="phone"
+                                                    name="phone"
+                                                    value={formData.phone}
+                                                    onChange={handleChange}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="tutor-contact-form-group">
+                                                <label htmlFor="subject" className="tutor-contact-label">Subject *</label>
+                                                <select
+                                                    className="tutor-contact-select"
+                                                    id="subject"
+                                                    name="subject"
+                                                    value={formData.subject}
+                                                    onChange={handleChange}
+                                                    required
+                                                >
+                                                    <option value="">Select a subject</option>
+                                                    <option value="IB Chemistry HL">IB Chemistry HL Year 11-12</option>
+                                                    <option value="IB Biology HL">IB Biology HL Year 11-12</option>
+                                                    <option value="IB Biology SL">IB Biology SL Year 11-12</option>
+                                                    <option value="Maths 5-10">Maths Year 5-10</option>
+                                                    <option value="Science 5-10">Science Year 5-10</option>
+                                                    <option value="Maths 1-4">Maths Year 1-4</option>
+                                                    <option value="Math Applications">Mathematics Applications Year 11-12</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="tutor-contact-form-group">
+                                                <label htmlFor="password" className="tutor-contact-label">Password *</label>
+                                                <input
+                                                    type="password"
+                                                    className="tutor-contact-input"
+                                                    id="password"
+                                                    name="password"
+                                                    value={formData.password}
+                                                    onChange={handleChange}
+                                                    required
+                                                    minLength="8"
+                                                    placeholder="Enter your password"
+                                                />
+                                                <small className="tutor-contact-help-text">Minimum 8 characters</small>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="tutor-contact-form-group">
+                                                <label htmlFor="confirmPassword" className="tutor-contact-label">Confirm Password *</label>
+                                                <input
+                                                    type="password"
+                                                    className="tutor-contact-input"
+                                                    id="confirmPassword"
+                                                    name="confirmPassword"
+                                                    value={formData.confirmPassword}
+                                                    onChange={handleChange}
+                                                    required
+                                                    minLength="8"
+                                                    placeholder="Confirm your password"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className="tutor-contact-form-group">
+                                                <label htmlFor="message" className="tutor-contact-label">Message *</label>
+                                                <textarea
+                                                    className="tutor-contact-textarea"
+                                                    id="message"
+                                                    name="message"
+                                                    rows="4"
+                                                    value={formData.message}
+                                                    onChange={handleChange}
+                                                    required
+                                                    placeholder="Please include any specific questions or requirements you have for the tutor"
+                                                ></textarea>
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className="tutor-contact-form-group">
+                                                <label className="tutor-contact-label d-block">Preferred Contact Method *</label>
+                                                <div className="tutor-contact-radio-group">
+                                                    <div className="tutor-contact-radio">
+                                                        <input
+                                                            type="radio"
+                                                            className="tutor-contact-radio-input"
+                                                            id="email-preference"
+                                                            name="preferredContact"
+                                                            value="email"
+                                                            checked={formData.preferredContact === 'email'}
+                                                            onChange={handleChange}
+                                                        />
+                                                        <label className="tutor-contact-radio-label" htmlFor="email-preference">Email</label>
+                                                    </div>
+                                                    <div className="tutor-contact-radio">
+                                                        <input
+                                                            type="radio"
+                                                            className="tutor-contact-radio-input"
+                                                            id="phone-preference"
+                                                            name="preferredContact"
+                                                            value="phone"
+                                                            checked={formData.preferredContact === 'phone'}
+                                                            onChange={handleChange}
+                                                        />
+                                                        <label className="tutor-contact-radio-label" htmlFor="phone-preference">Phone</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className="tutor-contact-form-group">
+                                                <label className="tutor-contact-label">Preferred Availability *</label>
+                                                <div className="tutor-contact-availability-section">
+                                                    <div className="tutor-contact-availability-table">
+                                                        <table className="table table-bordered">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>Mon</th>
+                                                                    <th>Tue</th>
+                                                                    <th>Wed</th>
+                                                                    <th>Thu</th>
+                                                                    <th>Fri</th>
+                                                                    <th>Sat</th>
+                                                                    <th>Sun</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td className="tutor-contact-time-label">Morning</td>
+                                                                    <td>{renderCheckbox('morning', 'mon')}</td>
+                                                                    <td>{renderCheckbox('morning', 'tue')}</td>
+                                                                    <td>{renderCheckbox('morning', 'wed')}</td>
+                                                                    <td>{renderCheckbox('morning', 'thu')}</td>
+                                                                    <td>{renderCheckbox('morning', 'fri')}</td>
+                                                                    <td>{renderCheckbox('morning', 'sat')}</td>
+                                                                    <td>{renderCheckbox('morning', 'sun')}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td className="tutor-contact-time-label">Afternoon</td>
+                                                                    <td>{renderCheckbox('afternoon', 'mon')}</td>
+                                                                    <td>{renderCheckbox('afternoon', 'tue')}</td>
+                                                                    <td>{renderCheckbox('afternoon', 'wed')}</td>
+                                                                    <td>{renderCheckbox('afternoon', 'thu')}</td>
+                                                                    <td>{renderCheckbox('afternoon', 'fri')}</td>
+                                                                    <td>{renderCheckbox('afternoon', 'sat')}</td>
+                                                                    <td>{renderCheckbox('afternoon', 'sun')}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td className="tutor-contact-time-label">Night</td>
+                                                                    <td>{renderCheckbox('night', 'mon')}</td>
+                                                                    <td>{renderCheckbox('night', 'tue')}</td>
+                                                                    <td>{renderCheckbox('night', 'wed')}</td>
+                                                                    <td>{renderCheckbox('night', 'thu')}</td>
+                                                                    <td>{renderCheckbox('night', 'fri')}</td>
+                                                                    <td>{renderCheckbox('night', 'sat')}</td>
+                                                                    <td>{renderCheckbox('night', 'sun')}</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <small className="tutor-contact-help-text">Please select all time slots that work for you</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className="tutor-contact-form-group">
+                                                <label htmlFor="availability-notes" className="tutor-contact-label">Additional Availability Notes</label>
+                                                <textarea
+                                                    className="tutor-contact-textarea"
+                                                    id="availability-notes"
+                                                    name="availabilityNotes"
+                                                    rows="2"
+                                                    value={formData.availabilityNotes}
+                                                    onChange={handleChange}
+                                                    placeholder="Any specific timing preferences or additional notes about your availability"
+                                                ></textarea>
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className="tutor-contact-form-group">
+                                                <div className="tutor-contact-terms">
+                                                    <div className="tutor-contact-checkbox-wrapper">
+                                                        <input
+                                                            type="checkbox"
+                                                            id="agreeToTerms"
+                                                            name="agreeToTerms"
+                                                            className="tutor-contact-terms-checkbox"
+                                                            checked={formData.agreeToTerms}
+                                                            onChange={handleChange}
+                                                            required
+                                                        />
+                                                        <label htmlFor="agreeToTerms" className="tutor-contact-terms-label">
+                                                            I agree to the <a href="/terms" target="_blank" className="tutor-contact-terms-link">Terms and Conditions</a>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="col-12">
+                                            <div className="tutor-contact-button-wrapper">
+                                                <button type="submit" className="tutor-contact-submit-btn">Signup and Send Message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -201,4 +349,4 @@ function TutorContact({ isOpen, onClose, tutorName, tutorSubjects }) {
     );
 }
 
-export default TutorContact;
+export default TutorContact; 
