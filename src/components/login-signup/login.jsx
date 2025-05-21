@@ -18,7 +18,7 @@ function Login() {
                         <div className="col-md-6 col-lg-5">
                             <div className="login-card">
                                 <div className="login-logo-container text-center mb-2">
-                                    <img src="/Images/logo/logo v/logo-v-gr.svg" alt="Strive Academics Logo" className="login-logo" />
+                                    <img src="/Images/logo/logo-v/logo-v-gr.svg" alt="Strive Academics Logo" className="login-logo" />
                                 </div>
 
                                 <h2 className="login-title text-center mb-2">Welcome Back</h2>

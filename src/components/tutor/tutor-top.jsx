@@ -18,11 +18,9 @@ function TutorTop() {
             <div className="row col-lg-10 col-md-11 col-sm-12 d-flex tutor-top-sec">
                 <div className="tutor-top-content g-0">
                     <div className="tutor-top-banner">
-                        <img 
-                            src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" 
-                            alt="Laboratory equipment" 
-                            className="tutor-top-banner-img"
-                        />
+                        <div className="tutor-top-banner-text">
+                            Achieve your goals with a Strive tutor.
+                        </div>
                     </div>
                     
                     <div className="tutor-top-profile container">

@@ -12,12 +12,12 @@ function BfriendPricegrid() {
         <div className="d-flex g-0 price-grid-heading-main" id="gold-plan">
           <div className="d-flex price-grid-heading-sec" id="plan-h-gold">
             <h1 className="fw-bold plan-type" id="plan-t-gold">
-              Gold
+            🧑‍🎓 Gold
             </h1>
             <span className="plan-des">
               Tailored Sessions
             </span>
-            <button className="btn btn-primary mt-5m p-3 fw-bold plan-gs-btn" id="plan-gs-gold-btn">
+            <button className="btn btn-primary mt-5 p-3 fw-bold plan-gs-btn" id="plan-gs-gold-btn">
               Get started
             </button>
           </div>
@@ -25,7 +25,7 @@ function BfriendPricegrid() {
         <div className="d-flex g-0 price-grid-heading-main" id="platinum-plan">
           <div className="d-flex price-grid-heading-sec" id="plan-h-platinum">
             <h1 className="fw-bold plan-type" id="plan-t-platinum">
-              Platinum
+            🧑‍🏫 Platinum
             </h1>
             <span className="plan-des">
               Tailored Sessions
@@ -38,7 +38,7 @@ function BfriendPricegrid() {
         <div className="d-flex g-0 price-grid-heading-main" id="executive-plan">
           <div className="d-flex price-grid-heading-sec" id="plan-h-executive">
             <h1 className="fw-bold plan-type" id="plan-t-executive">
-              Executive
+            🌟 Executive
             </h1>
             <span className="plan-des">
               Tailored Sessions

@@ -9,6 +9,7 @@
 
 .navbar {
   background-color: white;
+  user-select: none;
 }
 
 .nav-sec {
