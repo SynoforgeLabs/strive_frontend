@@ -7,6 +7,9 @@ function PricingHdiw() {
     const [confirmedWithTutor, setConfirmedWithTutor] = useState('');
     const [numFriends, setNumFriends] = useState(0);
     const [tutorName, setTutorName] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [passwordError, setPasswordError] = useState('');
     
     const handleClose = () => {
         setShowModal(false);
@@ -14,6 +17,10 @@ function PricingHdiw() {
             setFormSubmitted(false);
             setConfirmedWithTutor('');
             setNumFriends(0);
+            setTutorName('');
+            setPassword('');
+            setConfirmPassword('');
+            setPasswordError('');
         }, 500);
     };
     
@@ -24,6 +31,12 @@ function PricingHdiw() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
+        
+        if (password !== confirmPassword) {
+            setPasswordError('Passwords do not match');
+            return;
+        }
+        
         setFormSubmitted(true);
         // Here you would typically handle form submission to backend
     };
@@ -103,22 +116,26 @@ function PricingHdiw() {
                     <div className="col-12 text-center mb-5">
                         <h2 className="pricing-hdiw-title mb-5">How do I sign up?</h2>
                         
-                        <div className="row justify-content-center">
-                            <div className="col-12 col-md-10">
-                                <ol className="pricing-hdiw-list ps-3">
-                                    <li className="mb-4 d-flex align-items-start">
-                                        <span className="fw-bold me-2 pricing-hdiw-number">1</span>
-                                        <span className="pricing-hdiw-step-text">   
+                        <div className="row justify-content-center g-4">
+                            <div className="col-12 col-md-3">
+                                <div className="card h-100 pricing-hdiw-card">
+                                    <div className="card-body text-center">
+                                        <span className="pricing-hdiw-number">1</span>
+                                        <p className="pricing-hdiw-step-text mb-0">
                                             Fill out <a href="#" onClick={handleShow} className="fw-bold pricing-hdiw-link">this form</a> individually to confirm your attendance in sessions. Once we establish a group of at least 5, and no more than 8 students, we will get the free academic skills consultation organised!
-                                        </span>
-                                    </li>
-                                    <li className="mb-2 d-flex align-items-start">
-                                        <span className="fw-bold me-2 pricing-hdiw-number">2</span>
-                                        <span className="pricing-hdiw-step-text">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-12 col-md-3">
+                                <div className="card h-100 pricing-hdiw-card">
+                                    <div className="card-body text-center">
+                                        <span className="pricing-hdiw-number">2</span>
+                                        <p className="pricing-hdiw-step-text mb-0">
                                             <span className="fw-bold">Please note:</span> free academic skills consultations are not offered for group interview preparation sessions.
-                                        </span>
-                                    </li>
-                                </ol>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -198,17 +215,6 @@ function PricingHdiw() {
                                             {confirmedWithTutor === 'yes' && (
                                                 <>
                                                     <div className="mb-3">
-                                                        <label htmlFor="formPhone" className="form-label pricing-hdiw-form-label">Your Phone Number</label>
-                                                        <input 
-                                                            type="tel" 
-                                                            className="form-control pricing-hdiw-form-input" 
-                                                            id="formPhone" 
-                                                            placeholder="Enter your phone number" 
-                                                            required 
-                                                        />
-                                                    </div>
-                                                    
-                                                    <div className="mb-3">
                                                         <label htmlFor="formEmail" className="form-label pricing-hdiw-form-label">Your Email</label>
                                                         <input 
                                                             type="email" 
@@ -217,6 +223,47 @@ function PricingHdiw() {
                                                             placeholder="Enter your email address" 
                                                             required 
                                                         />
+                                                    </div>
+                                                    
+                                                    <div className="mb-3">
+                                                        <label htmlFor="formPassword" className="form-label pricing-hdiw-form-label">Password</label>
+                                                        <input 
+                                                            type="password" 
+                                                            className="form-control pricing-hdiw-form-input" 
+                                                            id="formPassword" 
+                                                            placeholder="Enter your password" 
+                                                            required 
+                                                            minLength="8"
+                                                            value={password}
+                                                            onChange={(e) => {
+                                                                setPassword(e.target.value);
+                                                                setPasswordError('');
+                                                            }}
+                                                        />
+                                                        <div className="pricing-hdiw-form-help-text">
+                                                            Password must be at least 8 characters long
+                                                        </div>
+                                                    </div>
+
+                                                    <div className="mb-3">
+                                                        <label htmlFor="formConfirmPassword" className="form-label pricing-hdiw-form-label">Confirm Password</label>
+                                                        <input 
+                                                            type="password" 
+                                                            className="form-control pricing-hdiw-form-input" 
+                                                            id="formConfirmPassword" 
+                                                            placeholder="Confirm your password" 
+                                                            required 
+                                                            value={confirmPassword}
+                                                            onChange={(e) => {
+                                                                setConfirmPassword(e.target.value);
+                                                                setPasswordError('');
+                                                            }}
+                                                        />
+                                                        {passwordError && (
+                                                            <div className="pricing-hdiw-form-error text-danger mt-2">
+                                                                {passwordError}
+                                                            </div>
+                                                        )}
                                                     </div>
                                                     
                                                     <div className="mb-3">

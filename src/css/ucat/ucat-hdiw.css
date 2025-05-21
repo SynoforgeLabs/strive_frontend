@@ -25,11 +25,21 @@
 
 .ucat-hdiw-number {
     color: #f44336;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    display: block;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(244, 67, 54, 0.1);
 }
 
 .ucat-hdiw-step-text {
     font-size: 1.125rem;
     line-height: 1.7;
+    color: #333;
+    text-align: center;
 }
 
 .ucat-hdiw-link {
@@ -86,7 +96,6 @@
     justify-content: space-between;
     padding-bottom:  1.5rem;
     border-radius: 10px 10px 0 0;
-    border-bottom: 1px solid #e9ecef;
 }
 
 .ucat-hdiw-modal-title {
@@ -192,4 +201,21 @@
     .ucat-hdiw-confirmation-text {
         font-size: 1.125rem;
     }
+}
+
+.ucat-hdiw-card {
+    border: 1px solid rgba(13, 35, 113, 0.1);
+    box-shadow: 0 4px 6px rgba(13, 35, 113, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem !important;
+    padding: 2rem 1.5rem;
+    height: 100%;
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.ucat-hdiw-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(13, 35, 113, 0.15);
 }

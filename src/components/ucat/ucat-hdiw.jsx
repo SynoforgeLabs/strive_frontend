@@ -4,10 +4,18 @@ import "../../css/ucat/ucat-hdiw.css";
 function UcatHdiw() {
     const [showModal, setShowModal] = useState(false);
     const [formSubmitted, setFormSubmitted] = useState(false);
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [passwordError, setPasswordError] = useState('');
     
     const handleClose = () => {
         setShowModal(false);
-        setTimeout(() => setFormSubmitted(false), 500); // Reset form submitted state after modal closes
+        setTimeout(() => {
+            setFormSubmitted(false);
+            setPassword('');
+            setConfirmPassword('');
+            setPasswordError('');
+        }, 500);
     };
     
     const handleShow = (e) => {
@@ -17,6 +25,12 @@ function UcatHdiw() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
+        
+        if (password !== confirmPassword) {
+            setPasswordError('Passwords do not match');
+            return;
+        }
+        
         setFormSubmitted(true);
         // Here you would typically handle form submission to backend
     };
@@ -46,22 +60,26 @@ function UcatHdiw() {
                                 <h2 className="fw-bold ucat-hdiw-title">How do I sign up?</h2>
                             </div>
                         </div>
-                        <div className="row justify-content-center">
-                            <div className="col-12 col-md-10">
-                                <ol className="ucat-hdiw-list ps-3">
-                                    <li className="mb-4 d-flex align-items-start">
-                                        <span className="fw-bold me-2 ucat-hdiw-number">1</span>
-                                        <span className="ucat-hdiw-step-text">
+                        <div className="row justify-content-center g-4">
+                            <div className="col-12 col-md-3">
+                                <div className="card h-100 ucat-hdiw-card">
+                                    <div className="card-body text-center">
+                                        <span className="ucat-hdiw-number">1</span>
+                                        <p className="ucat-hdiw-step-text mb-0">
                                             Fill out <a href="#" onClick={handleShow} className="fw-bold ucat-hdiw-link">this form</a> individually to confirm your attendance in sessions. Once we establish a group of at least 5, and no more than 8 students, we will get the free academic skills consultation organised!
-                                        </span>
-                                    </li>
-                                    <li className="mb-2 d-flex align-items-start">
-                                        <span className="fw-bold me-2 ucat-hdiw-number">2</span>
-                                        <span className="ucat-hdiw-step-text">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-12 col-md-3">
+                                <div className="card h-100 ucat-hdiw-card">
+                                    <div className="card-body text-center">
+                                        <span className="ucat-hdiw-number">2</span>
+                                        <p className="ucat-hdiw-step-text mb-0">
                                             <span className="fw-bold">Please note:</span> free academic skills consultations are not offered for group interview preparation sessions.
-                                        </span>
-                                    </li>
-                                </ol>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -115,6 +133,47 @@ function UcatHdiw() {
                                                     placeholder="Enter your phone number" 
                                                     required 
                                                 />
+                                            </div>
+                                            
+                                            <div className="mb-3">
+                                                <label htmlFor="formPassword" className="form-label ucat-hdiw-form-label">Password</label>
+                                                <input 
+                                                    type="password" 
+                                                    className="form-control ucat-hdiw-form-input" 
+                                                    id="formPassword" 
+                                                    placeholder="Enter your password" 
+                                                    required 
+                                                    minLength="8"
+                                                    value={password}
+                                                    onChange={(e) => {
+                                                        setPassword(e.target.value);
+                                                        setPasswordError('');
+                                                    }}
+                                                />
+                                                <div className="ucat-hdiw-form-help-text">
+                                                    Password must be at least 8 characters long
+                                                </div>
+                                            </div>
+
+                                            <div className="mb-3">
+                                                <label htmlFor="formConfirmPassword" className="form-label ucat-hdiw-form-label">Confirm Password</label>
+                                                <input 
+                                                    type="password" 
+                                                    className="form-control ucat-hdiw-form-input" 
+                                                    id="formConfirmPassword" 
+                                                    placeholder="Confirm your password" 
+                                                    required 
+                                                    value={confirmPassword}
+                                                    onChange={(e) => {
+                                                        setConfirmPassword(e.target.value);
+                                                        setPasswordError('');
+                                                    }}
+                                                />
+                                                {passwordError && (
+                                                    <div className="ucat-hdiw-form-error text-danger mt-2">
+                                                        {passwordError}
+                                                    </div>
+                                                )}
                                             </div>
                                             
                                             <div className="mb-3">

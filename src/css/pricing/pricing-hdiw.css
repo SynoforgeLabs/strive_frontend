@@ -25,11 +25,21 @@
 
 .pricing-hdiw-number {
     color: #f44336;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    display: block;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(244, 67, 54, 0.1);
 }
 
 .pricing-hdiw-step-text {
     font-size: 1.125rem;
     line-height: 1.7;
+    color: #333;
+    text-align: center;
 }
 
 .pricing-hdiw-link {
@@ -79,6 +89,8 @@
     border-radius: 1rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 2rem;
+    max-height: 80dvh;
+    overflow: scroll;
 }
 
 .pricing-hdiw-modal-header {
@@ -105,6 +117,11 @@
     opacity: 1;
 }
 
+.pricing-hdiw-form {
+    max-height: 80dvh;
+    overflow: scroll;
+}
+
 .pricing-hdiw-form-label {
     font-weight: 600;
     margin-bottom: 0.5rem;
@@ -118,6 +135,19 @@
     padding: 0.75rem;
     font-size: 1rem;
     transition: border-color 0.3s;
+}
+
+.pricing-hdiw-form-input[type="password"] {
+    letter-spacing: 0.1em;
+    font-family: monospace;
+}
+
+.pricing-hdiw-form-help-text {
+    display: block;
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .pricing-hdiw-form-input:focus,
@@ -200,4 +230,21 @@
     .pricing-hdiw-confirmation-text {
         font-size: 1.125rem;
     }
+}
+
+.pricing-hdiw-card {
+    border: 1px solid rgba(13, 35, 113, 0.1);
+    box-shadow: 0 4px 6px rgba(13, 35, 113, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 1rem !important;
+    padding: 2rem 1.5rem;
+    height: 100%;
+    background: linear-gradient(145deg, #ffffff 0%, #f8f9ff 100%);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pricing-hdiw-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(13, 35, 113, 0.15);
 }
