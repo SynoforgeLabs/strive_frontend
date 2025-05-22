@@ -1,0 +1,48 @@
+#contactus_hero {
+    height: auto;
+    padding: 6rem 0;
+    padding-bottom: 0 !important;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contactus-hero-sec {
+    height: 100%;
+    max-width: 2000px !important;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  .contactus-hero-t {
+    position: absolute;
+    transform: scale(60%);
+    top: -25%;
+    left: -25%;
+    z-index: 1;
+  }
+  .contactus-hero-b {
+    position: absolute;
+    transform: scale(60%);
+    bottom: -25%;
+    right: -25%;
+    z-index: 1;
+  }
+  
+  .contactus-hero-text-col {
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    background-image: url("/public/Images/site-images/home/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10rem;
+    border-radius: 2rem;
+  }
+  .contactus-hero-title {
+    font-size: 4rem;
+    text-align: center;
+  }
+

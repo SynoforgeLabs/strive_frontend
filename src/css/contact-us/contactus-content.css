@@ -1,0 +1,108 @@
+.contactus-content-section {
+    padding: 5rem 0;
+}
+
+.contactus-content-box {
+    padding: 2rem;
+}
+
+.contactus-content-description {
+    color: #333;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.contactus-content-buttons {
+    margin-top: 1rem;
+}
+
+.contactus-content-email-btn,
+.contactus-content-tutor-btn {
+    padding: 1rem 2rem !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.contactus-content-email-btn {
+    color: #3A75C4 !important;
+    border: 5px solid #3A75C4 !important;
+    border-radius: 2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    font-weight: 800 !important;
+    font-size: 1rem !important;
+    aspect-ratio: 1/1 !important;
+}
+
+.contactus-content-email-btn span {
+    font-size: 5rem;
+}
+
+.contactus-content-email-btn:hover {
+    background-color: #d32f2f;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.contactus-content-tutor-btn {
+    color: #3A75C4 !important;
+    border: 5px solid #3A75C4 !important;
+    border-radius: 2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    font-weight: 800 !important;
+    font-size: 1rem !important;
+    aspect-ratio: 1/1 !important;
+}
+
+.contactus-content-tutor-btn span {
+    font-size: 5rem;
+}
+
+.contactus-content-tutor-btn:hover {
+    background-color: #3A75C4;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contactus-content-section {
+        padding: 4rem 0;
+    }
+
+    .contactus-content-description {
+        font-size: 1.1rem;
+    }
+
+    .contactus-content-buttons {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contactus-content-section {
+        padding: 3rem 0;
+    }
+
+    .contactus-content-box {
+        padding: 1.5rem;
+    }
+
+    .contactus-content-description {
+        font-size: 1rem;
+    }
+
+    .contactus-content-email-btn,
+    .contactus-content-tutor-btn {
+        width: 100%;
+        padding: 0.875rem 1.5rem !important;
+        font-size: 1rem;
+    }
+}

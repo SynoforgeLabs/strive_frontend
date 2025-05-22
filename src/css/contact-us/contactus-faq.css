@@ -1,0 +1,44 @@
+.contactus-faq-main {
+    justify-content: center;
+}
+
+.contactus-faq-sec {
+   justify-content: center;
+   margin: 5rem 0!important;
+   max-width: 1200px !important;
+}
+
+.contactus-faq-main-h {
+    text-align: center;
+    color: #132151;
+    margin-bottom: 3rem;
+    justify-content: center;
+}
+
+#contactus-faq-accordians-main {
+    flex-direction: column;
+}
+
+#contactus-faq-ac-item {
+    border-radius: 1rem !important;
+}
+
+#contactus-faq-accordians-main button {
+    box-shadow: none !important;
+    border: none;
+    border-radius: .5rem !important;
+}
+
+.accordion-item {
+    transition: border 0.3s ease; /* Smooth transition for border */
+}
+
+.contactus-faq-q {
+    border-radius: 0.5 !important;
+    border: none;
+    justify-content: start;
+    font-size: 1.5rem !important;
+    padding: 1rem 1.5rem !important;
+    color: #0C4DA2 !important;
+}
+
