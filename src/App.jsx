@@ -17,6 +17,7 @@ import TermsPage from './pages/js/terms';
 import LoginPage from './pages/js/login';
 import SignupPage from './pages/js/signup';
 import TutorContactPage from './pages/js/tutor-contact';
+import PrivacyPage from './pages/js/privacy';
 
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/ucat" element={<UcatPage />} />
           <Route path="/terms" element={<TermsPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
         </Routes>

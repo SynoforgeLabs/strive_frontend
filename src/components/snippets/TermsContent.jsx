@@ -4,9 +4,9 @@ import '../../css/snippets/terms-content.css';
 const TermsContent = () => {
   return (
       <div className="terms-container py-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
+        <div className="container col-10">
+          <div className="row justify-content-center">
+            <div className="col-lg-10 col-md-10 col-sm-12">
               <h1 className="terms-title mb-4">Terms and Conditions</h1>
     <div className="terms-content">
       <h2 className="terms-section-title">Purpose</h2>
