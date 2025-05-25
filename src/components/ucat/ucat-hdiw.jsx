@@ -53,36 +53,48 @@ function UcatHdiw() {
     return (
         <section className="row container-fluid section d-flex g-0 z-index-0 ucat-hdiw-main" id="ucat-hdiw">
             <div className="row col-lg-9 col-md-12 d-flex ucat-hdiw-sec">
-                
-                    <div className="container-fluid ucat-hdiw-container">
-                        <div className="row justify-content-center">
-                            <div className="col-12 text-center mb-4">
-                                <h2 className="fw-bold ucat-hdiw-title">How do I sign up?</h2>
-                            </div>
+                <div className="container-fluid ucat-hdiw-container">
+                    <div className="row justify-content-center">
+                        <div className="col-12 text-center mb-5">
+                            <h2 className="fw-bold ucat-hdiw-title">How do I sign up?</h2>
                         </div>
-                        <div className="row justify-content-center g-4">
-                            <div className="col-12 col-md-3">
-                                <div className="card h-100 ucat-hdiw-card">
-                                    <div className="card-body text-center">
-                                        <span className="ucat-hdiw-number">1</span>
-                                        <p className="ucat-hdiw-step-text mb-0">
-                                            Fill out <a href="#" onClick={handleShow} className="fw-bold ucat-hdiw-link">this form</a> individually to confirm your attendance in sessions. Once we establish a group of at least 5, and no more than 8 students, we will get the free academic skills consultation organised!
+                    </div>
+                    <div className="row justify-content-center">
+                        <div className="col-lg-8 col-md-10 col-sm-12">
+                            <div className="ucat-hdiw-steps">
+                                <div className="ucat-hdiw-step">
+                                    <div className="ucat-hdiw-step-number">1</div>
+                                    <div className="ucat-hdiw-step-content">
+                                        <h3 className="ucat-hdiw-step-title">Confirm Your Attendance for Academic Skills Consultation</h3>
+                                        <p className="ucat-hdiw-step-text">
+                                        Fill out <a href="#" onClick={handleShow} className="fw-bold ucat-hdiw-link">this form</a> individually to confirm your attendance in sessions. Once we establish a group of at least 5, and no more than 8 students, we will get the free academic skills consultation organised!
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-12 col-md-3">
-                                <div className="card h-100 ucat-hdiw-card">
-                                    <div className="card-body text-center">
-                                        <span className="ucat-hdiw-number">2</span>
-                                        <p className="ucat-hdiw-step-text mb-0">
-                                            <span className="fw-bold">Please note:</span> free academic skills consultations are not offered for group interview preparation sessions.
+                                
+                                <div className="ucat-hdiw-step">
+                                    <div className="ucat-hdiw-step-number">2</div>
+                                    <div className="ucat-hdiw-step-content">
+                                        <h3 className="ucat-hdiw-step-title">Begin Weekly Sessions with Your Group and Expert Tutor</h3>
+                                        <p className="ucat-hdiw-step-text">
+                                        Once the free academic skills consultation is complete, you will start having weekly sessions with your group and expert tutor!
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div className="ucat-hdiw-step">
+                                    <div className="ucat-hdiw-step-number">3</div>
+                                    <div className="ucat-hdiw-step-content">
+                                        <h3 className="ucat-hdiw-step-title">Important Note About Group Eligibility</h3>
+                                        <p className="ucat-hdiw-step-text">
+                                        Please note: the free academic skills consultation will not be offered if you are joining an existing group.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
             
             {showModal && (

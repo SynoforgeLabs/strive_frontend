@@ -11,7 +11,7 @@ function PricingPricegrid() {
                         <div className="col"></div>
                         <div className="col pricing-price-grid-header" id='pricing-price-grid-gold'>
                             <div className="pricing-price-grid-card pricing-price-grid-gold text-center p-4 rounded-4">
-                                <h3 className="mb-2">Gold</h3>
+                                <h3 className="mb-2">🧑‍🎓 Gold</h3>
                                 <p className="text-muted mb-3">Personalised Sessions</p>
                                 <div className="pricing-price-grid-price-tag mb-3">
                                     <span className="pricing-price-grid-amount">$60</span>
@@ -22,7 +22,7 @@ function PricingPricegrid() {
                         </div>
                         <div className="col pricing-price-grid-header" id='pricing-price-grid-platinum'>
                             <div className="pricing-price-grid-card pricing-price-grid-platinum text-center p-4 rounded-4">
-                                <h3 className="mb-2">Platinum</h3>
+                                <h3 className="mb-2">🧑‍🏫 Platinum</h3>
                                 <p className="text-muted mb-3">Experienced Tutor</p>
                                 <div className="pricing-price-grid-price-tag mb-3">
                                     <span className="pricing-price-grid-amount">$80</span>
@@ -33,7 +33,7 @@ function PricingPricegrid() {
                         </div>
                         <div className="col pricing-price-grid-header" id='pricing-price-grid-elite'>
                             <div className="pricing-price-grid-card pricing-price-grid-elite text-center p-4 rounded-4">
-                                <h3 className="mb-2">Elite</h3>
+                                <h3 className="mb-2">🌟 Elite</h3>
                                 <p className="text-muted mb-3">Expert Tutor</p>
                                 <div className="pricing-price-grid-price-tag mb-3">
                                     <span className="pricing-price-grid-amount">$120</span>

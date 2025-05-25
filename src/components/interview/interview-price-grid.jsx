@@ -19,7 +19,7 @@ function InterviewPriceGrid() {
                         <div className="col"></div>
                         <div className="col interview-price-grid-header" id='interview-price-grid-gold'>
                             <div className="interview-price-grid-card interview-price-grid-gold text-center p-4 rounded-4">
-                                <p className="text-muted mb-3">5 x Interview Workshops</p>
+                                <p className="text-muted mb-3">🧑‍🎓 5 x Interview Workshops</p>
                                 <div className="interview-price-grid-price-tag mb-3">
                                     <span className="interview-price-grid-amount">$30</span>
                                     <span className="interview-price-grid-period">/hr</span>
@@ -29,7 +29,7 @@ function InterviewPriceGrid() {
                         </div>
                         <div className="col interview-price-grid-header" id='interview-price-grid-elite'>
                             <div className="interview-price-grid-card interview-price-grid-elite text-center p-4 rounded-4">
-                                <p className="text-muted mb-3">Mock Interviews</p>
+                                <p className="text-muted mb-3">🌟 Mock Interviews</p>
                                 <div className="interview-price-grid-price-tag mb-3">
                                     <span className="interview-price-grid-amount">$120</span>
                                     <span className="interview-price-grid-period">Per mock</span>

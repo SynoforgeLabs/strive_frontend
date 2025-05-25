@@ -11,7 +11,7 @@ function UcatPricegrid() {
                         <div className="col"></div>
                         <div className="col ucat-price-grid-header" id='ucat-price-grid-gold'>
                             <div className="ucat-price-grid-card ucat-price-grid-gold text-center p-4 rounded-4">
-                                <p className="text-muted mb-3">Online Small Group Sessions</p>
+                                <p className="text-muted mb-3">🧑‍🎓 Online Small Group Sessions</p>
                                 <div className="ucat-price-grid-price-tag mb-3">
                                     <span className="ucat-price-grid-amount">$60</span>
                                     <span className="ucat-price-grid-period">/hr</span>

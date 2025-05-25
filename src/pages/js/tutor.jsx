@@ -10,6 +10,7 @@ const Tutorpage = () => {
         <Snippets.Navbar />
         <Tutorcomponents.TutorTop />
         <Tutorcomponents.TutorInfo />
+        <Tutorcomponents.TutorFaq />
         <Snippets.Footer />
       </div>
     );

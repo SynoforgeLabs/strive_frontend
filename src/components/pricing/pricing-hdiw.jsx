@@ -112,28 +112,34 @@ function PricingHdiw() {
     return (
         <>
             <section className="row container-fluid section d-flex g-0 z-index-0 pricing-hdiw-main" id="pricing-hdiw">
-                <div className="row col-11 col-lg-9 d-flex pricing-hdiw-sec">
-                    <div className="col-12 text-center mb-5">
-                        <h2 className="pricing-hdiw-title mb-5">How do I sign up?</h2>
-                        
-                        <div className="row justify-content-center g-4">
-                            <div className="col-12 col-md-3">
-                                <div className="card h-100 pricing-hdiw-card">
-                                    <div className="card-body text-center">
-                                        <span className="pricing-hdiw-number">1</span>
-                                        <p className="pricing-hdiw-step-text mb-0">
-                                            Fill out <a href="#" onClick={handleShow} className="fw-bold pricing-hdiw-link">this form</a> individually to confirm your attendance in sessions. Once we establish a group of at least 5, and no more than 8 students, we will get the free academic skills consultation organised!
-                                        </p>
-                                    </div>
-                                </div>
+                <div className="row col-lg-9 col-md-12 d-flex pricing-hdiw-sec">
+                    <div className="container-fluid pricing-hdiw-container">
+                        <div className="row justify-content-center">
+                            <div className="col-12 text-center mb-5">
+                                <h2 className="fw-bold pricing-hdiw-title">How do I sign up?</h2>
                             </div>
-                            <div className="col-12 col-md-3">
-                                <div className="card h-100 pricing-hdiw-card">
-                                    <div className="card-body text-center">
-                                        <span className="pricing-hdiw-number">2</span>
-                                        <p className="pricing-hdiw-step-text mb-0">
-                                            <span className="fw-bold">Please note:</span> free academic skills consultations are not offered for group interview preparation sessions.
-                                        </p>
+                        </div>
+                        <div className="row justify-content-center">
+                            <div className="col-lg-8 col-md-10 col-sm-12">
+                                <div className="pricing-hdiw-steps">
+                                    <div className="pricing-hdiw-step">
+                                        <div className="pricing-hdiw-step-number">1</div>
+                                        <div className="pricing-hdiw-step-content">
+                                            <h3 className="pricing-hdiw-step-title">Fill Out the Registration Form</h3>
+                                            <p className="pricing-hdiw-step-text">
+                                                Fill out <a href="#" onClick={handleShow} className="fw-bold pricing-hdiw-link">this form</a> individually to confirm your attendance in sessions. Once we establish a group of at least 5, and no more than 8 students, we will get the free academic skills consultation organised!
+                                            </p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="pricing-hdiw-step">
+                                        <div className="pricing-hdiw-step-number">2</div>
+                                        <div className="pricing-hdiw-step-content">
+                                            <h3 className="pricing-hdiw-step-title">Important Note</h3>
+                                            <p className="pricing-hdiw-step-text">
+                                                <span className="fw-bold">Please note:</span> free academic skills consultations are not offered for group interview preparation sessions.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
