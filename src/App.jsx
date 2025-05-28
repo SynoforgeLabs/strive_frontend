@@ -19,6 +19,7 @@ import SignupPage from './pages/js/signup';
 import TutorContactPage from './pages/js/tutor-contact';
 import PrivacyPage from './pages/js/privacy';
 import ContactusPage from './pages/js/contact-us';
+import AccountSettingsPage from './pages/js/dashboard/tutor/ account-settings';
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/contact-us" element={<ContactusPage />} />
+          <Route path="/tutor/account-settings" element={<AccountSettingsPage />} />
         </Routes>
       </Router>
     </ContactFormProvider>

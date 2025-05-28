@@ -51,15 +51,15 @@ function InterviewHdiw() {
     }, []);
     
     return (
-        <section className="row container-fluid section d-flex g-0 z-index-0 interview-hdiw-main" id="interview-hdiw">
-            <div className="row col-lg-9 col-md-12 d-flex interview-hdiw-sec">
-                <div className="container-fluid interview-hdiw-container">
-                    <div className="row justify-content-center">
+            <section className="row container-fluid section d-flex g-0 z-index-0 interview-hdiw-main" id="interview-hdiw">
+                <div className="row col-lg-9 col-md-12 d-flex interview-hdiw-sec">
+                    <div className="container-fluid interview-hdiw-container">
+                        <div className="row justify-content-center">
                         <div className="col-12 text-center mb-5">
-                            <h2 className="fw-bold interview-hdiw-title">How do I sign up?</h2>
+                                <h2 className="fw-bold interview-hdiw-title">How do I sign up?</h2>
+                            </div>
                         </div>
-                    </div>
-                    <div className="row justify-content-center">
+                        <div className="row justify-content-center">
                         <div className="col-lg-8 col-md-10 col-sm-12">
                             <div className="interview-hdiw-steps">
                                 <div className="interview-hdiw-step">
@@ -82,60 +82,60 @@ function InterviewHdiw() {
                                     </div>
                                 </div>
                             </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            {showModal && (
-                <div className="interview-hdiw-modal-backdrop" onClick={handleClose}>
-                    <div className="interview-hdiw-modal" onClick={(e) => e.stopPropagation()}>
-                        <div className="interview-hdiw-modal-dialog">
-                            <div className="interview-hdiw-modal-content">
-                                <div className="interview-hdiw-modal-header">
-                                    <h3 className="interview-hdiw-modal-title">Registration Form</h3>
-                                    <button 
-                                        type="button" 
-                                        className="btn-close interview-hdiw-close-button" 
-                                        onClick={handleClose}
-                                        aria-label="Close"
-                                    ></button>
-                                </div>
-                                <div className="interview-hdiw-modal-body">
-                                    {!formSubmitted ? (
-                                        <form onSubmit={handleSubmit} className="interview-hdiw-form">
-                                            <div className="mb-3">
-                                                <label htmlFor="formName" className="form-label interview-hdiw-form-label">Your Name</label>
-                                                <input 
-                                                    type="text" 
-                                                    className="form-control interview-hdiw-form-input" 
-                                                    id="formName" 
-                                                    placeholder="Enter your full name" 
-                                                    required 
-                                                />
-                                            </div>
-                                            
-                                            <div className="mb-3">
-                                                <label htmlFor="formEmail" className="form-label interview-hdiw-form-label">Your Email</label>
-                                                <input 
-                                                    type="email" 
-                                                    className="form-control interview-hdiw-form-input" 
-                                                    id="formEmail" 
-                                                    placeholder="Enter your email address" 
-                                                    required 
-                                                />
-                                            </div>
-                                            
-                                            <div className="mb-3">
-                                                <label htmlFor="formPhone" className="form-label interview-hdiw-form-label">Your Phone Number</label>
-                                                <input 
-                                                    type="tel" 
-                                                    className="form-control interview-hdiw-form-input" 
-                                                    id="formPhone" 
-                                                    placeholder="Enter your phone number" 
-                                                    required 
-                                                />
-                                            </div>
+                
+                {showModal && (
+                    <div className="interview-hdiw-modal-backdrop" onClick={handleClose}>
+                        <div className="interview-hdiw-modal" onClick={(e) => e.stopPropagation()}>
+                            <div className="interview-hdiw-modal-dialog">
+                                <div className="interview-hdiw-modal-content">
+                                    <div className="interview-hdiw-modal-header">
+                                        <h3 className="interview-hdiw-modal-title">Registration Form</h3>
+                                        <button 
+                                            type="button" 
+                                            className="btn-close interview-hdiw-close-button" 
+                                            onClick={handleClose}
+                                            aria-label="Close"
+                                        ></button>
+                                    </div>
+                                    <div className="interview-hdiw-modal-body">
+                                        {!formSubmitted ? (
+                                            <form onSubmit={handleSubmit} className="interview-hdiw-form">
+                                                <div className="mb-3">
+                                                    <label htmlFor="formName" className="form-label interview-hdiw-form-label">Your Name</label>
+                                                    <input 
+                                                        type="text" 
+                                                        className="form-control interview-hdiw-form-input" 
+                                                        id="formName" 
+                                                        placeholder="Enter your full name" 
+                                                        required 
+                                                    />
+                                                </div>
+                                                
+                                                <div className="mb-3">
+                                                    <label htmlFor="formEmail" className="form-label interview-hdiw-form-label">Your Email</label>
+                                                    <input 
+                                                        type="email" 
+                                                        className="form-control interview-hdiw-form-input" 
+                                                        id="formEmail" 
+                                                        placeholder="Enter your email address" 
+                                                        required 
+                                                    />
+                                                </div>
+                                                
+                                                <div className="mb-3">
+                                                    <label htmlFor="formPhone" className="form-label interview-hdiw-form-label">Your Phone Number</label>
+                                                    <input 
+                                                        type="tel" 
+                                                        className="form-control interview-hdiw-form-input" 
+                                                        id="formPhone" 
+                                                        placeholder="Enter your phone number" 
+                                                        required 
+                                                    />
+                                                </div>
                                             
                                             <div className="mb-3">
                                                 <label htmlFor="formPassword" className="form-label interview-hdiw-form-label">Password</label>
@@ -177,81 +177,81 @@ function InterviewHdiw() {
                                                     </div>
                                                 )}
                                             </div>
-                                            
-                                            <div className="mb-3">
-                                                <label htmlFor="formApplying" className="form-label interview-hdiw-form-label">Are you applying to dentistry, medicine, or both?</label>
-                                                <select className="form-select interview-hdiw-form-select" id="formApplying" required>
-                                                    <option value="dentistry">Dentistry</option>
-                                                    <option value="medicine">Medicine</option>
-                                                    <option value="both">Both</option>
-                                                </select>
-                                            </div>
-                                            
-                                            <div className="mb-3">
-                                                <div className="form-check interview-hdiw-form-checkbox">
-                                                    <input 
-                                                        className="form-check-input" 
-                                                        type="checkbox" 
-                                                        id="formConsultation" 
-                                                    />
-                                                    <label className="form-check-label" htmlFor="formConsultation">
-                                                        I require a consultation for preferencing and application to all medical/dental schools in Australia
-                                                    </label>
+                                                
+                                                <div className="mb-3">
+                                                    <label htmlFor="formApplying" className="form-label interview-hdiw-form-label">Are you applying to dentistry, medicine, or both?</label>
+                                                    <select className="form-select interview-hdiw-form-select" id="formApplying" required>
+                                                        <option value="dentistry">Dentistry</option>
+                                                        <option value="medicine">Medicine</option>
+                                                        <option value="both">Both</option>
+                                                    </select>
                                                 </div>
-                                            </div>
-                                            
-                                            <div className="mb-3">
-                                                <div className="form-check interview-hdiw-form-checkbox">
-                                                    <input 
-                                                        className="form-check-input" 
-                                                        type="checkbox" 
-                                                        id="formAttendance" 
-                                                        required 
-                                                    />
-                                                    <label className="form-check-label" htmlFor="formAttendance">
-                                                        I confirm my attendance in sessions once organised
-                                                    </label>
+                                                
+                                                <div className="mb-3">
+                                                    <div className="form-check interview-hdiw-form-checkbox">
+                                                        <input 
+                                                            className="form-check-input" 
+                                                            type="checkbox" 
+                                                            id="formConsultation" 
+                                                        />
+                                                        <label className="form-check-label" htmlFor="formConsultation">
+                                                            I require a consultation for preferencing and application to all medical/dental schools in Australia
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            
-                                            <div className="mb-4">
-                                                <div className="form-check interview-hdiw-form-checkbox">
-                                                    <input 
-                                                        className="form-check-input" 
-                                                        type="checkbox" 
-                                                        id="formTerms" 
-                                                        required 
-                                                    />
-                                                    <label className="form-check-label" htmlFor="formTerms">
-                                                        I agree with the <a href="#" className="interview-hdiw-link">terms and conditions</a> and <a href="#" className="interview-hdiw-link">privacy policy</a>
-                                                    </label>
+                                                
+                                                <div className="mb-3">
+                                                    <div className="form-check interview-hdiw-form-checkbox">
+                                                        <input 
+                                                            className="form-check-input" 
+                                                            type="checkbox" 
+                                                            id="formAttendance" 
+                                                            required 
+                                                        />
+                                                        <label className="form-check-label" htmlFor="formAttendance">
+                                                            I confirm my attendance in sessions once organised
+                                                        </label>
+                                                    </div>
                                                 </div>
+                                                
+                                                <div className="mb-4">
+                                                    <div className="form-check interview-hdiw-form-checkbox">
+                                                        <input 
+                                                            className="form-check-input" 
+                                                            type="checkbox" 
+                                                            id="formTerms" 
+                                                            required 
+                                                        />
+                                                        <label className="form-check-label" htmlFor="formTerms">
+                                                            I agree with the <a href="#" className="interview-hdiw-link">terms and conditions</a> and <a href="#" className="interview-hdiw-link">privacy policy</a>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div className="d-grid">
+                                                    <button type="submit" className="btn interview-hdiw-submit-btn">
+                                                        Submit Registration
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        ) : (
+                                            <div className="interview-hdiw-confirmation text-center py-4">
+                                                <div className="interview-hdiw-confirmation-icon mb-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#28a745" className="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                                    </svg>
+                                                </div>
+                                                <h3 className="interview-hdiw-confirmation-title mb-3">Thank you for filling out this form!</h3>
+                                                <p className="interview-hdiw-confirmation-text">We'll be in touch with the next steps.</p>
                                             </div>
-                                            
-                                            <div className="d-grid">
-                                                <button type="submit" className="btn interview-hdiw-submit-btn">
-                                                    Submit Registration
-                                                </button>
-                                            </div>
-                                        </form>
-                                    ) : (
-                                        <div className="interview-hdiw-confirmation text-center py-4">
-                                            <div className="interview-hdiw-confirmation-icon mb-3">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#28a745" className="bi bi-check-circle-fill" viewBox="0 0 16 16">
-                                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-                                                </svg>
-                                            </div>
-                                            <h3 className="interview-hdiw-confirmation-title mb-3">Thank you for filling out this form!</h3>
-                                            <p className="interview-hdiw-confirmation-text">We'll be in touch with the next steps.</p>
-                                        </div>
-                                    )}
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            )}
-        </section>
+                )}
+            </section>
     );
 }
 

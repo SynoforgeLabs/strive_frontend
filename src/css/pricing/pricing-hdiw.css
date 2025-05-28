@@ -140,11 +140,11 @@
     .pricing-hdiw-steps {
         padding: 1rem 0;
     }
-
+    
     .pricing-hdiw-step {
         padding-bottom: 2rem;
     }
-
+    
     .pricing-hdiw-step-number {
         width: 40px;
         height: 40px;
@@ -160,7 +160,7 @@
     .pricing-hdiw-step-title {
         font-size: 1.1rem;
     }
-
+    
     .pricing-hdiw-step-text {
         font-size: 0.95rem;
     }
@@ -172,7 +172,7 @@
         height: 35px;
         font-size: 1.1rem;
     }
-
+    
     .pricing-hdiw-step:not(:last-child)::after {
         left: 17px;
         top: 45px;
@@ -185,8 +185,8 @@
     .pricing-hdiw-step-text {
         font-size: 0.9rem;
     }
-}
-
+    }
+    
 .pricing-hdiw-card {
     border: 1px solid rgba(13, 35, 113, 0.1);
     box-shadow: 0 4px 6px rgba(13, 35, 113, 0.05);

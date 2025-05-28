@@ -240,7 +240,7 @@
         font-size: 1.25rem;
         margin-right: 1rem;
     }
-
+    
     .interview-hdiw-step:not(:last-child)::after {
         left: 20px;
         top: 50px;
@@ -249,7 +249,7 @@
     .interview-hdiw-step-title {
         font-size: 1.1rem;
     }
-
+    
     .interview-hdiw-step-text {
         font-size: 0.95rem;
     }
@@ -261,7 +261,7 @@
         height: 35px;
         font-size: 1.1rem;
     }
-
+    
     .interview-hdiw-step:not(:last-child)::after {
         left: 17px;
         top: 45px;
@@ -274,8 +274,8 @@
     .interview-hdiw-step-text {
         font-size: 0.9rem;
     }
-}
-
+    }
+    
 .interview-hdiw-card {
     border: 1px solid rgba(22, 32, 91, 0.1);
     box-shadow: 0 4px 6px rgba(22, 32, 91, 0.05);
