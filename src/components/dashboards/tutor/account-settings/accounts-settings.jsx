@@ -6,6 +6,8 @@ function TutorAccountSettings() {
     const [selectedLocations, setSelectedLocations] = useState([]);
     const [selectedSubjects, setSelectedSubjects] = useState([]);
     const [introVideo, setIntroVideo] = useState(null);
+    const [schools, setSchools] = useState(['']);
+    const [currentStudies, setCurrentStudies] = useState(['']);
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
@@ -48,18 +50,53 @@ function TutorAccountSettings() {
         setSelectedSubjects(selectedSubjects.filter(sub => sub !== subject));
     };
 
+    const handleSchoolChange = (index, value) => {
+        const newSchools = [...schools];
+        newSchools[index] = value;
+        setSchools(newSchools);
+    };
+
+    const handleStudyChange = (index, value) => {
+        const newStudies = [...currentStudies];
+        newStudies[index] = value;
+        setCurrentStudies(newStudies);
+    };
+
+    const addSchool = () => {
+        setSchools([...schools, '']);
+    };
+
+    const removeSchool = (index) => {
+        const newSchools = schools.filter((_, i) => i !== index);
+        setSchools(newSchools);
+    };
+
+    const addStudy = () => {
+        setCurrentStudies([...currentStudies, '']);
+    };
+
+    const removeStudy = (index) => {
+        const newStudies = currentStudies.filter((_, i) => i !== index);
+        setCurrentStudies(newStudies);
+    };
+
     return (
         <div className="account-settings-main">
-            <h1 className="account-settings-title">Account Management</h1>
+            <h1 className="account-settings-title">
+                <i className="fas fa-cog"></i> Account Management
+            </h1>
             <div className="account-settings-header">
                 <div className="account-settings-profile">
                     <div className="account-settings-avatar">
                         {profileImage ? (
                             <img src={profileImage} alt="Profile" />
                         ) : (
-                            <div className="account-settings-avatar-placeholder"></div>
+                            <div className="account-settings-avatar-placeholder">
+                                <i className="fas fa-user"></i>
+                            </div>
                         )}
                         <label htmlFor="profile-upload" className="account-settings-avatar-upload">
+                            <i className="fas fa-camera"></i>
                             <input
                                 type="file"
                                 id="profile-upload"
@@ -72,15 +109,22 @@ function TutorAccountSettings() {
                     <div className="account-settings-profile-info">
                         <h2>Sarah Brown</h2>
                         <div className="account-settings-stats">
-                            <span className="stats-gold">Gold (250/5)</span>
-                            <span className="stats-atr">ATR (96.45)</span>
+                            <span className="stats-gold">
+                                <i className="fas fa-medal"></i> Gold (250/5)
+                            </span>
+                            <span className="stats-atr">
+                                <i className="fas fa-chart-line"></i> ATR (96.45)
+                            </span>
                         </div>
                         <div className="account-settings-meta">
+                            <span className="account-settings-role">
+                                <i className="fas fa-briefcase"></i> Developer
+                            </span>
                             <span className="account-settings-location">
                                 <i className="fas fa-map-marker-alt"></i> New York
                             </span>
                             <span className="account-settings-joined">
-                                <i className="fas fa-calendar"></i> Joined March 17
+                                <i className="fas fa-calendar-alt"></i> Joined March 17
                             </span>
                         </div>
                     </div>
@@ -88,35 +132,35 @@ function TutorAccountSettings() {
             </div>
 
             <div className="account-settings-form">
-                <h3>Edit your account information:</h3>
+                <h3 className="mb-6">
+                    <i className="fas fa-edit"></i> Edit your account information:
+                </h3>
                 <form>
                     <div className="account-settings-form-row">
                         <div className="account-settings-form-group">
-                            <label>First Name</label>
+                            <label>
+                                <i className="fas fa-user"></i> First Name
+                            </label>
                             <input type="text" placeholder="First Name" />
                         </div>
                         <div className="account-settings-form-group">
-                            <label>Last Name</label>
+                            <label>
+                                <i className="fas fa-user"></i> Last Name
+                            </label>
                             <input type="text" placeholder="Last Name" />
                         </div>
                     </div>
-                    <div className="account-settings-form-row">
-                        <div className="account-settings-form-group">
-                            <label>Job Title</label>
-                            <input type="text" placeholder="Job Title" />
-                        </div>
-                        <div className="account-settings-form-group">
-                            <label>Location</label>
-                            <input type="text" placeholder="Location" />
-                        </div>
-                    </div>
                     <div className="account-settings-form-group full-width">
-                        <label>About you / Bio</label>
+                        <label>
+                            <i className="fas fa-comment-alt"></i> About you / Bio
+                        </label>
                         <textarea rows="4" placeholder="Write something about yourself..."></textarea>
                     </div>
 
                     <div className="account-settings-form-group full-width">
-                        <label>Introduction Video</label>
+                        <label>
+                            <i className="fas fa-video"></i> Introduction Video
+                        </label>
                         <div className="video-upload-container">
                             {introVideo ? (
                                 <div className="video-preview">
@@ -132,7 +176,7 @@ function TutorAccountSettings() {
                                         className="video-remove-btn"
                                         onClick={() => setIntroVideo(null)}
                                     >
-                                        Remove Video
+                                        <i className="fas fa-trash-alt"></i> Remove Video
                                     </button>
                                 </div>
                             ) : (
@@ -144,10 +188,12 @@ function TutorAccountSettings() {
                                         accept="video/*"
                                         onChange={handleVideoChange}
                                     />
-                                    <label htmlFor="video-upload" className="video-upload-label">
+                                    <label htmlFor="video-upload" className="video-upload-label d-flex flex-column align-items-center gap-2">
                                         <i className="fas fa-cloud-upload-alt"></i>
                                         <span>Click to upload your introduction video</span>
-                                        <span className="video-format-hint">MP4, WebM or Ogg format</span>
+                                        <span className="video-format-hint">
+                                            <i className="fas fa-info-circle"></i> MP4, WebM or Ogg format
+                                        </span>
                                     </label>
                                 </div>
                             )}
@@ -155,7 +201,9 @@ function TutorAccountSettings() {
                     </div>
 
                     <div className="form-section">
-                        <h3>AVAILABLE LOCATIONS</h3>
+                        <h3>
+                            <i className="fas fa-map-marked-alt"></i> AVAILABLE LOCATIONS
+                        </h3>
                         <div className="form-section-content">
                             <div className="multi-select-container">
                                 <select 
@@ -172,13 +220,13 @@ function TutorAccountSettings() {
                                 <div className="selected-items">
                                     {selectedLocations.map((location, index) => (
                                         <span key={index} className="selected-tag">
-                                            {location}
+                                            <i className="fas fa-map-pin"></i> {location}
                                             <button 
                                                 type="button" 
                                                 onClick={() => removeLocation(location)}
                                                 className="tag-remove"
                                             >
-                                                ×
+                                                <i className="fas fa-times"></i>
                                             </button>
                                         </span>
                                     ))}
@@ -188,7 +236,9 @@ function TutorAccountSettings() {
                     </div>
 
                     <div className="form-section">
-                        <h3>MY TUTORING SUBJECTS</h3>
+                        <h3>
+                            <i className="fas fa-book"></i> MY TUTORING SUBJECTS
+                        </h3>
                         <div className="form-section-content">
                             <div className="multi-select-container">
                                 <select 
@@ -208,13 +258,13 @@ function TutorAccountSettings() {
                                 <div className="selected-items">
                                     {selectedSubjects.map((subject, index) => (
                                         <span key={index} className="selected-tag">
-                                            {subject}
+                                            <i className="fas fa-book-open"></i> {subject}
                                             <button 
                                                 type="button" 
                                                 onClick={() => removeSubject(subject)}
                                                 className="tag-remove"
                                             >
-                                                ×
+                                                <i className="fas fa-times"></i>
                                             </button>
                                         </span>
                                     ))}
@@ -224,34 +274,68 @@ function TutorAccountSettings() {
                     </div>
 
                     <div className="form-section">
-                        <h3>EDUCATION</h3>
+                        <h3>
+                            <i className="fas fa-graduation-cap"></i> EDUCATION
+                        </h3>
                         <div className="education-subsection">
-                            <h4>I went to school at</h4>
+                            <h4>
+                                <i className="fas fa-school"></i> I went to school at
+                            </h4>
                             <div className="education-entries">
-                                <div className="education-entry">
-                                    <select className="form-select">
-                                        <option value="">Select School</option>
-                                        <option value="QASMT">Queensland Academy for Science, Mathematics and Technology</option>
-                                        {/* Add more options as needed */}
-                                    </select>
-                                    <button type="button" className="btn-remove">Remove</button>
-                                </div>
-                                <button type="button" className="btn-add">+ Add Another School</button>
+                                {schools.map((school, index) => (
+                                    <div key={index} className="education-entry">
+                                        <input
+                                            type="text"
+                                            className="form-input"
+                                            value={school}
+                                            onChange={(e) => handleSchoolChange(index, e.target.value)}
+                                            placeholder="Enter school name"
+                                        />
+                                        {schools.length > 1 && (
+                                            <button 
+                                                type="button" 
+                                                className="btn-remove"
+                                                onClick={() => removeSchool(index)}
+                                            >
+                                                <i className="fas fa-trash-alt"></i> Remove
+                                            </button>
+                                        )}
+                                    </div>
+                                ))}
+                                <button type="button" className="btn-add" onClick={addSchool}>
+                                    <i className="fas fa-plus"></i> Add Another School
+                                </button>
                             </div>
                         </div>
 
                         <div className="education-subsection">
-                            <h4>I'm Currently Studying</h4>
+                            <h4>
+                                <i className="fas fa-university"></i> I'm Currently Studying
+                            </h4>
                             <div className="education-entries">
-                                <div className="education-entry">
-                                    <select className="form-select">
-                                        <option value="">Select Course</option>
-                                        <option value="Medicine">Medicine</option>
-                                        {/* Add more options as needed */}
-                                    </select>
-                                    <button type="button" className="btn-remove">Remove</button>
-                                </div>
-                                <button type="button" className="btn-add">+ Add Another Course</button>
+                                {currentStudies.map((study, index) => (
+                                    <div key={index} className="education-entry">
+                                        <input
+                                            type="text"
+                                            className="form-input"
+                                            value={study}
+                                            onChange={(e) => handleStudyChange(index, e.target.value)}
+                                            placeholder="Enter what you're studying"
+                                        />
+                                        {currentStudies.length > 1 && (
+                                            <button 
+                                                type="button" 
+                                                className="btn-remove"
+                                                onClick={() => removeStudy(index)}
+                                            >
+                                                <i className="fas fa-trash-alt"></i> Remove
+                                            </button>
+                                        )}
+                                    </div>
+                                ))}
+                                <button type="button" className="btn-add" onClick={addStudy}>
+                                    <i className="fas fa-plus"></i> Add Another Course
+                                </button>
                             </div>
                         </div>
                     </div>

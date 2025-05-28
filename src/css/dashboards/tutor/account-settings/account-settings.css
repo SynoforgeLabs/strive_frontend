@@ -13,6 +13,10 @@
     font-weight: 600;
 }
 
+.account-settings-title i {
+    margin-right: 0.5rem;
+}
+
 /* Header Section */
 .account-settings-header {
     position: relative;
@@ -63,6 +67,14 @@
     width: 100%;
     height: 100%;
     background-color: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-settings-avatar-placeholder i {
+    font-size: 3rem;
+    color: #CBD5E0;
 }
 
 .account-settings-avatar-upload {
@@ -76,6 +88,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.account-settings-avatar-upload i {
+    font-size: 1.25rem;
+    color: white;
 }
 
 .account-settings-profile-info {
@@ -99,7 +116,7 @@
 }
 
 .account-settings-meta i {
-    margin-right: 5px;
+    margin-right: 0.5rem;
 }
 
 .account-settings-completion {
@@ -179,6 +196,10 @@
     color: #333;
 }
 
+.account-settings-form h3 i {
+    margin-right: 0.5rem;
+}
+
 .account-settings-form h4 {
     margin: 30px 0 20px;
     font-size: 16px;
@@ -206,6 +227,10 @@
     font-size: 14px;
 }
 
+.account-settings-form-group label i {
+    margin-right: 0.5rem;
+}
+
 .account-settings-form-group input,
 .account-settings-form-group textarea {
     width: 100%;
@@ -225,69 +250,6 @@
     padding-top: 20px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .account-settings-profile {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 0 15px;
-    }
-
-    .account-settings-profile-info {
-        margin-left: 0;
-        margin-top: 15px;
-    }
-
-    .account-settings-meta {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .account-settings-completion {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .account-settings-actions {
-        justify-content: center;
-    }
-
-    .account-settings-form {
-        margin: 15px;
-        padding: 20px;
-    }
-
-    .account-settings-form-row {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-
-.account-settings-stats {
-    display: flex;
-    gap: 15px;
-    margin: 8px 0;
-}
-
-.stats-gold, .stats-atr {
-    padding: 4px 12px;
-    border-radius: .5rem;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.stats-gold {
-    background-color: rgba(255, 215, 0, 0.1);
-    color: #B8860B;
-}
-
-.stats-atr {
-    background-color: rgba(255, 99, 71, 0.1);
-    color: #FF6347;
-}
-
 .form-section {
     margin-top: 2rem;
     padding-top: 2rem;
@@ -299,6 +261,10 @@
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
+}
+
+.form-section h3 i {
+    margin-right: 0.5rem;
 }
 
 .form-section-content {
@@ -339,6 +305,10 @@
     margin-bottom: 1rem;
 }
 
+.education-subsection h4 i {
+    margin-right: 0.5rem;
+}
+
 .education-entries {
     display: flex;
     flex-direction: column;
@@ -349,6 +319,7 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+    width: 100%;
 }
 
 .form-select {
@@ -376,6 +347,10 @@
     background-color: #FED7D7;
 }
 
+.btn-remove i {
+    margin-right: 0.5rem;
+}
+
 .btn-add {
     padding: 0.75rem;
     border: 2px dashed #CBD5E0;
@@ -391,6 +366,10 @@
 .btn-add:hover {
     border-color: #4A5568;
     color: #2D3748;
+}
+
+.btn-add i {
+    margin-right: 0.5rem;
 }
 
 .multi-select-container {
@@ -416,6 +395,10 @@
     color: #4A5568;
 }
 
+.selected-tag i:first-child {
+    margin-right: 0.5rem;
+}
+
 .tag-remove {
     background: none;
     border: none;
@@ -431,6 +414,10 @@
 
 .tag-remove:hover {
     color: #E53E3E;
+}
+
+.tag-remove i {
+    font-size: 0.875rem;
 }
 
 .form-select {
@@ -507,5 +494,58 @@
 
 .video-remove-btn:hover {
     background-color: #FED7D7;
+}
+
+.video-remove-btn i {
+    margin-right: 0.5rem;
+}
+
+.account-settings-stats {
+    display: flex;
+    gap: 15px;
+    margin: 8px 0;
+}
+
+.stats-gold, .stats-atr {
+    padding: 4px 12px;
+    border-radius: .5rem;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.stats-gold {
+    background-color: rgba(255, 215, 0, 0.1);
+    color: #B8860B;
+}
+
+.stats-atr {
+    background-color: rgba(255, 99, 71, 0.1);
+    color: #FF6347;
+}
+
+.stats-gold i,
+.stats-atr i {
+    margin-right: 0.5rem;
+}
+
+.form-input {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #CBD5E0;
+    font-size: 1rem;
+    color: #4A5568;
+    background-color: white;
+    transition: all 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #4A5568;
+    box-shadow: 0 0 0 1px #4A5568;
+}
+
+.form-input::placeholder {
+    color: #A0AEC0;
 }
 
