@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../css/reviews/reviews-list.css";
+import reviewService from "../../services/reviewService";
 
 // Review card component
 const ReviewCard = ({ name, date, rating, reviewText, platform }) => {
@@ -70,129 +71,65 @@ const ReviewCard = ({ name, date, rating, reviewText, platform }) => {
 };
 
 function ReviewsList() {
-  // Sample review data
-  const reviews = [
-    {
-      id: 1,
-      name: "Spider Man",
-      date: "2025/4/20",
-      rating: 3,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "trustpilot"
-    },
-    {
-      id: 2,
-      name: "Iron Man",
-      date: "2025/4/20",
-      rating: 4,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "google"
-    },
-    {
-      id: 3,
-      name: "Hulk",
-      date: "2025/4/20",
-      rating: 5,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "trustpilot"
-    },
-    {
-      id: 4,
-      name: "Wonder Woman",
-      date: "2025/4/20",
-      rating: 5,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "trustpilot"
-    },
-    {
-      id: 5,
-      name: "Black Panther",
-      date: "2025/4/20",
-      rating: 2,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "trustpilot"
-    },
-    {
-      id: 6,
-      name: "Hawkeye",
-      date: "2025/4/20",
-      rating: 4,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "google"
-    },
-    {
-      id: 7,
-      name: "Iron Man",
-      date: "2025/4/20",
-      rating: 5,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "google"
-    },
-    {
-      id: 8,
-      name: "Spider Man",
-      date: "2025/4/20",
-      rating: 2,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "trustpilot"
-    },
-    {
-      id: 9,
-      name: "Hulk", 
-      date: "2025/4/20",
-      rating: 5,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "trustpilot"
-    },
-    {
-      id: 10,
-      name: "Black Panther",
-      date: "2025/4/20",
-      rating: 3,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "trustpilot"
-    },
-    {
-      id: 11,
-      name: "Spider Man",
-      date: "2025/4/20",
-      rating: 2,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "trustpilot"
-    },
-    {
-      id: 12,
-      name: "Iron Man",
-      date: "2025/4/20",
-      rating: 5,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "google"
-    },
-    {
-      id: 13,
-      name: "Hawkeye",
-      date: "2025/4/20",
-      rating: 4,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "google"
-    },
-    {
-      id: 14,
-      name: "Hulk",
-      date: "2025/4/20",
-      rating: 5,
-      reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "trustpilot"
-    },
-    {
-      id: 15,
-      name: "Wonder Woman",
-      date: "2025/4/20",
-      rating: 5,
-      reviewText: "Lorem ipsum dolor  mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
-      platform: "trustpilot"
-    }
-  ];
+  const [reviews, setReviews] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        setLoading(true);
+        const data = await reviewService.getReviews();
+        setReviews(data);
+      } catch (error) {
+        console.error('Error fetching reviews:', error);
+        setError('Failed to load reviews');
+        // Fallback to sample data if API fails
+        setReviews([
+          {
+            id: 1,
+            name: "Spider Man",
+            date: "2025/4/20",
+            rating: 3,
+            reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+            platform: "trustpilot"
+          },
+          {
+            id: 2,
+            name: "Iron Man",
+            date: "2025/4/20",
+            rating: 4,
+            reviewText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.odio mattis.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.",
+            platform: "google"
+          },
+        ]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchReviews();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '400px' }}>
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Loading reviews...</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '400px' }}>
+        <div className="alert alert-warning" role="alert">
+          {error}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="d-flex reviews-list-container">

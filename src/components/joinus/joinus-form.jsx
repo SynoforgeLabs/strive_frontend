@@ -38,6 +38,9 @@ function JoinusForm({ isOpen, onClose }) {
 
   const [errors, setErrors] = useState({});
   const [showTerminationMessage, setShowTerminationMessage] = useState("");
+  const [showSuccessMessage, setShowSuccessMessage] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   // State options for dropdown
   const australianStates = [
@@ -220,16 +223,88 @@ function JoinusForm({ isOpen, onClose }) {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (validateStep(currentStep)) {
-      // Here you would typically send the form data to your backend
-      console.log("Form submitted:", formData);
-      alert("Thank you for expressing interest in joining our tutoring team at Strive Academics! We will review your application and contact you regarding the next steps.");
-      onClose();
+      setLoading(true);
+      try {
+        // Import the service
+        const tutorApplicationService = (await import('../../services/tutorApplicationService')).default;
+        
+        // Submit the application
+        const response = await tutorApplicationService.submitApplication(formData);
+        
+        // Show success message with application ID
+        setShowSuccessMessage({
+          applicationId: response.application_id,
+          message: response.message
+        });
+        
+      } catch (error) {
+        console.error('Application submission error:', error);
+        setError({ general: error.message || 'Failed to submit application. Please try again.' });
+      } finally {
+        setLoading(false);
+      }
     }
   };
+
+  // If there's a success message, show it instead of the form
+  if (showSuccessMessage) {
+    return (
+      <div className={`joinus-form-overlay ${isOpen ? 'active' : ''}`}>
+        <div className="joinus-form-container">
+          <div className="joinus-form-header">
+            <h2>Application Submitted Successfully!</h2>
+            <button type="button" className="btn-close" onClick={onClose} aria-label="Close"></button>
+          </div>
+          
+          <div className="joinus-form-success">
+            <div className="alert alert-success">
+              <h4><i className="bi bi-check-circle-fill"></i> Thank You!</h4>
+              <p>{showSuccessMessage.message}</p>
+            </div>
+            
+            <div className="application-tracking-info">
+              <h5>Your Application Details:</h5>
+              <div className="tracking-card">
+                <p><strong>Application ID:</strong> <code>{showSuccessMessage.applicationId}</code></p>
+                <p className="text-muted">Please save this ID to track your application status.</p>
+              </div>
+            </div>
+            
+            <div className="next-steps mt-4">
+              <h6>What happens next?</h6>
+              <ol>
+                <li>We'll review your application within 3-5 business days</li>
+                <li>You'll receive an email update on your application status</li>
+                <li>If selected, we'll contact you to schedule an interview</li>
+              </ol>
+            </div>
+            
+            <div className="action-buttons mt-4">
+              <button 
+                className="btn btn-primary me-3" 
+                onClick={() => {
+                  // Option to track application
+                  window.open(`/track-application?id=${showSuccessMessage.applicationId}`, '_blank');
+                }}
+              >
+                Track Application
+              </button>
+              <button 
+                className="btn btn-secondary" 
+                onClick={onClose}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // If there's a termination message, show it instead of the form
   if (showTerminationMessage) {
@@ -292,6 +367,14 @@ function JoinusForm({ isOpen, onClose }) {
         </div>
         
         <form onSubmit={handleSubmit} className="joinus-form-content">
+          {/* General Error Message */}
+          {error && error.general && (
+            <div className="alert alert-danger mb-3" role="alert">
+              <i className="bi bi-exclamation-triangle-fill me-2"></i>
+              {error.general}
+            </div>
+          )}
+
           {/* Step 1: Personal Information */}
           {currentStep === 1 && (
             <div className="joinus-form-step">
@@ -695,8 +778,19 @@ function JoinusForm({ isOpen, onClose }) {
               <button
                 type="submit"
                 className="btn btn-success"
+                disabled={loading}
               >
-                Submit Application
+                {loading ? (
+                  <>
+                    <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                    Submitting...
+                  </>
+                ) : (
+                  <>
+                    <i className="bi bi-send me-2"></i>
+                    Submit Application
+                  </>
+                )}
               </button>
             )}
           </div>

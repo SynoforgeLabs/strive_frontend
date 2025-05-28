@@ -1,13 +1,52 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../../css/login-signup/login.css';
+import { useAuth } from '../../contexts/AuthContext';
 
 function Login() {
     const [userType, setUserType] = useState('student');
     const [rememberMe, setRememberMe] = useState(false);
+    const [formData, setFormData] = useState({
+        username: '',
+        password: ''
+    });
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
+    const { login } = useAuth();
 
     const handleUserTypeChange = (type) => {
         setUserType(type);
+    };
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value
+        });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError('');
+        setLoading(true);
+
+        try {
+            // Only student login is implemented for now
+            if (userType !== 'student') {
+                setError('Teacher login is not yet available');
+                setLoading(false);
+                return;
+            }
+
+            await login(formData.username, formData.password);
+            navigate('/'); // Redirect to home page after successful login
+        } catch (error) {
+            setError(error.detail || 'Invalid username or password');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -43,16 +82,26 @@ function Login() {
                                     </div>
                                 </div>
 
-                                <form className="login-form">
+                                {error && (
+                                    <div className="alert alert-danger mb-3" role="alert">
+                                        {error}
+                                    </div>
+                                )}
+
+                                <form className="login-form" onSubmit={handleSubmit}>
                                     <div className="form-floating mb-3">
                                         <input 
-                                            type="email" 
+                                            type="text" 
                                             className="form-control login-input" 
-                                            id="emailInput" 
-                                            placeholder="Email address" 
+                                            id="usernameInput" 
+                                            name="username"
+                                            placeholder="Username" 
+                                            value={formData.username}
+                                            onChange={handleInputChange}
+                                            required
                                         />
-                                        <label htmlFor="emailInput">
-                                            <i className="bi bi-envelope login-input-icon"></i> Email address
+                                        <label htmlFor="usernameInput">
+                                            <i className="bi bi-person login-input-icon"></i> Username
                                         </label>
                                     </div>
                                     
@@ -61,7 +110,11 @@ function Login() {
                                             type="password" 
                                             className="form-control login-input" 
                                             id="passwordInput" 
+                                            name="password"
                                             placeholder="Password" 
+                                            value={formData.password}
+                                            onChange={handleInputChange}
+                                            required
                                         />
                                         <label htmlFor="passwordInput">
                                             <i className="bi bi-lock login-input-icon"></i> Password
@@ -84,8 +137,17 @@ function Login() {
                                         <Link to="/forgot-password" className="login-forgot-link">Forgot password?</Link>
                                     </div>
 
-                                    <button type="button" className="btn login-submit-btn w-100 mb-4">
-                                        <i className="bi bi-box-arrow-in-right me-2"></i> Sign In
+                                    <button 
+                                        type="submit" 
+                                        className="btn login-submit-btn w-100 mb-4" 
+                                        disabled={loading}
+                                    >
+                                        {loading ? (
+                                            <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                        ) : (
+                                            <i className="bi bi-box-arrow-in-right me-2"></i>
+                                        )}
+                                        Sign In
                                     </button>
 
                                     <div className="login-signup-prompt text-center">

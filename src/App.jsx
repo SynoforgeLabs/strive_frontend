@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ContactFormProvider } from './components/snippets/contact-form-overlay';
+import { AuthProvider } from './contexts/AuthContext';
+import ProtectedRoute from './components/protected-route/ProtectedRoute';
 
 import HomePage from './pages/js/home';
 import AboutusPage from './pages/js/aboutus';
@@ -20,33 +22,42 @@ import TutorContactPage from './pages/js/tutor-contact';
 import PrivacyPage from './pages/js/privacy';
 import ContactusPage from './pages/js/contact-us';
 import AccountSettingsPage from './pages/js/dashboard/tutor/ account-settings';
+import TrackApplicationPage from './pages/js/track-application';
 
 const App = () => {
   return (
-    <ContactFormProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/aboutus" element={<AboutusPage />} />
-          <Route path="/faq" element={<FaqPage />} />
-          <Route path="/reviews" element={<ReviewsPage />} />
-          <Route path="/find-a-tutor" element={<FindtPage />} />
-          <Route path="/join-us" element={<JoinusPage />} />
-          <Route path="/tutor" element={<TutorPage />} />
-          <Route path="/tutor/contact" element={<TutorContactPage />} />
-          <Route path="/bring-a-friend-and-save" element={<BFriendPage />} />
-          <Route path="/interview-preperation" element={<InterviewPage />} /> 
-          <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/ucat" element={<UcatPage />} />
-          <Route path="/terms" element={<TermsPage />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/signup" element={<SignupPage />} />
-          <Route path="/contact-us" element={<ContactusPage />} />
-          <Route path="/tutor/account-settings" element={<AccountSettingsPage />} />
-        </Routes>
-      </Router>
-    </ContactFormProvider>
+    <AuthProvider>
+      <ContactFormProvider>
+        <Router>
+          <Routes>
+            {/* Public Routes */}
+            <Route path="/" element={<HomePage />} />
+            <Route path="/aboutus" element={<AboutusPage />} />
+            <Route path="/faq" element={<FaqPage />} />
+            <Route path="/reviews" element={<ReviewsPage />} />
+            <Route path="/find-a-tutor" element={<FindtPage />} />
+            <Route path="/join-us" element={<JoinusPage />} />
+            <Route path="/tutor" element={<TutorPage />} />
+            <Route path="/bring-a-friend-and-save" element={<BFriendPage />} />
+            <Route path="/interview-preperation" element={<InterviewPage />} /> 
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/ucat" element={<UcatPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
+            <Route path="/contact-us" element={<ContactusPage />} />
+            <Route path="/track-application" element={<TrackApplicationPage />} />
+            
+            {/* Protected Routes */}
+            <Route element={<ProtectedRoute />}>
+              <Route path="/tutor/contact" element={<TutorContactPage />} />
+              <Route path="/tutor/account-settings" element={<AccountSettingsPage />} />
+            </Route>
+          </Routes>
+        </Router>
+      </ContactFormProvider>
+    </AuthProvider>
   );
 };
 

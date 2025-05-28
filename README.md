@@ -1,3 +1,87 @@
+# Strive Academics Platform
+
+This is a tutoring platform that connects students with tutors.
+
+## Project Structure
+
+The project consists of two parts:
+- **Frontend**: React application (strive_frontend)
+- **Backend**: Django REST API (strive_backend)
+
+## Getting Started
+
+### Frontend Setup
+
+1. Install dependencies:
+   ```
+   npm install
+   ```
+
+2. Start the development server:
+   ```
+   npm start
+   ```
+   This will start the React app at http://localhost:3000
+
+### Backend Setup
+
+1. Navigate to the backend directory:
+   ```
+   cd strive_backend
+   ```
+
+2. Install dependencies using pipenv:
+   ```
+   pipenv install
+   ```
+
+3. Activate the virtual environment:
+   ```
+   pipenv shell
+   ```
+
+4. Run migrations:
+   ```
+   python manage.py migrate
+   ```
+
+5. Start the development server:
+   ```
+   python manage.py runserver
+   ```
+   This will start the Django API at http://localhost:8000
+
+## Features
+
+- User authentication (login/signup)
+- Student and teacher profiles
+- Tutor search and filtering
+- Session booking
+- Reviews and ratings
+
+## API Endpoints
+
+### Authentication
+
+- `POST /api/auth/register/` - Register a new student account
+- `POST /api/auth/token/` - Get access token with username and password
+- `POST /api/auth/token/refresh/` - Refresh access token
+- `GET /api/auth/profile/` - Get user profile
+- `POST /api/auth/logout/` - Logout (blacklist token)
+
+## Technologies Used
+
+- **Frontend**:
+  - React 19
+  - React Router 7
+  - Bootstrap 5
+  - Axios
+
+- **Backend**:
+  - Django 5
+  - Django REST Framework
+  - JWT Authentication
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
