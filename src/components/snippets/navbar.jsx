@@ -9,7 +9,7 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid p-0 col-9">
             <Link className="navbar-brand" to="/">
-              <img src="/Images/logo/logo h/logo-h-gr.svg" alt="" className="nav-logo" />
+              <img src="/Images/logo/logo-h/logo-h-gr.svg" alt="" className="nav-logo" />
             </Link>
             <button
               className="navbar-toggler"
