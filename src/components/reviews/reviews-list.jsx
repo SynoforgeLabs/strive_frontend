@@ -61,9 +61,9 @@ const ReviewCard = ({ name, date, rating, reviewText, platform }) => {
       
       <div className="review-platform">
         {platform === 'trustpilot' ? (
-          <img src="/Images/review sites/trustpilot.png" alt="Trustpilot" className="platform-icon" />
+          <img src="/Images/review_sites/trustpilot.png" alt="Trustpilot" className="platform-icon" />
         ) : (
-          <img src="/Images/review sites/google.png" alt="Google" className="platform-icon" />
+          <img src="/Images/review_sites/google.png" alt="Google" className="platform-icon" />
         )}
       </div>
     </div>

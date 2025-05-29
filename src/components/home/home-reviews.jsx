@@ -156,7 +156,7 @@ function Reviews() {
               </span>
             </div>
             <div className="d-flex review-site-img-main">
-              <img src="/Images/review sites/trustpilot.png" className="review-site-img" alt="" />
+              <img src="/Images/review_sites/trustpilot.png" className="review-site-img" alt="" />
             </div>
 
           </div>
@@ -273,7 +273,7 @@ function Reviews() {
               </span>
             </div>
             <div className="d-flex review-site-img-main">
-              <img src="/Images/review sites/trustpilot.png" className="review-site-img" alt="" />
+              <img src="/Images/review_sites/trustpilot.png" className="review-site-img" alt="" />
             </div>
 
           </div>
@@ -390,7 +390,7 @@ function Reviews() {
               </span>
             </div>
             <div className="d-flex review-site-img-main">
-              <img src="/Images/review sites/trustpilot.png" className="review-site-img" alt="" />
+              <img src="/Images/review_sites/trustpilot.png" className="review-site-img" alt="" />
             </div>
 
           </div>
@@ -507,7 +507,7 @@ function Reviews() {
               </span>
             </div>
             <div className="d-flex review-site-img-main">
-              <img src="/Images/review sites/trustpilot.png" className="review-site-img" alt="" />
+              <img src="/Images/review_sites/trustpilot.png" className="review-site-img" alt="" />
             </div>
 
           </div>
@@ -624,7 +624,7 @@ function Reviews() {
               </span>
             </div>
             <div className="d-flex review-site-img-main">
-              <img src="/Images/review sites/trustpilot.png" className="review-site-img" alt="" />
+              <img src="/Images/review_sites/trustpilot.png" className="review-site-img" alt="" />
             </div>
 
           </div>
@@ -741,7 +741,7 @@ function Reviews() {
               </span>
             </div>
             <div className="d-flex review-site-img-main">
-              <img src="/Images/review sites/trustpilot.png" className="review-site-img" alt="" />
+              <img src="/Images/review_sites/trustpilot.png" className="review-site-img" alt="" />
             </div>
 
           </div>

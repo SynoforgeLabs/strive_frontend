@@ -7,6 +7,6 @@ build
 *.pyc
 __pycache__/
 strive_backend/__pycache__/
-strive_backend/db.sqlite3
+# strive_backend/db.sqlite3
 .env
 .venv
