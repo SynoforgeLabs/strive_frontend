@@ -82,7 +82,7 @@ function TutorAccountSettings() {
 
     return (
         <div className="account-settings-main">
-            <h1 className="account-settings-title">Account Management
+            <h1 className="account-settings-title">`Account Management
             </h1>
             <div className="account-settings-header">
                 <div className="account-settings-profile">
