@@ -8,6 +8,43 @@ function TutorAccountSettings() {
     const [introVideo, setIntroVideo] = useState(null);
     const [schools, setSchools] = useState(['']);
     const [currentStudies, setCurrentStudies] = useState(['']);
+    const [isEditMode, setIsEditMode] = useState(false);
+    const [formData, setFormData] = useState({
+        fullName: '',
+        username: '',
+        email: '',
+        phoneNumber: '',
+        bio: '',
+        currentPassword: '',
+        newPassword: '',
+        confirmPassword: ''
+    });
+    const [yearLevels] = useState([
+        'Year 1-4', 'Year 5-6', 'Year 7-8', 'Year 9-10', 'Year 11-12'
+    ]);
+    const [curriculums] = useState({
+        'Year 1-4': ['QLD', 'NSW', 'VIC', 'IB'],
+        'Year 5-6': ['QLD', 'NSW', 'VIC', 'IB'],
+        'Year 7-8': ['QLD', 'NSW', 'VIC', 'IB'],
+        'Year 9-10': ['QLD', 'NSW', 'VIC', 'IB'],
+        'Year 11-12': ['QLD', 'NSW', 'VIC', 'IB']
+    });
+    const [subjects] = useState({
+        'QLD': ['Mathematics', 'English', 'Science', 'Physics', 'Chemistry', 'Biology'],
+        'NSW': ['Mathematics', 'English', 'Science', 'Physics', 'Chemistry', 'Biology'],
+        'VIC': ['Mathematics', 'English', 'Science', 'Physics', 'Chemistry', 'Biology'],
+        'IB': ['Mathematics HL', 'Mathematics SL', 'Physics HL', 'Physics SL', 'Chemistry HL', 'Chemistry SL']
+    });
+    const [subjectEntries, setSubjectEntries] = useState([{
+        yearLevel: '',
+        curriculum: '',
+        subject: ''
+    }]);
+    const [showPasswords, setShowPasswords] = useState({
+        currentPassword: false,
+        newPassword: false,
+        confirmPassword: false
+    });
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
@@ -35,19 +72,39 @@ function TutorAccountSettings() {
         }
     };
 
-    const handleSubjectSelect = (e) => {
-        const value = e.target.value;
-        if (value && !selectedSubjects.includes(value)) {
-            setSelectedSubjects([...selectedSubjects, value]);
+    const handleSubjectChange = (index, field, value) => {
+        const newEntries = [...subjectEntries];
+        newEntries[index] = {
+            ...newEntries[index],
+            [field]: value
+        };
+        
+        // Reset dependent fields
+        if (field === 'yearLevel') {
+            newEntries[index].curriculum = '';
+            newEntries[index].subject = '';
+        } else if (field === 'curriculum') {
+            newEntries[index].subject = '';
         }
+        
+        setSubjectEntries(newEntries);
+    };
+
+    const addSubjectEntry = () => {
+        setSubjectEntries([...subjectEntries, {
+            yearLevel: '',
+            curriculum: '',
+            subject: ''
+        }]);
+    };
+
+    const removeSubjectEntry = (index) => {
+        const newEntries = subjectEntries.filter((_, i) => i !== index);
+        setSubjectEntries(newEntries);
     };
 
     const removeLocation = (location) => {
         setSelectedLocations(selectedLocations.filter(loc => loc !== location));
-    };
-
-    const removeSubject = (subject) => {
-        setSelectedSubjects(selectedSubjects.filter(sub => sub !== subject));
     };
 
     const handleSchoolChange = (index, value) => {
@@ -80,10 +137,40 @@ function TutorAccountSettings() {
         setCurrentStudies(newStudies);
     };
 
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Here you would typically send the data to your backend
+        console.log('Form submitted:', {
+            ...formData,
+            schools,
+            currentStudies,
+            selectedLocations,
+            selectedSubjects,
+            profileImage,
+            introVideo
+        });
+        setIsEditMode(false);
+    };
+
+    const togglePasswordVisibility = (field) => {
+        setShowPasswords(prev => ({
+            ...prev,
+            [field]: !prev[field]
+        }));
+    };
+
     return (
         <div className="account-settings-main">
-            <h1 className="account-settings-title">`Account Management
-            </h1>
+            <h1 className="account-settings-title">Account Management</h1>
+
             <div className="account-settings-header">
                 <div className="account-settings-profile">
                     <div className="account-settings-avatar">
@@ -109,16 +196,13 @@ function TutorAccountSettings() {
                         <h2>Sarah Brown</h2>
                         <div className="account-settings-stats">
                             <span className="stats-gold">
-                                <i className="fas fa-medal"></i> Gold (250/5)
+                                Gold (250/5)
                             </span>
                             <span className="stats-atr">
-                                <i className="fas fa-chart-line"></i> ATR (96.45)
+                                ATR (96.45)
                             </span>
                         </div>
                         <div className="account-settings-meta">
-                            <span className="account-settings-role">
-                                <i className="fas fa-briefcase"></i> Developer
-                            </span>
                             <span className="account-settings-location">
                                 <i className="fas fa-map-marker-alt"></i> New York
                             </span>
@@ -131,29 +215,88 @@ function TutorAccountSettings() {
             </div>
 
             <div className="account-settings-form">
-                <h3 className="mb-6">
-                    <i className="fas fa-edit"></i> Edit your account information:
-                </h3>
-                <form>
+                <form onSubmit={handleSubmit}>
+                    <div className="edit-button-container">
+                        <button 
+                            type="button" 
+                            className={`edit-mode-button ${isEditMode ? 'active' : ''}`}
+                            onClick={() => setIsEditMode(!isEditMode)}
+                        >
+                            <i className="fas fa-edit"></i>
+                            {isEditMode ? 'Cancel Edit' : 'Edit Profile'}
+                        </button>
+                    </div>
+
                     <div className="account-settings-form-row">
                         <div className="account-settings-form-group">
                             <label>
-                                <i className="fas fa-user"></i> First Name
+                                <i className="fas fa-user"></i> Full Name
                             </label>
-                            <input type="text" placeholder="First Name" />
+                            <input 
+                                type="text" 
+                                name="fullName"
+                                value={formData.fullName}
+                                onChange={handleInputChange}
+                                placeholder="Enter your full name"
+                                disabled={!isEditMode}
+                            />
                         </div>
                         <div className="account-settings-form-group">
                             <label>
-                                <i className="fas fa-user"></i> Last Name
+                                <i className="fas fa-at"></i> Username
                             </label>
-                            <input type="text" placeholder="Last Name" />
+                            <input 
+                                type="text" 
+                                name="username"
+                                value={formData.username}
+                                onChange={handleInputChange}
+                                placeholder="Enter your username"
+                                disabled={!isEditMode}
+                            />
                         </div>
                     </div>
+
+                    <div className="account-settings-form-row">
+                        <div className="account-settings-form-group">
+                            <label>
+                                <i className="fas fa-envelope"></i> Email
+                            </label>
+                            <input 
+                                type="email" 
+                                name="email"
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                placeholder="Enter your email address"
+                                disabled={!isEditMode}
+                            />
+                        </div>
+                        <div className="account-settings-form-group">
+                            <label>
+                                <i className="fas fa-phone"></i> Phone Number
+                            </label>
+                            <input 
+                                type="tel" 
+                                name="phoneNumber"
+                                value={formData.phoneNumber}
+                                onChange={handleInputChange}
+                                placeholder="Enter your phone number"
+                                disabled={!isEditMode}
+                            />
+                        </div>
+                    </div>
+
                     <div className="account-settings-form-group full-width">
                         <label>
                             <i className="fas fa-comment-alt"></i> About you / Bio
                         </label>
-                        <textarea rows="4" placeholder="Write something about yourself..."></textarea>
+                        <textarea 
+                            rows="4" 
+                            name="bio"
+                            value={formData.bio}
+                            onChange={handleInputChange}
+                            placeholder="Write something about yourself..."
+                            disabled={!isEditMode}
+                        ></textarea>
                     </div>
 
                     <div className="account-settings-form-group full-width">
@@ -170,13 +313,15 @@ function TutorAccountSettings() {
                                     >
                                         Your browser does not support the video tag.
                                     </video>
-                                    <button 
-                                        type="button" 
-                                        className="video-remove-btn"
-                                        onClick={() => setIntroVideo(null)}
-                                    >
-                                        <i className="fas fa-trash-alt"></i> Remove Video
-                                    </button>
+                                    {isEditMode && (
+                                        <button 
+                                            type="button" 
+                                            className="video-remove-btn"
+                                            onClick={() => setIntroVideo(null)}
+                                        >
+                                            <i className="fas fa-trash-alt"></i> Remove Video
+                                        </button>
+                                    )}
                                 </div>
                             ) : (
                                 <div className="video-upload-placeholder">
@@ -186,8 +331,12 @@ function TutorAccountSettings() {
                                         className="video-input"
                                         accept="video/*"
                                         onChange={handleVideoChange}
+                                        disabled={!isEditMode}
                                     />
-                                    <label htmlFor="video-upload" className="video-upload-label d-flex flex-column align-items-center gap-2">
+                                    <label 
+                                        htmlFor="video-upload" 
+                                        className={`video-upload-label d-flex flex-column align-items-center gap-2 ${!isEditMode ? 'disabled' : ''}`}
+                                    >
                                         <i className="fas fa-cloud-upload-alt"></i>
                                         <span>Click to upload your introduction video</span>
                                         <span className="video-format-hint">
@@ -201,6 +350,80 @@ function TutorAccountSettings() {
 
                     <div className="form-section">
                         <h3>
+                            <i className="fas fa-lock"></i> CHANGE PASSWORD
+                        </h3>
+                        <div className="form-section-content">
+                            <div className="password-change-container">
+                                <div className="account-settings-form-group">
+                                    <label>
+                                        <i className="fas fa-key"></i> Current Password
+                                    </label>
+                                    <div className="password-input-container">
+                                        <input 
+                                            type="password"
+                                            name="currentPassword"
+                                            value={formData.currentPassword || ''}
+                                            onChange={handleInputChange}
+                                            placeholder="Enter your current password"
+                                            disabled={!isEditMode}
+                                            className="form-input"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="account-settings-form-group">
+                                    <label>
+                                        <i className="fas fa-lock"></i> New Password
+                                    </label>
+                                    <div className="password-input-container">
+                                        <input 
+                                            type={showPasswords.newPassword ? "text" : "password"}
+                                            name="newPassword"
+                                            value={formData.newPassword || ''}
+                                            onChange={handleInputChange}
+                                            placeholder="Enter your new password"
+                                            disabled={!isEditMode}
+                                            className="form-input"
+                                        />
+                                        <button 
+                                            type="button"
+                                            className="password-toggle-btn"
+                                            onClick={() => togglePasswordVisibility('newPassword')}
+                                            disabled={!isEditMode}
+                                        >
+                                            <i className={`fas ${showPasswords.newPassword ? 'fa-eye' : 'fa-eye-slash'}`}></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className="account-settings-form-group">
+                                    <label>
+                                        <i className="fas fa-lock"></i> Confirm Password
+                                    </label>
+                                    <div className="password-input-container">
+                                        <input 
+                                            type={showPasswords.confirmPassword ? "text" : "password"}
+                                            name="confirmPassword"
+                                            value={formData.confirmPassword || ''}
+                                            onChange={handleInputChange}
+                                            placeholder="Confirm your new password"
+                                            disabled={!isEditMode}
+                                            className="form-input"
+                                        />
+                                        <button 
+                                            type="button"
+                                            className="password-toggle-btn"
+                                            onClick={() => togglePasswordVisibility('confirmPassword')}
+                                            disabled={!isEditMode}
+                                        >
+                                            <i className={`fas ${showPasswords.confirmPassword ? 'fa-eye' : 'fa-eye-slash'}`}></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="form-section">
+                        <h3>
                             <i className="fas fa-map-marked-alt"></i> AVAILABLE LOCATIONS
                         </h3>
                         <div className="form-section-content">
@@ -209,6 +432,7 @@ function TutorAccountSettings() {
                                     className="form-select"
                                     onChange={handleLocationSelect}
                                     value=""
+                                    disabled={!isEditMode}
                                 >
                                     <option value="">Select locations...</option>
                                     <option value="Online">Online</option>
@@ -220,13 +444,15 @@ function TutorAccountSettings() {
                                     {selectedLocations.map((location, index) => (
                                         <span key={index} className="selected-tag">
                                             <i className="fas fa-map-pin"></i> {location}
-                                            <button 
-                                                type="button" 
-                                                onClick={() => removeLocation(location)}
-                                                className="tag-remove"
-                                            >
-                                                <i className="fas fa-times"></i>
-                                            </button>
+                                            {isEditMode && (
+                                                <button 
+                                                    type="button" 
+                                                    onClick={() => removeLocation(location)}
+                                                    className="tag-remove"
+                                                >
+                                                    <i className="fas fa-times"></i>
+                                                </button>
+                                            )}
                                         </span>
                                     ))}
                                 </div>
@@ -239,35 +465,72 @@ function TutorAccountSettings() {
                             <i className="fas fa-book"></i> MY TUTORING SUBJECTS
                         </h3>
                         <div className="form-section-content">
-                            <div className="multi-select-container">
-                                <select 
-                                    className="form-select"
-                                    onChange={handleSubjectSelect}
-                                    value=""
-                                >
-                                    <option value="">Select subjects...</option>
-                                    <option value="IB Chemistry HL Year 11-12">IB Chemistry HL Year 11-12</option>
-                                    <option value="IB Biology HL Year 11-12">IB Biology HL Year 11-12</option>
-                                    <option value="IB Biology SL Year 11-12">IB Biology SL Year 11-12</option>
-                                    <option value="Maths Year 5-10">Maths Year 5-10</option>
-                                    <option value="Science Year 5-10">Science Year 5-10</option>
-                                    <option value="Maths Year 1-4">Maths Year 1-4</option>
-                                    <option value="Mathematics Applications Year 11-12">Mathematics Applications Year 11-12</option>
-                                </select>
-                                <div className="selected-items">
-                                    {selectedSubjects.map((subject, index) => (
-                                        <span key={index} className="selected-tag">
-                                            <i className="fas fa-book-open"></i> {subject}
-                                            <button 
-                                                type="button" 
-                                                onClick={() => removeSubject(subject)}
-                                                className="tag-remove"
-                                            >
-                                                <i className="fas fa-times"></i>
-                                            </button>
-                                        </span>
-                                    ))}
-                                </div>
+                            <div className="education-entries">
+                                {subjectEntries.map((entry, index) => (
+                                    <div key={index} className="education-entry">
+                                        <div className="subject-dropdowns">
+                                            <div className="subject-dropdown-group">
+                                                <label>Year Level</label>
+                                                <select 
+                                                    className="form-select"
+                                                    value={entry.yearLevel}
+                                                    onChange={(e) => handleSubjectChange(index, 'yearLevel', e.target.value)}
+                                                    disabled={!isEditMode}
+                                                >
+                                                    <option value="">Select year level...</option>
+                                                    {yearLevels.map((year) => (
+                                                        <option key={year} value={year}>{year}</option>
+                                                    ))}
+                                                </select>
+                                            </div>
+
+                                            <div className="subject-dropdown-group">
+                                                <label>Curriculum/State</label>
+                                                <select 
+                                                    className="form-select"
+                                                    value={entry.curriculum}
+                                                    onChange={(e) => handleSubjectChange(index, 'curriculum', e.target.value)}
+                                                    disabled={!isEditMode || !entry.yearLevel}
+                                                >
+                                                    <option value="">Select curriculum...</option>
+                                                    {entry.yearLevel && curriculums[entry.yearLevel].map((curr) => (
+                                                        <option key={curr} value={curr}>{curr}</option>
+                                                    ))}
+                                                </select>
+                                            </div>
+
+                                            <div className="subject-dropdown-group">
+                                                <label>Subject</label>
+                                                <select 
+                                                    className="form-select"
+                                                    value={entry.subject}
+                                                    onChange={(e) => handleSubjectChange(index, 'subject', e.target.value)}
+                                                    disabled={!isEditMode || !entry.yearLevel || !entry.curriculum}
+                                                >
+                                                    <option value="">Select subject...</option>
+                                                    {entry.curriculum && subjects[entry.curriculum].map((subj) => (
+                                                        <option key={subj} value={subj}>{subj}</option>
+                                                    ))}
+                                                </select>
+                                            </div>
+
+                                            {isEditMode && subjectEntries.length > 1 && (
+                                                <button 
+                                                    type="button" 
+                                                    className="btn-remove"
+                                                    onClick={() => removeSubjectEntry(index)}
+                                                >
+                                                    <i className="fas fa-trash-alt"></i> Remove
+                                                </button>
+                                            )}
+                                        </div>
+                                    </div>
+                                ))}
+                                {isEditMode && (
+                                    <button type="button" className="btn-add" onClick={addSubjectEntry}>
+                                        <i className="fas fa-plus"></i> Add Another Subject
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -289,8 +552,9 @@ function TutorAccountSettings() {
                                             value={school}
                                             onChange={(e) => handleSchoolChange(index, e.target.value)}
                                             placeholder="Enter school name"
+                                            disabled={!isEditMode}
                                         />
-                                        {schools.length > 1 && (
+                                        {isEditMode && schools.length > 1 && (
                                             <button 
                                                 type="button" 
                                                 className="btn-remove"
@@ -301,9 +565,11 @@ function TutorAccountSettings() {
                                         )}
                                     </div>
                                 ))}
-                                <button type="button" className="btn-add" onClick={addSchool}>
-                                    <i className="fas fa-plus"></i> Add Another School
-                                </button>
+                                {isEditMode && (
+                                    <button type="button" className="btn-add" onClick={addSchool}>
+                                        <i className="fas fa-plus"></i> Add Another School
+                                    </button>
+                                )}
                             </div>
                         </div>
 
@@ -320,8 +586,9 @@ function TutorAccountSettings() {
                                             value={study}
                                             onChange={(e) => handleStudyChange(index, e.target.value)}
                                             placeholder="Enter what you're studying"
+                                            disabled={!isEditMode}
                                         />
-                                        {currentStudies.length > 1 && (
+                                        {isEditMode && currentStudies.length > 1 && (
                                             <button 
                                                 type="button" 
                                                 className="btn-remove"
@@ -332,12 +599,22 @@ function TutorAccountSettings() {
                                         )}
                                     </div>
                                 ))}
-                                <button type="button" className="btn-add" onClick={addStudy}>
-                                    <i className="fas fa-plus"></i> Add Another Course
-                                </button>
+                                {isEditMode && (
+                                    <button type="button" className="btn-add" onClick={addStudy}>
+                                        <i className="fas fa-plus"></i> Add Another Course
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </div>
+
+                    {isEditMode && (
+                        <div className="form-submit-container">
+                            <button type="submit" className="submit-button">
+                                <i className="fas fa-save"></i> Save Changes
+                            </button>
+                        </div>
+                    )}
                 </form>
             </div>
         </div>
