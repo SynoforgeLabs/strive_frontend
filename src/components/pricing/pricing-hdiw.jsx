@@ -20,7 +20,7 @@ function PricingHdiw() {
                                         <div className="pricing-hdiw-step-content">
                                             <h3 className="pricing-hdiw-step-title">Find the Right Tutor for You</h3>
                                             <p className="pricing-hdiw-step-text">
-                                            Find a Tutor by looking through the tutor profiles and finding a suitable tutor. 
+                                            <a className="pricing-hdiw-link" href="/find-a-tutor">Find a Tutor</a> by looking through the tutor profiles and finding a suitable tutor. 
                                             </p>
                                         </div>
                                     </div>

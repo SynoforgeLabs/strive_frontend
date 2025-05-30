@@ -91,6 +91,7 @@
     color: #0D2371;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: 600;
 }
 
 .pricing-hdiw-link:hover {
