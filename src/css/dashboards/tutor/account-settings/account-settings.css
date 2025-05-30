@@ -549,3 +549,198 @@
     color: #A0AEC0;
 }
 
+.account-settings-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.edit-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+
+.edit-mode-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #4A5568;
+    background-color: white;
+    color: #4A5568;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.edit-mode-button:hover {
+    background-color: #4A5568;
+    color: white;
+}
+
+.edit-mode-button.active {
+    background-color: #E53E3E;
+    border-color: #E53E3E;
+    color: white;
+}
+
+.edit-mode-button.active:hover {
+    background-color: #C53030;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+    background-color: #F7FAFC;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.form-submit-container {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #E2E8F0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-button {
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #48BB78;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.submit-button:hover {
+    background-color: #38A169;
+}
+
+.subject-select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.subject-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.subject-entry {
+    border: 1px solid #E2E8F0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    background-color: #F8FAFC;
+}
+
+.subject-dropdowns {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.subject-dropdown-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.subject-dropdown-group label {
+    font-size: 0.875rem;
+    color: #4A5568;
+    font-weight: 500;
+}
+
+.form-select:disabled {
+    background-color: #F7FAFC;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.video-upload-label.disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.video-upload-placeholder:has(.video-input:disabled) {
+    border-color: #E2E8F0;
+    background-color: #F7FAFC;
+}
+
+.password-change-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 400px;
+}
+
+.password-change-container .account-settings-form-group {
+    width: 100%;
+}
+
+.password-change-container .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #CBD5E0;
+    font-size: 1rem;
+}
+
+.password-change-container .form-input:focus {
+    outline: none;
+    border-color: #4A5568;
+    box-shadow: 0 0 0 1px #4A5568;
+}
+
+.password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-input-container .form-input {
+    padding-right: 2.5rem;
+}
+
+.password-toggle-btn {
+    position: absolute;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    color: #4A5568;
+    padding: 0.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.password-toggle-btn:hover:not(:disabled) {
+    color: #2D3748;
+}
+
+.password-toggle-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.password-toggle-btn i {
+    font-size: 1.125rem;
+}
+
