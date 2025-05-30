@@ -149,28 +149,6 @@ function TutorAccountSettings() {
                             <input type="text" placeholder="Last Name" />
                         </div>
                     </div>
-
-                    <div className="account-settings-form-row">
-                        <div className="account-settings-form-group">
-                            <label>
-                                <i className="fas fa-envelope"></i> Email
-                            </label>
-                            <input 
-                                type="email" 
-                                placeholder="Enter your email address"
-                            />
-                        </div>
-                        <div className="account-settings-form-group">
-                            <label>
-                                <i className="fas fa-phone"></i> Phone Number
-                            </label>
-                            <input 
-                                type="tel" 
-                                placeholder="Enter your phone number"
-                            />
-                        </div>
-                    </div>
-
                     <div className="account-settings-form-group full-width">
                         <label>
                             <i className="fas fa-comment-alt"></i> About you / Bio
