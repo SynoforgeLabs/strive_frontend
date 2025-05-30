@@ -53,11 +53,11 @@ function PricingPricegrid() {
                         </div>
                         <div className="col pricing-price-grid-feature-content" id='pricing-price-grid-platinum'>
                                 <p className="mb-2">Tutors with a wealth of experience and consistently outstanding student feedback.</p>
-                                <p className="text-muted small">These tutors not only know their subject well, but have a strong track record of improving student outcomes through engaging and effective teaching strategies.</p>
+                                <p className="text-muted small">These tutors not only know their subject well, but also have a strong track record of improving student outcomes through engaging and effective teaching strategies.</p>
                         </div>
                         <div className="col pricing-price-grid-feature-content" id='pricing-price-grid-elite'>
                                 <p className="mb-2">Top-tier tutors with over 3 years of tutoring experience, exceptional student reviews, and a demonstrated history of academic excellence.</p>
-                                <p className="text-muted small">Perfect for students seeking exam-focused guidance, and results-driven support from the best in the field.</p>
+                                <p className="text-muted small">Perfect for students seeking expert guidance, exam-focused strategies, and results-driven support from the best in the field.</p>
                         </div>
 
                     {/* Tutor Selection Criteria Row */}
@@ -84,13 +84,13 @@ function PricingPricegrid() {
                             <h4 className="pricing-price-grid-feature-title">Additional Features</h4>
                         </div>
                         <div className="text-center pricing-price-grid-feature-content" id='pricing-price-grid-gold'>
-                            <span className="pricing-price-grid-check pricing-price-grid-gold-check">✓</span>
+                            <span className="pricing-price-grid-check pricing-price-grid-gold-check"></span>
                         </div>
                         <div className="text-center pricing-price-grid-feature-content" id='pricing-price-grid-platinum'>
-                            <span className="pricing-price-grid-check pricing-price-grid-platinum-check">✓</span>
+                            <span className="pricing-price-grid-check pricing-price-grid-platinum-check"></span>
                         </div>
                         <div className="text-center pricing-price-grid-feature-content" id='pricing-price-grid-elite'>
-                            <span className="pricing-price-grid-check pricing-price-grid-elite-check">✓</span>
+                            <span className="pricing-price-grid-check pricing-price-grid-elite-check"></span>
                         </div>
 
                     {/* Progress Reports */}
@@ -98,7 +98,7 @@ function PricingPricegrid() {
                             <h4 className="pricing-price-grid-feature-title">Progress Reports</h4>
                         </div>
                         <div className="col text-center pricing-price-grid-feature-content" id='pricing-price-grid-gold'>
-                            <span className="pricing-price-grid-check pricing-price-grid-gold-check">✓</span>    
+                            <span className="pricing-price-grid-check pricing-price-grid-gold-check"></span>    
                         </div>
                         <div className="col text-center pricing-price-grid-feature-content" id='pricing-price-grid-platinum'>
                             <span className="pricing-price-grid-check pricing-price-grid-platinum-check">✓</span>
@@ -112,10 +112,10 @@ function PricingPricegrid() {
                             <h4 className="pricing-price-grid-feature-title">Parent consultations</h4>
                         </div>
                         <div className="col text-center pricing-price-grid-feature-content" id='pricing-price-grid-gold'>
-                            <span className="pricing-price-grid-check pricing-price-grid-gold-check">✓</span>    
+                            <span className="pricing-price-grid-check pricing-price-grid-gold-check"></span>    
                         </div>
                         <div className="col text-center pricing-price-grid-feature-content" id='pricing-price-grid-platinum'>
-                            <span className="pricing-price-grid-check pricing-price-grid-platinum-check">✓</span>    
+                            <span className="pricing-price-grid-check pricing-price-grid-platinum-check"></span>    
                         </div>
                         <div className="col text-center pricing-price-grid-feature-content" id='pricing-price-grid-elite'>
                             <span className="pricing-price-grid-check pricing-price-grid-elite-check">✓</span>
@@ -126,7 +126,7 @@ function PricingPricegrid() {
                             <h4 className="pricing-price-grid-feature-title">24/7 support via Platform</h4>
                         </div>
                         <div className="col text-center pricing-price-grid-feature-content" id='pricing-price-grid-gold'>
-                            <span className="pricing-price-grid-check pricing-price-grid-gold-check">✓</span>    
+                            <span className="pricing-price-grid-check pricing-price-grid-gold-check"></span>    
                         </div>
                         <div className="col text-center pricing-price-grid-feature-content" id='pricing-price-grid-platinum'>
                             <span className="pricing-price-grid-check pricing-price-grid-platinum-check">✓</span>    
@@ -140,7 +140,7 @@ function PricingPricegrid() {
                             <h4 className="pricing-price-grid-feature-title">Medicine/Dentistry Interview Preparation Workshops</h4>
                         </div>
                         <div className="col text-center pricing-price-grid-feature-content" id='pricing-price-grid-gold'>
-                            <span className="pricing-price-grid-check pricing-price-grid-gold-check">✓</span>    
+                            <span className="pricing-price-grid-check pricing-price-grid-gold-check"></span>    
                         </div>
                         <div className="col text-center pricing-price-grid-feature-content" id='pricing-price-grid-platinum'>
                             <span className="pricing-price-grid-check pricing-price-grid-platinum-check">✓</span>    
@@ -154,10 +154,10 @@ function PricingPricegrid() {
                             <h4 className="pricing-price-grid-feature-title">Scholarship Application Support</h4>
                         </div>
                         <div className="col text-center pricing-price-grid-feature-content" id='pricing-price-grid-gold'>
-                            <span className="pricing-price-grid-check pricing-price-grid-gold-check">✓</span>    
+                            <span className="pricing-price-grid-check pricing-price-grid-gold-check"></span>    
                         </div>
                         <div className="col text-center pricing-price-grid-feature-content" id='pricing-price-grid-platinum'>
-                            <span className="pricing-price-grid-check pricing-price-grid-platinum-check">✓</span>    
+                            <span className="pricing-price-grid-check pricing-price-grid-platinum-check"></span>    
                         </div>
                         <div className="col text-center pricing-price-grid-feature-content" id='pricing-price-grid-elite'>
                             <span className="pricing-price-grid-check pricing-price-grid-elite-check">✓</span>
@@ -168,10 +168,24 @@ function PricingPricegrid() {
                             <h4 className="pricing-price-grid-feature-title">University Application Support</h4>
                         </div>
                         <div className="text-center pricing-price-grid-feature-content" id='pricing-price-grid-gold'>
-                            <span className="pricing-price-grid-check pricing-price-grid-gold-check">✓</span>    
+                            <span className="pricing-price-grid-check pricing-price-grid-gold-check"></span>    
                         </div>
                         <div className="text-center pricing-price-grid-feature-content" id='pricing-price-grid-platinum'>
-                            <span className="pricing-price-grid-check pricing-price-grid-platinum-check">✓</span>    
+                            <span className="pricing-price-grid-check pricing-price-grid-platinum-check"></span>    
+                        </div>
+                        <div className="text-center pricing-price-grid-feature-content" id='pricing-price-grid-elite'>
+                            <span className="pricing-price-grid-check pricing-price-grid-elite-check">✓</span>
+                        </div>
+
+                    {/* Discounted Packages*/}
+                        <div className="p-3 d-flex">
+                            <h4 className="pricing-price-grid-feature-title">Discounted Packages</h4>
+                        </div>
+                        <div className="text-center pricing-price-grid-feature-content" id='pricing-price-grid-gold'>
+                            <span className="pricing-price-grid-check pricing-price-grid-gold-check"></span>    
+                        </div>
+                        <div className="text-center pricing-price-grid-feature-content" id='pricing-price-grid-platinum'>
+                            <span className="pricing-price-grid-check pricing-price-grid-platinum-check"></span>    
                         </div>
                         <div className="text-center pricing-price-grid-feature-content" id='pricing-price-grid-elite'>
                             <span className="pricing-price-grid-check pricing-price-grid-elite-check">✓</span>
