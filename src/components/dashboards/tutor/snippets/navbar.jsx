@@ -38,6 +38,10 @@ function TutorNavbar() {
                 <i className="fas fa-user-cog"></i>
                 <span>Account Settings</span>
               </Link>
+              <Link to="/tutor/documents" className="tutor-navbar-menu-link">
+              <i class="fa-solid fa-file"></i>
+                <span>Documents</span>
+              </Link>
             </li>
           </ul>
         </div>

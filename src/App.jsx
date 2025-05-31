@@ -20,7 +20,7 @@ import TutorContactPage from './pages/js/tutor-contact';
 import PrivacyPage from './pages/js/privacy';
 import ContactusPage from './pages/js/contact-us';
 import AccountSettingsPage from './pages/js/dashboard/tutor/ account-settings';
-
+import TutorDocumentsPage from './pages/js/dashboard/tutor/documents';
 const App = () => {
   return (
     <ContactFormProvider>
@@ -44,6 +44,7 @@ const App = () => {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/contact-us" element={<ContactusPage />} />
           <Route path="/tutor/account-settings" element={<AccountSettingsPage />} />
+          <Route path="/tutor/documents" element={<TutorDocumentsPage />} />
         </Routes>
       </Router>
     </ContactFormProvider>
