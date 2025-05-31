@@ -42,6 +42,10 @@ function TutorNavbar() {
               <i class="fa-solid fa-file"></i>
                 <span>Documents</span>
               </Link>
+              <Link to="/tutor/payment-details" className="tutor-navbar-menu-link">
+              <i class="fa-solid fa-wallet"></i>
+                <span>Payment Details</span>
+              </Link>
             </li>
           </ul>
         </div>
